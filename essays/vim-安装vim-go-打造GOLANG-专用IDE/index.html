@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="郭浩">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>安装vim-go - 浩的个人网站</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u5b89\u88c5vim-go";
+    var mkdocs_page_input_path = "essays\\vim-\u5b89\u88c5vim-go-\u6253\u9020GOLANG-\u4e13\u7528IDE.md";
+    var mkdocs_page_url = "/essays/vim-\u5b89\u88c5vim-go-\u6253\u9020GOLANG-\u4e13\u7528IDE/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> 浩的个人网站</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">首页</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">关于</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../about/contact/">联系方式</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../about/release-notes/">更新日志</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">文章</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">安装vim-go</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#vim-vim-go-golang-ide">vim 安装vim-go 打造GOLANG 专用IDE</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#_1">分两步:</a></li>
+        
+            <li><a class="toctree-l4" href="#_4">开始：</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">浩的个人网站</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>文章 &raquo;</li>
+        
+      
+    
+    <li>安装vim-go</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="vim-vim-go-golang-ide">vim 安装vim-go 打造GOLANG 专用IDE</h1>
+<hr />
+<h2 id="_1">分两步:</h2>
+<h3 id="_2">第一步：</h3>
+<pre><code>安装vim插件管理器Vundle
+</code></pre>
+<h3 id="_3">第二步：</h3>
+<pre><code>安装vim-go插件。
+</code></pre>
+<p><code>另外：我也写了一个自动安装的脚本。手懒的朋友，可以自行下载使用：https://github.com/aimin/InstallvimGo.git</code></p>
+<h2 id="_4">开始：</h2>
+<h3 id="vundle">第一步：安装Vundle</h3>
+<p>根据Vundle的安装说明，首先安装Vundle：</p>
+<pre><code class="bash">$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
+</code></pre>
+
+<p>然后对.vimrc进行配置，将Vundle的相关配置置在最开始处，下面只显示关于Vundle的相关配置：
+对.vimrc进行配置，将Vundle的相关配置置在最开始处，下面只显示关于Vundle的相关配置（详细参考Vundle的README.MD)：</p>
+<pre><code class="bash">    1. &quot; -------------  
+    2. &quot; Vundle  
+    3. &quot; https://github.com/gmarik/Vundle.vim  
+    4. &quot; -------------  
+    5.   
+    6. set nocompatible              &quot; be iMproved, required  
+    7. filetype off                  &quot; required  
+    8.   
+    9. &quot; set the runtime path to include Vundle and initialize  
+    10. set rtp+=~/.vim/bundle/Vundle.vim  
+    11. call vundle#begin()  
+    12. &quot; alternatively, pass a path where Vundle should install plugins  
+    13. &quot;call vundle#begin('~/some/path/here')  
+    14.   
+    15. &quot; let Vundle manage Vundle, required  
+    16. Plugin 'gmarik/Vundle.vim'  
+    17.   
+    18. &quot; The following are examples of different formats supported.  
+    19. &quot; Keep Plugin commands between vundle#begin/end.  
+    20. &quot; plugin on GitHub repo  
+    21. &quot;&quot;Plugin 'tpope/vim-fugitive'  
+    22. &quot; plugin from http://vim-scripts.org/vim/scripts.html  
+    23. &quot;&quot;Plugin 'L9'  
+    24. &quot; Git plugin not hosted on GitHub  
+    25. &quot;&quot;Plugin 'git://git.wincent.com/command-t.git'  
+    26. &quot; git repos on your local machine (i.e. when working on your own plugin)  
+    27. &quot;&quot;Plugin 'file:///home/gmarik/path/to/plugin'  
+    28. &quot; The sparkup vim script is in a subdirectory of this repo called vim.  
+    29. &quot; Pass the path to set the runtimepath properly.  
+    30. &quot;&quot;Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}  
+    31. &quot; Avoid a name conflict with L9  
+    32. &quot;&quot;Plugin 'user/L9', {'name': 'newL9'}  
+    33.   
+    34. &quot; Install Vim-go  
+    35. Plugin 'fatih/vim-go'  
+    36.   
+    37. &quot; All of your Plugins must be added before the following line  
+    38. call vundle#end()            &quot; required  
+    39. filetype plugin indent on    &quot; required  
+    40. &quot; To ignore plugin indent changes, instead use:  
+    41. &quot;filetype plugin on  
+    42. &quot;  
+    43. &quot; Brief help  
+    44. &quot; :PluginList       - lists configured plugins  
+    45. &quot; :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate  
+    46. &quot; :PluginSearch foo - searches for foo; append `!` to refresh local cache  
+    47. &quot; :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal  
+    48. &quot;  
+    49. &quot; see :h vundle for more details or wiki for FAQ  
+    50. &quot; Put your non-Plugin stuff after this line 
+</code></pre>
+
+<h3 id="vim-go-vim-goreadmemd">第二步：安装vim-go (详细查看vim-go的README.MD)</h3>
+<p><code>注意路径</code></p>
+<pre><code class="bash">git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
+</code></pre>
+
+<p>至此安装完成。
+打开.go 文件看看效果吧！ </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../../about/release-notes/" class="btn btn-neutral" title="更新日志"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>郭浩</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../about/release-notes/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>
