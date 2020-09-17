@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>必看！bot宏 | Korman个人微博</title>
-    <meta property="og:title" content="必看！bot宏 - Korman个人微博">
+    <title>地图全开和飞行点全开 | Korman个人微博</title>
+    <meta property="og:title" content="地图全开和飞行点全开 - Korman个人微博">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-09-15T17:23:58&#43;08:00'>
+    <meta property="article:published_time" content='2020-09-17T09:58:59&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-09-15T17:23:58&#43;08:00'>
+    <meta property="article:modified_time" content='2020-09-17T09:58:59&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="必看！bot宏">
+    <meta name="description" content="地图全开和飞行点全开">
         
     <meta name="author" content="Korman">
-    <meta property="og:url" content="http://korman.github.io/post/wow/base/bot%E5%AE%8F/">
+    <meta property="og:url" content="http://korman.github.io/post/wow/role/%E5%9C%B0%E5%9B%BE%E5%85%A8%E5%BC%80%E5%92%8C%E9%A3%9E%E8%A1%8C%E7%82%B9%E5%85%A8%E5%BC%80/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -69,10 +69,10 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">必看！bot宏</h1>
+            <h1 class="post-title">地图全开和飞行点全开</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年9月15日
+            2020年9月17日
         </date>
         
         <div class="post-meta">
@@ -85,123 +85,8 @@
         
         
         <div class="post-content">
-            <h2 id="基础">基础</h2>
-<p>机器人用“停止”命令后，鼠标右键点击机器人即可对话，可以分配机器人职责（坦克、奶、输出——如“坦克”选择“近战，坦克”；“治疗”选择“远程，治疗”、或“近战，治疗”，或：“治疗”），交易装备给他；交易完成用“跟随”命令即可</p>
-<h2 id="机器人装备指南">机器人装备指南</h2>
-<p>伤害受玩家装备等级和他自己装备影响，好装备对其影响很大，尤其是武器
-貌似可以享受装备属性影响（暴击、法伤、攻强、防御、躲闪等）
-可以触发武器附带技能，不能触发饰品附带技能
-穿装备后会刷新装备原始属性，如变回装绑，附魔、宝石消失。</p>
-<p>坦克不一定就得穿防御拿盾牌，队伍装备好坦克也可以穿输出拿双手武器</p>
-<p>因有buff道具，没有打不过的boss……</p>
-<h2 id="基础随从创建">基础随从创建</h2>
-<h3 id="联盟">联盟</h3>
-<h4 id="5人队">5人队</h4>
-<p><strong>骑士（坦克、近战、治疗）、萨满（治疗、远程）、盗贼、牧师（治疗、远程）</strong></p>
-<p>.npcbot add 70150
-.npcbot add 70010
-.npcbot add 70142
-.npcbot add 70131</p>
-<h4 id="其余人">其余人</h4>
-<p>.npcbot add 70014
-.npcbot add 70093
-.npcbot add 70044
-.npcbot add 70003
-.npcbot add 70144
-.npcbot add 70243</p>
-<h3 id="部落">部落</h3>
-<h4 id="5人队-1">5人队</h4>
-<p><strong>骑士（坦克、近战、治疗）、萨满（治疗、远程）、盗贼、牧师（治疗、远程）</strong></p>
-<p>.npcbot add 70073
-.npcbot add 70195
-.npcbot add 70193
-.npcbot add 70101</p>
-<h4 id="其余人-1">其余人</h4>
-<p>.npcbot add 70053
-.npcbot add 70075
-.npcbot add 70048
-.npcbot add 70206
-.npcbot add 70036
-.npcbot add 70245</p>
-<h2 id="基础随从命令">基础随从命令</h2>
-<h3 id="跟随">跟随</h3>
-<p>.npcbot command follow 让所有小伙伴跟随你<strong>只可在非战斗状态下使用</strong></p>
-<h3 id="停止">停止</h3>
-<p>.npcbot command stay 让所有小伙伴停留原地<strong>只可在非战斗状态下使用</strong></p>
-<h3 id="刷新">刷新</h3>
-<p>.npcbot reset 刷新小伙伴 <strong>选定一个小伙伴后使用让其刷新，不选择任何目标则刷新全部小伙伴</strong></p>
-<h3 id="跟随距离">跟随距离</h3>
-<p><strong>可设置为0、15、30（近战）、75（远程）四种，在副本可减少引怪，也可以配合-跟随、停止-指令把卡位怪物引过来</strong></p>
-<p>.npcbot distance 数字 设定小伙伴跟随距离，方便给予其装备，分配其作战特色</p>
-<p><strong>默认值30，需要队长或团队领袖权限，也会影响全团他人召唤的小伙伴，值为0机器人不会主动打怪</strong></p>
-<h3 id="其他命令">其他命令</h3>
-<p>.npcbot remove 解散小伙伴<strong>选定一个小伙伴后使用将其与你解散，选择自己头像则让全部小伙伴与你解散</strong>
-.npcbot remove all 解散所有小伙伴
-.npcbot helper 打开小伙伴帮助菜单
-.npcbot info 获得小伙伴详细信息<strong>需要选定一个小伙伴</strong></p>
-<h2 id="召唤nbot团队">召唤nbot团队</h2>
-<p><strong>此命令每次会随机召唤nbot——除非精简至每职业10人，不然不能培养装备</strong></p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>召唤目标</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.npcbot add dk</td>
-<td>死骑</td>
-<td>坦克、近战</td>
-</tr>
-<tr>
-<td>.npcbot add qs</td>
-<td>圣骑</td>
-<td>坦克、近战、治疗</td>
-</tr>
-<tr>
-<td>.npcbot add zs</td>
-<td>战士</td>
-<td>坦克、近战</td>
-</tr>
-<tr>
-<td>.npcbot add sm</td>
-<td>萨满</td>
-<td>治疗、近战：增强dps比元素高得多</td>
-</tr>
-<tr>
-<td>.npcbot add lr</td>
-<td>猎人</td>
-<td>坦克、近战</td>
-</tr>
-<tr>
-<td>.npcbot add xd</td>
-<td>小德</td>
-<td>治疗、远程</td>
-</tr>
-<tr>
-<td>.npcbot add dz</td>
-<td>盗贼</td>
-<td>坦克、近战</td>
-</tr>
-<tr>
-<td>.npcbot add fs</td>
-<td>法师</td>
-<td>坦克、近战</td>
-</tr>
-<tr>
-<td>.npcbot add ss</td>
-<td>术士</td>
-<td>坦克、近战</td>
-</tr>
-<tr>
-<td>.npcbot add ms</td>
-<td>牧师</td>
-<td>治疗、远程</td>
-</tr>
-</tbody>
-</table>
+            <p>.explorecheat 1        地图全开
+.taxicheat on          飞行点全开</p>
 
         </div>
 
@@ -209,6 +94,19 @@
 
 
         
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/wow/base/%E5%9F%BA%E6%9C%AC%E7%AE%A1%E7%90%86gm%E5%91%BD%E4%BB%A4/">基本管理GM命令</a></li>
+        
+        <li><a href="/post/wow/base/%E7%A7%B0%E5%8F%B7/">称号</a></li>
+        
+        <li><a href="/post/wow/base/bot%E5%AE%8F/">必看！bot宏</a></li>
+        
+    </ul>
+</div>
 
 
         <div class="post-meta meta-tags">

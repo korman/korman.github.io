@@ -6,10 +6,37 @@
     <description>Recent content in 魔兽世界 on Korman个人微博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 17 Sep 2020 09:24:40 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2020 10:01:48 +0800</lastBuildDate>
     
 	<atom:link href="http://korman.github.io/categories/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>所有物品代码</title>
+      <link>http://korman.github.io/post/wow/item/%E6%89%80%E6%9C%89%E7%89%A9%E5%93%81%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Thu, 17 Sep 2020 10:01:48 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/item/%E6%89%80%E6%9C%89%E7%89%A9%E5%93%81%E4%BB%A3%E7%A0%81/</guid>
+      <description>简介 在游戏用GM帐号输入 .additem xxx 添加物品 （xxx就是下面的数字代码） 列表 ID 物品名称 25 破损的短剑 35 弯曲的法杖 36 用旧的钉锤 37 破损的斧头 38 新兵衬衣 39 新兵短裤 40 新兵之靴 43 侍从之靴 44 侍从短裤 45 侍从衬衣 47 盗贼之鞋 48 盗贼短裤 49 盗贼衬衣 51 见习牧师之靴 52 见习牧师短裤 53 见习牧师衬衣 55 学徒之靴 56 学徒长袍 57</description>
+    </item>
+    
+    <item>
+      <title>记录的物品ID列表</title>
+      <link>http://korman.github.io/post/wow/item/itemid/</link>
+      <pubDate>Thu, 17 Sep 2020 10:00:17 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/item/itemid/</guid>
+      <description>简介 我自己记录的常用的商业技能材料id与基础的低等级所需物品id 列表 物品名 id 铜锭 2840 青铜锭 2841 粗糙的石头 2836 毛料 2592 宁神花 2447 绿玛瑙 1206 彩色珍珠 5500 次级月亮石 1705 银锭 2842 学者的书写工具 39505 轻羊皮纸 39354 虎眼石 818 珠宝制作工具 20815 暗影石 1210 冰镇牛奶 1179 果汁 1205 卷轴：附魔武器 - 十字军 38873 铁锭 3575 黑铁锭 11371 绿色染料 2605 黄水晶 3864</description>
+    </item>
+    
+    <item>
+      <title>地图全开和飞行点全开</title>
+      <link>http://korman.github.io/post/wow/role/%E5%9C%B0%E5%9B%BE%E5%85%A8%E5%BC%80%E5%92%8C%E9%A3%9E%E8%A1%8C%E7%82%B9%E5%85%A8%E5%BC%80/</link>
+      <pubDate>Thu, 17 Sep 2020 09:58:59 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/role/%E5%9C%B0%E5%9B%BE%E5%85%A8%E5%BC%80%E5%92%8C%E9%A3%9E%E8%A1%8C%E7%82%B9%E5%85%A8%E5%BC%80/</guid>
+      <description>.explorecheat 1 地图全开 .taxicheat on 飞行点全开</description>
+    </item>
     
     <item>
       <title>基本管理GM命令</title>
