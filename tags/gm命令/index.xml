@@ -6,10 +6,136 @@
     <description>Recent content in gm命令 on Korman个人微博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 17 Sep 2020 11:13:14 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2020 15:16:05 +0800</lastBuildDate>
     
 	<atom:link href="http://korman.github.io/tags/gm%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>祖尔曼和祖格</title>
+      <link>http://korman.github.io/post/wow/teleport/%E7%A5%96%E5%B0%94%E6%9B%BC%E5%92%8C%E7%A5%96%E6%A0%BC/</link>
+      <pubDate>Thu, 17 Sep 2020 15:16:05 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/teleport/%E7%A5%96%E5%B0%94%E6%9B%BC%E5%92%8C%E7%A5%96%E6%A0%BC/</guid>
+      <description>祖尔曼 .go 6851.15 -7988.15 188.53 530 祖格 .go -11916 -1208.36 92.28 0</description>
+    </item>
+    
+    <item>
+      <title>巫妖王个副本BOSS</title>
+      <link>http://korman.github.io/post/wow/teleport/%E5%B7%AB%E5%A6%96%E7%8E%8B%E4%B8%AA%E5%89%AF%E6%9C%ACboss/</link>
+      <pubDate>Thu, 17 Sep 2020 15:14:58 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/teleport/%E5%B7%AB%E5%A6%96%E7%8E%8B%E4%B8%AA%E5%89%AF%E6%9C%ACboss/</guid>
+      <description>命令列表 传送命令 地点 .go 5696 2197.674316 798.126099 571 新三本入口 .go 4914.370117 2184.003418 638.733643 632 灵魂熔炉 .go 439.14256 209.538788 528.708740 658 萨倫之渊 .go 5239 1932.64 707.694946 668 倒影大厅 .go 5579.586426 2233.414307 733.011475 668 巫妖王The Lich King .go 8516.254883 707.177063 558.247681 571 银白联赛场地（十字军入口） .go 8577.664063 791.918884 558.234558 571 银白联赛场地（勇士试练入口）YS .go 690.690613 127.155220 142.135513 649 阿努巴拉克TOC10&amp;amp;25人；YX&amp;amp;PT .go 8922.087891 -991.638184 1039.398682 571 石之大</description>
+    </item>
+    
+    <item>
+      <title>巫妖王北极全部坐标</title>
+      <link>http://korman.github.io/post/wow/teleport/%E5%B7%AB%E5%A6%96%E7%8E%8B%E5%8C%97%E6%9E%81%E5%85%A8%E9%83%A8%E5%9D%90%E6%A0%87/</link>
+      <pubDate>Thu, 17 Sep 2020 15:10:23 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/teleport/%E5%B7%AB%E5%A6%96%E7%8E%8B%E5%8C%97%E6%9E%81%E5%85%A8%E9%83%A8%E5%9D%90%E6%A0%87/</guid>
+      <description>凛风峡湾 新阿加曼德 .go 383 -4610 244 571 索瓦雨德营地 .go 343 -4210 255 571 西风升降梯 .go 424 -3980 267 571 镇西要塞 .go 1368 -3341 175 571 冬蹄营地 .go 2651 -4392 283 571 斯考恩 .go 1959 -4277 210 571 鬼刃岗哨 .go 669 -5473 238 571 探险者协会前哨 .go 453 -5908 313 571 无赖角 .go 49 -3589 2 571 Valgarde (Alliance Base)瓦尔加德(凛风峡湾) .go 592,33 -5095,5 6 571 Wyrmskol (Utgarde Keep entrance)龙颅村(凛风峡湾) .go 943,4 -4933 2 571 Kamagua (Tuskarr</description>
+    </item>
+    
+    <item>
+      <title>外域副本传送点命令</title>
+      <link>http://korman.github.io/post/wow/teleport/%E5%A4%96%E5%9F%9F%E5%89%AF%E6%9C%AC%E4%BC%A0%E9%80%81%E7%82%B9%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Thu, 17 Sep 2020 15:07:30 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/teleport/%E5%A4%96%E5%9F%9F%E5%89%AF%E6%9C%AC%E4%BC%A0%E9%80%81%E7%82%B9%E5%91%BD%E4%BB%A4/</guid>
+      <description>资料片副本传送点命令(已更新) .go 瞬移命令 .go 0 -11853.6 -3197.44 -27.2186 黑暗之门 副本坐标 有部分副本传送有点不正常，如果遇到团队副本不能进，可以双开组队进 传送副本前要先用这个命令 .gm on 格式为 .worldport map xyz map和xyz均为下面的坐标值 .go -3562.8f 247.6f 42.9f 530 黑暗神庙（副本）入口 (没去过官服的朋友 门是在地上墙壁上的缺口) .go -11107.95 -2002.06 49.89</description>
+    </item>
+    
+    <item>
+      <title>太阳井副本坐标</title>
+      <link>http://korman.github.io/post/wow/teleport/%E5%A4%AA%E9%98%B3%E4%BA%95%E5%89%AF%E6%9C%AC%E5%9D%90%E6%A0%87/</link>
+      <pubDate>Thu, 17 Sep 2020 15:06:42 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/teleport/%E5%A4%AA%E9%98%B3%E4%BA%95%E5%89%AF%E6%9C%AC%E5%9D%90%E6%A0%87/</guid>
+      <description>.go 12612 -6777 14 530</description>
+    </item>
+    
+    <item>
+      <title>十字军副本</title>
+      <link>http://korman.github.io/post/wow/teleport/%E5%8D%81%E5%AD%97%E5%86%9B%E5%89%AF%E6%9C%AC/</link>
+      <pubDate>Thu, 17 Sep 2020 13:55:57 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/teleport/%E5%8D%81%E5%AD%97%E5%86%9B%E5%89%AF%E6%9C%AC/</guid>
+      <description>.go 8515.45 728.91 558.24 571</description>
+    </item>
+    
+    <item>
+      <title>红玉圣殿</title>
+      <link>http://korman.github.io/post/wow/teleport/%E7%BA%A2%E7%8E%89%E5%9C%A3%E6%AE%BF/</link>
+      <pubDate>Thu, 17 Sep 2020 13:55:25 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/teleport/%E7%BA%A2%E7%8E%89%E5%9C%A3%E6%AE%BF/</guid>
+      <description>.go 3592.03 208.45 -110.66 571</description>
+    </item>
+    
+    <item>
+      <title>寒冰皇冠副本</title>
+      <link>http://korman.github.io/post/wow/teleport/%E5%AF%92%E5%86%B0%E7%9A%87%E5%86%A0%E5%89%AF%E6%9C%AC/</link>
+      <pubDate>Thu, 17 Sep 2020 13:54:18 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/teleport/%E5%AF%92%E5%86%B0%E7%9A%87%E5%86%A0%E5%89%AF%E6%9C%AC/</guid>
+      <description>.go 5841 2095 636 571 寒冰皇冠副本 老2 门口的传送门 可以传送到老4那的 老3飞艇由于单人没办法完成 所以取消 也可以直接传送.go -549.13 2211.29 539.29 631 打完老4后面有个门 就能进2区了 .go 4147.22 2766.81 350.96 631 2区直接传送 打完瘟疫区 和赤红区 霜翼区才会 开门 打绿龙这个BOSS 和一般BOSS 打发不一样 是给绿龙加血 他血满了就过了 可以用这个</description>
+    </item>
+    
+    <item>
+      <title>地球传送</title>
+      <link>http://korman.github.io/post/wow/teleport/%E5%9C%B0%E7%90%83%E4%BC%A0%E9%80%81/</link>
+      <pubDate>Thu, 17 Sep 2020 13:45:29 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/teleport/%E5%9C%B0%E7%90%83%E4%BC%A0%E9%80%81/</guid>
+      <description>基础 传送命令 .go 坐标 例如去银月城输入 .go 9485 -7281 14 530 如何自己查找坐标？ 进入游戏后，输入 .gps，会显示你当前坐标 例如显示的是下面的内容 Map:1 Zone:1637 Area:1637 x:1801.856201 Y:-4529.882813 z:21.071239 orientation:3.006988 grid[35,23]cell[3,4] instanceid:0 那么你的坐标就是 1802 -4530 21 1 再例如，显示的是 Map:530 Zone:3483 Area:3539 x:-248.356201 Y:956.182813 z:84.071239 orientation:3.006988 grid[31,23]cell[4,6] instanceid:0 那么你的坐标就是 -248 956 84 530 下面是我自己查找的一些坐标 副本及野外boss 地点 命令 卡</description>
+    </item>
+    
+    <item>
+      <title>达拉然城堡</title>
+      <link>http://korman.github.io/post/wow/teleport/%E8%BE%BE%E6%8B%89%E7%84%B6%E5%9F%8E%E5%A0%A1/</link>
+      <pubDate>Thu, 17 Sep 2020 13:44:59 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/teleport/%E8%BE%BE%E6%8B%89%E7%84%B6%E5%9F%8E%E5%A0%A1/</guid>
+      <description>达拉然城堡 .go 5818.13 452.51 658.76 571</description>
+    </item>
+    
+    <item>
+      <title>传送主城</title>
+      <link>http://korman.github.io/post/wow/teleport/%E4%BC%A0%E9%80%81%E4%B8%BB%E5%9F%8E/</link>
+      <pubDate>Thu, 17 Sep 2020 13:41:07 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/teleport/%E4%BC%A0%E9%80%81%E4%B8%BB%E5%9F%8E/</guid>
+      <description>部落 地点 命令 银月城 .go 9485 -7281 14 530 奥格瑞玛 .go 1551 -4408 9 1 雷霆崖 .go -1280 125 131 1 幽暗城 .go 1609 202 -43 0 联盟 地点 命令 埃索达 .go -3973 -11587 -134 530 暴风城 .go -9065 434 94 0 铁炉堡 .go -5032 -819 495 0 达纳苏斯 .go 9961 2055 1329 1 中立 地点 命令 加基森 .go -7174 -3778 8 1 东瘟疫礼拜堂 .go 2320 5293 82 0 棘齿城 .go -977 -3788 6 1 藏宝海湾 .go -14302 518 9 0 黑暗之门 .go -248 956 84 530 沙斯塔城 .go -1831 5297 -12 530 风暴</description>
+    </item>
+    
+    <item>
+      <title>传送人物</title>
+      <link>http://korman.github.io/post/wow/teleport/%E4%BC%A0%E9%80%81%E4%BA%BA%E7%89%A9/</link>
+      <pubDate>Thu, 17 Sep 2020 13:40:01 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/teleport/%E4%BC%A0%E9%80%81%E4%BA%BA%E7%89%A9/</guid>
+      <description>.goname * 传送自己到名为*的人物处 比如传送到abc旁边 就输入 .goname abc (必须是玩家) .namego * 传送名为*的目标到自己所在处</description>
+    </item>
+    
+    <item>
+      <title>北极副本</title>
+      <link>http://korman.github.io/post/wow/teleport/%E5%8C%97%E6%9E%81%E5%89%AF%E6%9C%AC/</link>
+      <pubDate>Thu, 17 Sep 2020 13:37:02 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/teleport/%E5%8C%97%E6%9E%81%E5%89%AF%E6%9C%AC/</guid>
+      <description>北裂境副本 地点 命令 奥核之心 .go 3891.73 6984.91 69.49 571 奥核之眼 .go 3877.41 6984.64 106.32 571 永恒之眼 .go 3865.92 6986.52 152.59 571 阿兹欧-奈幽（尼鲁布） .go 3678.06 2166.39 35.79 571 紫罗兰城堡（监狱） .go 5696.87 505.73 652.69 571 刚德拉克 .go 6969.75 -4402.35 441.58 571 德拉克塞隆要塞 .go 4774.21 -2046.72 229.42 571 安卡罕特.古王国 .go 3641.85 2032.94 2.47 571 纳克萨玛斯NAXX .go 3666.79 -1264.78 243.52 571 俄特加德要塞 .go 1224.24 -4864.12 41.25 571</description>
+    </item>
+    
+    <item>
+      <title>奥杜亚</title>
+      <link>http://korman.github.io/post/wow/teleport/%E5%A5%A5%E6%9D%9C%E4%BA%9A/</link>
+      <pubDate>Thu, 17 Sep 2020 13:35:43 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/teleport/%E5%A5%A5%E6%9D%9C%E4%BA%9A/</guid>
+      <description>奥杜亚(外围).go -768.06 -135.60 429.79 603 生命温室：.go 2292.56 -9.74 422.59 603 雷鸣之厅：.go 2134.9 -259.7 419.8 603 前厅 .go 1651.86 -23.43 427.30 603 创思之厅：.go 2703.92 2569.63 364.31 603 癫狂斜廊：.go 1848.49 136.84 341.80 603</description>
+    </item>
     
     <item>
       <title>战斗宠物</title>
