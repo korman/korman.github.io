@@ -152,7 +152,7 @@
       <pubDate>Thu, 17 Sep 2020 11:13:14 +0800</pubDate>
       
       <guid>http://korman.github.io/post/wow/pet/%E6%88%98%E6%96%97%E5%AE%A0%E7%89%A9/</guid>
-      <description>.demorph 改变人物回缺省外形 战斗宠物 .npc add ID 作用 4950 召唤赫尔库拉之犬 6251 召唤红衣大炮 7903 召唤熊 7905 召唤野猪 7906 召唤豹 7907 召唤螃蟹 7908 召唤鳄鱼 7909 召唤猩猩 7910 召唤迅猛龙 7911 召唤蝎子 7912 召唤蜘蛛 7913 召唤陆行鸟 7914 召唤灵魂 7915 召唤海龟 7916 召唤斑马 7904 召唤鸟 8270 召唤地行者 8271 召唤风嚎者 8274 召唤战斗猪 8276 召唤土狼 8594 召唤月夜猛虎幼崽 宠物技能</description>
+      <description>缺省 .demorph 改变人物回缺省外形 战斗宠物 .npc add ID 作用 4950 召唤赫尔库拉之犬 6251 召唤红衣大炮 7903 召唤熊 7905 召唤野猪 7906 召唤豹 7907 召唤螃蟹 7908 召唤鳄鱼 7909 召唤猩猩 7910 召唤迅猛龙 7911 召唤蝎子 7912 召唤蜘蛛 7913 召唤陆行鸟 7914 召唤灵魂 7915 召唤海龟 7916 召唤斑马 7904 召唤鸟 8270 召唤地行者 8271 召唤风嚎者 8274 召唤战斗猪 8276 召唤土狼 8594 召唤月夜猛虎幼崽 宠物</description>
     </item>
     
     <item>
@@ -315,6 +315,15 @@
       
       <guid>http://korman.github.io/post/wow/base/bot%E5%AE%8F/</guid>
       <description>基础 机器人用“停止”命令后，鼠标右键点击机器人即可对话，可以分配机器人职责（坦克、奶、输出——如“坦克”选择“近战，坦克”；“治疗”选择“远程，治疗”、或“近战，治疗”，或：“治疗”），交易装备给他；交易完成用“跟随”命令即可 机器人装备指南 伤害受玩家装备等级和他自己装备影响，好装</description>
+    </item>
+    
+    <item>
+      <title>搜索</title>
+      <link>http://korman.github.io/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://korman.github.io/search/</guid>
+      <description></description>
     </item>
     
   </channel>
