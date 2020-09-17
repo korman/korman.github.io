@@ -3,12 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://korman.github.io/about/</loc>
-    <lastmod>2020-09-17T09:03:30+08:00</lastmod>
+    <loc>http://korman.github.io/categories/</loc>
+    <lastmod>2020-09-17T09:24:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://korman.github.io/tags/gm%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2020-09-17T09:24:40+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://korman.github.io/</loc>
+    <lastmod>2020-09-17T09:24:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://korman.github.io/post/</loc>
+    <lastmod>2020-09-17T09:24:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://korman.github.io/tags/</loc>
+    <lastmod>2020-09-17T09:24:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://korman.github.io/post/wow/base/%E5%9F%BA%E6%9C%AC%E7%AE%A1%E7%90%86gm%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2020-09-17T09:24:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://korman.github.io/categories/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C/</loc>
+    <lastmod>2020-09-17T09:24:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://korman.github.io/about/</loc>
     <lastmod>2020-09-17T09:03:30+08:00</lastmod>
   </url>
   
@@ -18,11 +48,13 @@
   </url>
   
   <url>
-    <loc>http://korman.github.io/categories/</loc>
+    <loc>http://korman.github.io/post/wow/base/%E7%A7%B0%E5%8F%B7/</loc>
+    <lastmod>2020-09-16T14:46:04+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://korman.github.io/tags/</loc>
+    <loc>http://korman.github.io/post/wow/base/bot%E5%AE%8F/</loc>
+    <lastmod>2020-09-15T17:23:58+08:00</lastmod>
   </url>
   
 </urlset>
