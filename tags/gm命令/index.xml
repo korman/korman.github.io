@@ -6,10 +6,73 @@
     <description>Recent content in gm命令 on Korman个人微博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 17 Sep 2020 10:31:59 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2020 11:13:14 +0800</lastBuildDate>
     
 	<atom:link href="http://korman.github.io/tags/gm%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>战斗宠物</title>
+      <link>http://korman.github.io/post/wow/pet/%E6%88%98%E6%96%97%E5%AE%A0%E7%89%A9/</link>
+      <pubDate>Thu, 17 Sep 2020 11:13:14 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/pet/%E6%88%98%E6%96%97%E5%AE%A0%E7%89%A9/</guid>
+      <description>.demorph 改变人物回缺省外形 战斗宠物 .npc add ID 作用 4950 召唤赫尔库拉之犬 6251 召唤红衣大炮 7903 召唤熊 7905 召唤野猪 7906 召唤豹 7907 召唤螃蟹 7908 召唤鳄鱼 7909 召唤猩猩 7910 召唤迅猛龙 7911 召唤蝎子 7912 召唤蜘蛛 7913 召唤陆行鸟 7914 召唤灵魂 7915 召唤海龟 7916 召唤斑马 7904 召唤鸟 8270 召唤地行者 8271 召唤风嚎者 8274 召唤战斗猪 8276 召唤土狼 8594 召唤月夜猛虎幼崽 宠物技能</description>
+    </item>
+    
+    <item>
+      <title>有趣的东西</title>
+      <link>http://korman.github.io/post/wow/pet/%E6%9C%89%E8%B6%A3%E7%9A%84%E4%B8%9C%E8%A5%BF/</link>
+      <pubDate>Thu, 17 Sep 2020 11:09:39 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/pet/%E6%9C%89%E8%B6%A3%E7%9A%84%E4%B8%9C%E8%A5%BF/</guid>
+      <description>有趣的东西~ 学习类的 使用.learn命令 ID 作用 17707 召唤熊猫 17708 召唤迷你破坏神 23530 召唤红色小神龙 40634 小新 7975 召唤Party机器小姐（无数量限制） 添加物品的 使用.additem命令 ID 作用 32622 小象项圈 32617 贪睡的威利 32616 蛋蛋的蛋 32233 鹿角小飞兔的酒杯 31880 血精灵孤儿哨 34425 发条机器人 34493 风筝 34499 纸飞机 34492 火箭鸡 33924 美味巧克</description>
+    </item>
+    
+    <item>
+      <title>玩具</title>
+      <link>http://korman.github.io/post/wow/pet/%E7%8E%A9%E5%85%B7/</link>
+      <pubDate>Thu, 17 Sep 2020 11:07:45 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/pet/%E7%8E%A9%E5%85%B7/</guid>
+      <description>介绍 先选中自己，再输入.learn id ID列表 ID 名字 介绍 62857 沙池虎 右键点击以召唤一只沙池虎 61031 玩具火车组 右键点击以架设你的玩具火车组。 61032 复制的可爱蛋糕 右键点击以准备一块可爱蛋糕，足以提供5名小队成员食用。 61033 陈年达拉然圆形重奶酪 右键点击以准备一块陈年达拉然圆形重奶酪，足以提供5名小队成员</description>
+    </item>
+    
+    <item>
+      <title>搜索宠物方法</title>
+      <link>http://korman.github.io/post/wow/pet/%E6%90%9C%E7%B4%A2%E5%AE%A0%E7%89%A9%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 17 Sep 2020 11:07:01 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/pet/%E6%90%9C%E7%B4%A2%E5%AE%A0%E7%89%A9%E6%96%B9%E6%B3%95/</guid>
+      <description>.lookup item 宠物名字 然后.additem 代码</description>
+    </item>
+    
+    <item>
+      <title>魔兽非战斗宠物全收藏</title>
+      <link>http://korman.github.io/post/wow/pet/%E9%AD%94%E5%85%BD%E9%9D%9E%E6%88%98%E6%96%97%E5%AE%A0%E7%89%A9%E5%85%A8%E6%94%B6%E8%97%8F/</link>
+      <pubDate>Thu, 17 Sep 2020 10:54:53 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/pet/%E9%AD%94%E5%85%BD%E9%9D%9E%E6%88%98%E6%96%97%E5%AE%A0%E7%89%A9%E5%85%A8%E6%94%B6%E8%97%8F/</guid>
+      <description>列表 命令 宝宝名 .additem 23713 角鹰兽宝宝 .additem 34493 飞龙风筝 .additem 49287 巨牙海民风筝 .additem 39973 幽灵颅骨 .additem 38658 吸血蝙蝠宝宝 .additem 38628 小虚空鳐 .additem 35504 凤凰宝宝 .additem 34478 微型孢子蝠 .additem 46802 沉重的鱼人卵(鱼人机枪兵) .additem 46894 魔化碧玉 .additem 46892 莫叽姆斯的小矛 .additem 20371 蓝色鱼人卵 .additem 13584 破坏神之石 .additem 13583 熊猫项圈 .additem 13582 跳虫绳索 .additem 35350 莫莫的小桶 .additem 35349 尼尼的小桶 .additem 34955 灼烧石 .additem 33818 毒皮</description>
+    </item>
+    
+    <item>
+      <title>好看猎人宝宝</title>
+      <link>http://korman.github.io/post/wow/pet/%E5%A5%BD%E7%9C%8B%E7%8C%8E%E4%BA%BA%E5%AE%9D%E5%AE%9D/</link>
+      <pubDate>Thu, 17 Sep 2020 10:42:42 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/pet/%E5%A5%BD%E7%9C%8B%E7%8C%8E%E4%BA%BA%E5%AE%9D%E5%AE%9D/</guid>
+      <description>描述 .npc add id 召唤出来 兽王天赋猎人可以抓 列表 名字 ID 介绍 猎人宝宝-Skoll 35189 传说中身上围绕着电的 狼宝宝！很漂亮哦！ 猎人宝宝-古德利亚 33776 传说中的幽灵虎！很拉风 猎人宝宝-Arcturis 38453 传说中的幽灵熊！也很拉风 猎人宝宝-洛卡纳哈 32517 这只其实我感觉没有上面的帅</description>
+    </item>
+    
+    <item>
+      <title>宠物</title>
+      <link>http://korman.github.io/post/wow/pet/%E5%AE%A0%E7%89%A9/</link>
+      <pubDate>Thu, 17 Sep 2020 10:37:01 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/pet/%E5%AE%A0%E7%89%A9/</guid>
+      <description>介绍 先选中自己，再输入.learn id，具体id列表如下 列表 技能id 宠物名字 描述 65381 好奇的小神谕者 右键点击以召唤或解散好奇的小神谕者。 65382 好奇的小獾狼怪 右键点击以召唤或解散好奇的小獾狼。 67413 小飞奔迅猛龙 右键点击以召唤或解散你的小迅猛龙。 67414 小变异迅猛龙 右键点击以召唤或解散你的小迅猛龙。 67415</description>
+    </item>
     
     <item>
       <title>重置副本</title>
