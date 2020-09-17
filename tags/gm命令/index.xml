@@ -6,10 +6,55 @@
     <description>Recent content in gm命令 on Korman个人微博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 17 Sep 2020 10:01:48 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2020 10:31:59 +0800</lastBuildDate>
     
 	<atom:link href="http://korman.github.io/tags/gm%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>重置副本</title>
+      <link>http://korman.github.io/post/wow/base/%E9%87%8D%E7%BD%AE%E5%89%AF%E6%9C%AC/</link>
+      <pubDate>Thu, 17 Sep 2020 10:31:59 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/base/%E9%87%8D%E7%BD%AE%E5%89%AF%E6%9C%AC/</guid>
+      <description>注意重置不是全部，而是选择得置哪个怪或者BOSS 在副本内输入.respawn 在重置前先用.gm on 开启GM模式 选中要重置的怪或者BOSS输入.respawn 然在输入.gm off 关闭GM 模式 ，就可以开打了</description>
+    </item>
+    
+    <item>
+      <title>GM基本命令</title>
+      <link>http://korman.github.io/post/wow/base/gm%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Thu, 17 Sep 2020 10:31:21 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/base/gm%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</guid>
+      <description>gm使用方法 在游戏选中自己头像， 按回车 输入就行了 比如 .modify money 给自己加金钱，后面空一格加数字，数字是以铜为单位的， 就打 .modify money 99999 然后回车 升级 .levelup 99 添加装备就是.additem xxxxx xxxx就是装备代码 命令里都有 常用命令 .modify money 999999999 给自己加金钱，后面空一格加数字，数字是以铜为单位的，要点下自己 .modify speed 10 改变</description>
+    </item>
+    
+    <item>
+      <title>重置人物</title>
+      <link>http://korman.github.io/post/wow/role/%E9%87%8D%E7%BD%AE%E4%BA%BA%E7%89%A9/</link>
+      <pubDate>Thu, 17 Sep 2020 10:30:30 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/role/%E9%87%8D%E7%BD%AE%E4%BA%BA%E7%89%A9/</guid>
+      <description>.reset stats 重置目标所有状态 .reset honor 重置目标荣誉点数 .reset level 重置目标等级 .reset spells 重置目标所有技能 .reset talents 重置目标所有天赋</description>
+    </item>
+    
+    <item>
+      <title>36格包包代码</title>
+      <link>http://korman.github.io/post/wow/item/36%E6%A0%BC%E5%8C%85%E5%8C%85%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Thu, 17 Sep 2020 10:29:55 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/item/36%E6%A0%BC%E5%8C%85%E5%8C%85%E4%BB%A3%E7%A0%81/</guid>
+      <description>.additem 23162</description>
+    </item>
+    
+    <item>
+      <title>技能冷却</title>
+      <link>http://korman.github.io/post/wow/role/%E6%8A%80%E8%83%BD%E5%86%B7%E5%8D%B4/</link>
+      <pubDate>Thu, 17 Sep 2020 10:28:51 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/wow/role/%E6%8A%80%E8%83%BD%E5%86%B7%E5%8D%B4/</guid>
+      <description>.cooldown 立即使目标的魔法冷却</description>
+    </item>
     
     <item>
       <title>所有物品代码</title>
