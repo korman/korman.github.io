@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>玩具 | Korman的个人博客</title>
-    <meta property="og:title" content="玩具 - Korman的个人博客">
+    <title>[转载]Agones：一款基于Kubernetes的开源游戏服务器 | Korman的个人博客</title>
+    <meta property="og:title" content="[转载]Agones：一款基于Kubernetes的开源游戏服务器 - Korman的个人博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-09-17T11:07:45&#43;08:00'>
+    <meta property="article:published_time" content='2020-09-18T17:10:08&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-09-17T11:07:45&#43;08:00'>
+    <meta property="article:modified_time" content='2020-09-18T17:10:08&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="玩具">
+    <meta name="description" content="[转载]Agones：一款基于Kubernetes的开源游戏服务器">
         
     <meta name="author" content="Korman">
-    <meta property="og:url" content="http://korman.github.io/post/wow/pet/%E7%8E%A9%E5%85%B7/">
+    <meta property="og:url" content="http://korman.github.io/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -132,8 +132,10 @@
     <div class="post-toc-content">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#介绍">介绍</a></li>
-    <li><a href="#id列表">ID列表</a></li>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#特性">特性</a></li>
+    <li><a href="#开始">开始</a></li>
+    <li><a href="#下一步">下一步</a></li>
   </ul>
 </nav>
     </div>
@@ -167,16 +169,16 @@
 </script>
     <article class="post">
         <header>
-            <h1 class="post-title">玩具</h1>
+            <h1 class="post-title">[转载]Agones：一款基于Kubernetes的开源游戏服务器</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年9月17日
+            2020年9月18日
         </date>
         
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='http://korman.github.io/categories/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C'>魔兽世界</a></span>
+            <span class="meta-category"><a href='http://korman.github.io/categories/go%E8%AF%AD%E8%A8%80'>Go语言</a></span>
             
         </div>
         
@@ -189,380 +191,39 @@
         </div>
         
         <div class="post-content">
-            <h2 id="介绍">介绍</h2>
-<p>先选中自己，再输入.learn id</p>
-<h2 id="id列表">ID列表</h2>
-<table>
-<thead>
-<tr>
-<th>ID</th>
-<th>名字</th>
-<th>介绍</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>62857</td>
-<td>沙池虎</td>
-<td>右键点击以召唤一只沙池虎</td>
-</tr>
-<tr>
-<td>61031</td>
-<td>玩具火车组</td>
-<td>右键点击以架设你的玩具火车组。</td>
-</tr>
-<tr>
-<td>61032</td>
-<td>复制的可爱蛋糕</td>
-<td>右键点击以准备一块可爱蛋糕，足以提供5名小队成员食用。</td>
-</tr>
-<tr>
-<td>61033</td>
-<td>陈年达拉然圆形重奶酪</td>
-<td>右键点击以准备一块陈年达拉然圆形重奶酪，足以提供5名小队成员食用。</td>
-</tr>
-<tr>
-<td>61034</td>
-<td>制造陈年达拉然重奶酪</td>
-<td></td>
-</tr>
-<tr>
-<td>61035</td>
-<td>达拉然圆形冷酪</td>
-<td>右键点击以准备一块达拉然圆形冷酪，足以提供5名小队成员食用。</td>
-</tr>
-<tr>
-<td>61036</td>
-<td>制造达拉然冷酪</td>
-<td></td>
-</tr>
-<tr>
-<td>61037</td>
-<td>复制的可爱蛋糕</td>
-<td>右键点击以准备一块可爱蛋糕，足以提供5名小队成员食用。</td>
-</tr>
-<tr>
-<td>61038</td>
-<td>新鲜的达拉然面包</td>
-<td>右键点击以准备一块新鲜的达拉然面包，足以提供5名小队成员食用。</td>
-</tr>
-<tr>
-<td>61045</td>
-<td>一瓶达拉然红酒</td>
-<td>右键点击以准备一瓶达拉然红酒，足以提供5名小队成员食用。</td>
-</tr>
-<tr>
-<td>61046</td>
-<td>制造一瓶达拉然红酒</td>
-<td></td>
-</tr>
-<tr>
-<td>61047</td>
-<td>一瓶达拉然白酒</td>
-<td>右键点击以准备一瓶达拉然白酒，足以提供5名小队成员食用。</td>
-</tr>
-<tr>
-<td>61048</td>
-<td>制造一瓶达拉然白酒</td>
-<td></td>
-</tr>
-<tr>
-<td>61050</td>
-<td>一瓶陈年达拉然红酒</td>
-<td>右键点击可设置一瓶陈年达拉然红酒供5名队伍成员饮用。</td>
-</tr>
-<tr>
-<td>61051</td>
-<td>制造一瓶陈年达拉然红酒</td>
-<td></td>
-</tr>
-<tr>
-<td>61052</td>
-<td>一桶达拉然白酒</td>
-<td>右键点击以准备一桶达拉然白酒，足以提供25名小队成员食用。</td>
-</tr>
-<tr>
-<td>61053</td>
-<td>一桶达拉然红酒</td>
-<td>右键点击以准备一桶达拉然红酒，足以提供25名小队成员食用。</td>
-</tr>
-<tr>
-<td>61063</td>
-<td>一瓶顶级达拉然红酒</td>
-<td>右键点击以准备一瓶顶级达拉然红酒，足以提供5名小队成员食用。</td>
-</tr>
-<tr>
-<td>62736</td>
-<td>暴风城旌旗</td>
-<td>右键点击以插上你的暴风城旌旗。</td>
-</tr>
-<tr>
-<td>62737</td>
-<td>铁炉堡旌旗</td>
-<td>右键点击以插上你的铁炉堡旌旗。</td>
-</tr>
-<tr>
-<td>62738</td>
-<td>森金旌旗</td>
-<td>右键点击以插上你的森金旌旗。</td>
-</tr>
-<tr>
-<td>62739</td>
-<td>达纳苏斯旌旗</td>
-<td>右键点击以插上你的达纳苏斯旌旗。</td>
-</tr>
-<tr>
-<td>62740</td>
-<td>艾克索达旌旗</td>
-<td>右键点击以插上你的艾克索达旌旗。</td>
-</tr>
-<tr>
-<td>62741</td>
-<td>诺姆瑞根旌旗</td>
-<td>右键点击以插上你的诺姆瑞根旌旗。</td>
-</tr>
-<tr>
-<td>62742</td>
-<td>奥格玛旌旗</td>
-<td>右键点击以插上你的奥格玛旌旗。</td>
-</tr>
-<tr>
-<td>62743</td>
-<td>幽暗城旌旗</td>
-<td>右键点击以插上你的幽暗城旌旗。</td>
-</tr>
-<tr>
-<td>62744</td>
-<td>银月城旌旗</td>
-<td>右键点击以插上你的银月城旌旗。</td>
-</tr>
-<tr>
-<td>62745</td>
-<td>雷霆崖旌旗</td>
-<td>右键点击以插上你的雷霆崖旌旗。</td>
-</tr>
-<tr>
-<td>63421</td>
-<td>艾克索达志士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63518</td>
-<td>放置联盟勇士旗帜</td>
-<td></td>
-</tr>
-<tr>
-<td>63519</td>
-<td>放置部落勇士旗帜</td>
-<td></td>
-</tr>
-<tr>
-<td>63422</td>
-<td>艾克索达骁士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63423</td>
-<td>艾克索达勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63425</td>
-<td>铁炉堡志士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63426</td>
-<td>铁炉堡骁士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63427</td>
-<td>铁炉堡勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63428</td>
-<td>幽暗城志士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63429</td>
-<td>幽暗城骁士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63430</td>
-<td>幽暗城勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63431</td>
-<td>奥格玛志士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63432</td>
-<td>奥格玛骁士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63433</td>
-<td>奥格玛勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63434</td>
-<td>雷霆崖志士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63435</td>
-<td>雷霆崖骁士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63436</td>
-<td>雷霆崖勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63438</td>
-<td>银月城勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63439</td>
-<td>艾克索达勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63440</td>
-<td>铁炉堡勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63441</td>
-<td>幽暗城勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63442</td>
-<td>诺姆瑞根勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63443</td>
-<td>达纳苏斯勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63444</td>
-<td>奥格玛勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63445</td>
-<td>雷霆崖勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63446</td>
-<td>森金勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63401</td>
-<td>银月城志士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63402</td>
-<td>银月城骁士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63403</td>
-<td>银月城勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63404</td>
-<td>达纳苏斯志士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63405</td>
-<td>达纳苏斯骁士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63406</td>
-<td>达纳苏斯勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63394</td>
-<td>诺姆瑞根志士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63395</td>
-<td>诺姆瑞根骁士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63396</td>
-<td>诺姆瑞根勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63397</td>
-<td>森金志士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63398</td>
-<td>森金骁士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63399</td>
-<td>森金勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63500</td>
-<td>银白十字军骁士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63501</td>
-<td>银白十字军勇士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63606</td>
-<td>银白十字军志士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63607</td>
-<td>黯刃志士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63608</td>
-<td>黯刃骁士锦旗</td>
-<td></td>
-</tr>
-<tr>
-<td>63609</td>
-<td>黯刃勇士锦旗</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+            <h2 id="简介">简介</h2>
+<p>在分布式系统领域，支持在线弹性扩展，实时多人专属游戏服务器意味着特殊的挑战。随着游戏专业人士创造的各种特殊方案，Kubernetes被整合成跨云和物理机，支持复杂工作流的开源分布式标准。今天，我们很高兴发布开源Agones[1]（希腊语“contest”或者“gathering”的意思）项目，支持弹性扩展实时多人专属游戏平台。</p>
+<p>按照目前跟游戏业界巨头Ubisoft的合作进展，Agones被定位为自驱动（batteries-included），开源，基于Kubernetes的专属弹性游戏平台项目，用户可以在其上按需灵活调整自己的游戏主机配置。</p>
+<h2 id="特性">特性</h2>
+<p>专属游戏服务器的特性</p>
+<p>游戏行业一般通过软件调度编排实现游戏服务弹性扩展，而系统级的弹性则很少被考虑，实际上这并不奇怪。许多流行在线多人游戏都需要专属服务器，例如competitive FPSs、MMOs和MOBAs，它们都需要给玩家共享同一个游戏世界的感受。这种专属服务器一般都部署在互联网上，来实时同步玩家之间的状态，同时也需要对每个玩家状态进行裁决，保证大家不会作弊。</p>
+<p>专属游戏服务器是在内存中保留游戏信息的有状态应用。但是和其它有状态应用（如数据库）不同，他们生命周期很短，一般只需保留几分钟或者几个小时。专属游服也需要直连到运行服务进程的IP和端口，而不是通过负载均衡器，因此这类应用对网络延迟很敏感（复杂均衡器只会增加延迟）。另外所有连到同一台服务器玩家会共享内存状态，因此将他们连到同一台设备最简单。下图是一个典型架构，具体过程如下：</p>
+<p>玩家们连接到某种匹配服务，匹配服务（一般通过玩家等级）将玩家匹配分组。</p>
+<p>一旦玩家匹配成功，匹配服务通知游戏管理器在服务器集群中提供一个专属游戏进程。</p>
+<p>游戏管理器在集群中某台机器上创建专属游戏服务。</p>
+<p>游戏管理器给专属游戏服务分配IP地址和服务端口，并返回匹配器。</p>
+<p>匹配器将返回的IP地址和端口回传给玩家</p>
+<p>玩家们直连到专属服务进程开始游戏。</p>
+<p>基于Kubernetes构建开源Agones</p>
+<p>Agones用Kubernetes集群替代了图一架构图中的集群管理和弹性扩展功能，其中包括一个客制化Kubernetes控制器和客制化的游戏服务资源定义匹配器。如图二所示：</p>
+<p>Agones通过调用标准Kubernetes功能和API提供的内置功能，可以在Kubernetes集群中提供创建、运行、管理和弹性扩展专属服务进程的能力。这种模式也允许匹配器直接通过Kubernetes API和Agones沟通生成专属游戏服务。</p>
+<p>在Kubernetes之上构建Agones还有其它好处：可以很容易在任何地方，例如开发者设备，通过像minikutbe、in-studi集群，on-premises设备或者云环境等平台直接运行游戏负载。Kubernetes也可以简化操作。多人游戏除了专属服务器外，还有后勤服务、账户管理、装备、市场等其他进程支撑。用Kubernetes作为单一平台可以动态运行支撑进程，减少开发团队面对的游戏层面复杂逻辑关系。</p>
+<p>最后一点，Agones后台并不只是孤立的游戏开发，其后台可以使用Kubernetes贡献者和大量成熟工具带来的生态系统。Ubisoft在Agones项目中资助了贡献者，将他们顶尖的知识带到了AAA级游戏玩家面前。</p>
+<p>我们的目的就是尽所能提供提供高质量无缝服务，让玩家只需专注于游戏中。Agones帮助我们在数据中心运行专属游戏服务的灵活性，而且给开发团队提供了更多资源可控性。这种合作为整合Google云平台专业性和我们队游戏行业的专业理解提供了可能性。</p>
+<p>——Carl Dionne，开发总监，Online Technology Group，Ubisoft</p>
+<h2 id="开始">开始</h2>
+<p>因为Agones是基于Kubernetes扩展开发的，因此可以使用所有标准Kubernetes工具，包括kubectl和Kubernetes API。</p>
+<p>创建游戏服务器</p>
+<p>使用如下命令创建专属游戏服务：</p>
+<p>Dockerfile</p>
+<p>通过变价Kubernetes Pod配置选线提价游戏服务资源：</p>
+<p>gameserver.yaml</p>
+<p>通过kubectl命令行或者Kubernetes API提交以上定义：</p>
+<p>Agones会按照yaml文件中配置启动游戏服务器，分配一个公有端口，将IP和端口号发回玩家端进行直连。通过嵌入游戏服务器内的SDK代码监控游戏服务器生命周期和状态。可以通过kubectl和Kubernetes API向游戏服务器请求获得各种信息，包括状态、IP和端口等。</p>
+<h2 id="下一步">下一步</h2>
+<p>Agones还是很初级阶段，但是我们对它的未来很期待。我们在其上已经开始了不少功能，例如游戏服务器集群[2]，包括支持Windows的0.2版本[3]路标支持，游戏服务器状态搜集和显示，节点自动扩展等。</p>
+<p>如果想尝试Agones 0.1 alpha版本，可以直接在Kubernetes集群上安装，例如：GKE or minikube；我们也有一个很好的安装文档[4]可以参考。</p>
+<p>原文链接：http://kuaibao.qq.com/s/20180316B07IA600?refer=cp_1026</p>
 
         </div>
 
@@ -575,15 +236,11 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/wow/pet/%E6%90%9C%E7%B4%A2%E5%AE%A0%E7%89%A9%E6%96%B9%E6%B3%95/">搜索宠物方法</a></li>
+        <li><a href="/post/golang/%E4%BD%BF%E7%94%A8micro%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1/">[转载]使用micro创建微服务</a></li>
         
-        <li><a href="/post/wow/pet/%E9%AD%94%E5%85%BD%E9%9D%9E%E6%88%98%E6%96%97%E5%AE%A0%E7%89%A9%E5%85%A8%E6%94%B6%E8%97%8F/">魔兽非战斗宠物全收藏</a></li>
+        <li><a href="/post/golang/gomicro%E7%BC%96%E5%86%99%E5%BE%AE%E6%9C%8D%E5%8A%A1/">[转载]go-micro讲解--Go Micro编写微服务</a></li>
         
-        <li><a href="/post/wow/pet/%E5%A5%BD%E7%9C%8B%E7%8C%8E%E4%BA%BA%E5%AE%9D%E5%AE%9D/">好看猎人宝宝</a></li>
-        
-        <li><a href="/post/wow/pet/%E5%AE%A0%E7%89%A9/">宠物</a></li>
-        
-        <li><a href="/post/wow/base/%E9%87%8D%E7%BD%AE%E5%89%AF%E6%9C%AC/">重置副本</a></li>
+        <li><a href="/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/">[转载]Linux下查看文件编码及修改编码</a></li>
         
     </ul>
 </div>
@@ -593,7 +250,11 @@
             
             <ul class="clearfix">
                 
-                <li><a href='http://korman.github.io/tags/gm%E5%91%BD%E4%BB%A4'>gm命令</a></li>
+                <li><a href='http://korman.github.io/tags/golang'>golang</a></li>
+                
+                <li><a href='http://korman.github.io/tags/%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8'>游戏服务器</a></li>
+                
+                <li><a href='http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD'>转载</a></li>
                 
             </ul>
             

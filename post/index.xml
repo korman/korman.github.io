@@ -6,13 +6,22 @@
     <description>Recent content in Posts on Korman的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 18 Sep 2020 17:00:21 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2020 17:10:08 +0800</lastBuildDate>
     
 	<atom:link href="http://korman.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Linux下查看文件编码及修改编码</title>
+      <title>[转载]Agones：一款基于Kubernetes的开源游戏服务器</title>
+      <link>http://korman.github.io/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <pubDate>Fri, 18 Sep 2020 17:10:08 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description>简介 在分布式系统领域，支持在线弹性扩展，实时多人专属游戏服务器意味着特殊的挑战。随着游戏专业人士创造的各种特殊方案，Kubernetes被整合成跨云和物理机，支持复杂工作流的开源分布式标准。今天，我们很高兴发布开源Agones[1]（希腊语“contest”或者“gatherin</description>
+    </item>
+    
+    <item>
+      <title>[转载]Linux下查看文件编码及修改编码</title>
       <link>http://korman.github.io/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/</link>
       <pubDate>Fri, 18 Sep 2020 17:00:21 +0800</pubDate>
       
