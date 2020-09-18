@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Korman的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 18 Sep 2020 09:20:37 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2020 17:00:21 +0800</lastBuildDate>
     
 	<atom:link href="http://korman.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>linux</title>
+      <link>http://korman.github.io/tags/linux/</link>
+      <pubDate>Fri, 18 Sep 2020 17:00:21 +0800</pubDate>
+      
+      <guid>http://korman.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>转载</title>
+      <link>http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD/</link>
+      <pubDate>Fri, 18 Sep 2020 17:00:21 +0800</pubDate>
+      
+      <guid>http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>golang</title>
@@ -26,15 +44,6 @@
       <pubDate>Fri, 18 Sep 2020 09:20:37 +0800</pubDate>
       
       <guid>http://korman.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>转载</title>
-      <link>http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD/</link>
-      <pubDate>Fri, 18 Sep 2020 09:20:37 +0800</pubDate>
-      
-      <guid>http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD/</guid>
       <description></description>
     </item>
     
