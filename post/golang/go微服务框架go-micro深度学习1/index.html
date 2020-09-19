@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>[转载]go微服务框架go-micro深度学习(一) | Korman的个人博客</title>
+    <meta property="og:title" content="[转载]go微服务框架go-micro深度学习(一) - Korman的个人博客">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-09-19T13:16:04&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-09-19T13:16:04&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="[转载]go微服务框架go-micro深度学习(一)">
+        
+    <meta name="author" content="Korman">
+    <meta property="og:url" content="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A01/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://korman.github.io/">
+                        Korman的个人博客
+                    </a>
+                
+                <p class="description">Korman&#39;s Blog</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://korman.github.io/">首页</a>
+                    
+                    <a  href="http://korman.github.io/about/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#起因">起因</a>
+      <ul>
+        <li><a href="#通信流程">通信流程</a></li>
+        <li><a href="#transort">Transort</a></li>
+        <li><a href="#codec">Codec</a></li>
+        <li><a href="#registry">Registry</a></li>
+        <li><a href="#selector">Selector</a></li>
+        <li><a href="#broker">Broker</a></li>
+        <li><a href="#client">Client</a></li>
+        <li><a href="#server">Server</a></li>
+        <li><a href="#service">Service</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">[转载]go微服务框架go-micro深度学习(一)</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年9月19日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://korman.github.io/categories/go%E8%AF%AD%E8%A8%80'>Go语言</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
+        </div>
+        
+        <div class="post-content">
+            <h2 id="起因">起因</h2>
+<p>产品嘴里的一个小项目，从立项到开发上线，随着时间和需求的不断激增，会越来越复杂，变成一个大项目，如果前期项目架构没设计的不好，代码会越来越臃肿，难以维护，后期的每次产品迭代上线都会牵一发而动全身。项目微服务化，松耦合模块间的关系，是一个很好的选择，随然增加了维护成本，但是还是很值得的。</p>
+<p>
+        <img class="mx-auto" alt="f88db6da-91ff-4597-84ae-e8b065108441" src="/Users/kakuhiroshi/code/kormanweb/static/post/golang/go%e5%be%ae%e6%9c%8d%e5%8a%a1%e6%a1%86%e6%9e%b6go-micro%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0/f88db6da-91ff-4597-84ae-e8b065108441.png" />   
+    </p>
+<p>微服务化项目除了稳定性我个人还比较关心的几个问题：</p>
+<p>一: 服务间数据传输的效率和安全性。</p>
+<p>二: 服务的动态扩充，也就是服务的注册和发现，服务集群化。</p>
+<p>三: 微服务功能的可订制化，因为并不是所有的功能都会很符合你的需求，难免需要根据自己的需要二次开发一些功能。</p>
+<p>go-micro是go语言下的一个很好的rpc微服务框架，功能很完善，而且我关心的几个问题也解决的很好：</p>
+<p>一：服务间传输格式为protobuf，效率上没的说，非常的快，也很安全。</p>
+<p>二：go-micro的服务注册和发现是多种多样的。我个人比较喜欢etcdv3的服务服务发现和注册。</p>
+<p>三：主要的功能都有相应的接口，只要实现相应的接口，就可以根据自己的需要订制插件。</p>
+<p>业余时间把go-micro的源码系统地读了一遍，越读越感觉这个框架写的好，从中也学到了很多东西。就想整理一系列的帖子，把学习go-micro的心得和大家分享。</p>
+<h3 id="通信流程">通信流程</h3>
+<p>go-micro的通信流程大至如下</p>
+<p>
+        <img class="mx-auto" alt="f5026514-173e-4cc1-96aa-944e8f644f55" src="/Users/kakuhiroshi/code/kormanweb/static/post/golang/go%e5%be%ae%e6%9c%8d%e5%8a%a1%e6%a1%86%e6%9e%b6go-micro%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0/f5026514-173e-4cc1-96aa-944e8f644f55.png" />   
+    </p>
+<p>Server监听客户端的调用，和Brocker推送过来的信息进行处理。并且Server端需要向Register注册自己的存在或消亡，这样Client才能知道自己的状态。</p>
+<p>Register服务的注册的发现。</p>
+<p>Client端从Register中得到Server的信息，然后每次调用都根据算法选择一个的Server进行通信，当然通信是要经过编码/解码，选择传输协议等一系列过程的。</p>
+<p>如果有需要通知所有的Server端可以使用Brocker进行信息的推送。</p>
+<p>Brocker 信息队列进行信息的接收和发布。</p>
+<p>go-micro之所以可以高度订制和他的框架结构是分不开的，go-micro由8个关键的interface组成，每一个interface都可以根据自己的需求重新实现，这8个主要的inteface也构成了go-micro的框架结构。</p>
+<p>
+        <img class="mx-auto" alt="dc612ff8-d2fd-435a-b816-3566797e2db0" src="/Users/kakuhiroshi/code/kormanweb/static/post/golang/go%e5%be%ae%e6%9c%8d%e5%8a%a1%e6%a1%86%e6%9e%b6go-micro%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0/dc612ff8-d2fd-435a-b816-3566797e2db0.png" />   
+    </p>
+<p>这些接口go-micir都有他自己默认的实现方式，还有一个go-plugins是对这些接口实现的可替换项。你也可以根据需求实现自己的插件。</p>
+<p>
+        <img class="mx-auto" alt="ced236c0-608a-4f7c-a777-57e369241228" src="/Users/kakuhiroshi/code/kormanweb/static/post/golang/go%e5%be%ae%e6%9c%8d%e5%8a%a1%e6%a1%86%e6%9e%b6go-micro%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0/ced236c0-608a-4f7c-a777-57e369241228.png" />   
+    </p>
+<p>这篇帖子主要是给大家介绍go-micro的主体结构和这些接口的功能，具体细节以后的文章我们再慢慢说：</p>
+<h3 id="transort">Transort</h3>
+<p>服务之间通信的接口。也就是服务发送和接收的最终实现方式，是由这些接口定制的。</p>
+<p>源码：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Socket</span> <span style="color:#66d9ef">interface</span> {
+    <span style="color:#a6e22e">Recv</span>(<span style="color:#f92672">*</span><span style="color:#a6e22e">Message</span>) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Send</span>(<span style="color:#f92672">*</span><span style="color:#a6e22e">Message</span>) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Close</span>() <span style="color:#66d9ef">error</span>
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Client</span> <span style="color:#66d9ef">interface</span> {
+    <span style="color:#a6e22e">Socket</span>
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Listener</span> <span style="color:#66d9ef">interface</span> {
+    <span style="color:#a6e22e">Addr</span>() <span style="color:#66d9ef">string</span>
+    <span style="color:#a6e22e">Close</span>() <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Accept</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">Socket</span>)) <span style="color:#66d9ef">error</span>
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Transport</span> <span style="color:#66d9ef">interface</span> {
+    <span style="color:#a6e22e">Dial</span>(<span style="color:#a6e22e">addr</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">opts</span> <span style="color:#f92672">...</span><span style="color:#a6e22e">DialOption</span>) (<span style="color:#a6e22e">Client</span>, <span style="color:#66d9ef">error</span>)
+    <span style="color:#a6e22e">Listen</span>(<span style="color:#a6e22e">addr</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">opts</span> <span style="color:#f92672">...</span><span style="color:#a6e22e">ListenOption</span>) (<span style="color:#a6e22e">Listener</span>, <span style="color:#66d9ef">error</span>)
+    <span style="color:#a6e22e">String</span>() <span style="color:#66d9ef">string</span>
+}
+</code></pre></div><p>Transport 的Listen方法是一般是Server端进行调用的，他监听一个端口，等待客户端调用。</p>
+<p>Transport 的Dial就是客户端进行连接服务的方法。他返回一个Client接口，这个接口返回一个Client接口，这个Client嵌入了Socket接口，这个接口的方法就是具体发送和接收通信的信息。</p>
+<p>http传输是go-micro默认的同步通信机制。当然还有很多其他的插件：grpc,nats,tcp,udp,rabbitmq,nats，都是目前已经实现了的方式。在go-plugins里你都可以找到。</p>
+<h3 id="codec">Codec</h3>
+<p>有了传输方式，下面要解决的就是传输编码和解码问题，go-micro有很多种编码解码方式，默认的实现方式是protobuf,当然也有其他的实现方式，json、protobuf、jsonrpc、mercury等等。</p>
+<p>源码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Codec</span> <span style="color:#66d9ef">interface</span> {
+    <span style="color:#a6e22e">ReadHeader</span>(<span style="color:#f92672">*</span><span style="color:#a6e22e">Message</span>, <span style="color:#a6e22e">MessageType</span>) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">ReadBody</span>(<span style="color:#66d9ef">interface</span>{}) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Write</span>(<span style="color:#f92672">*</span><span style="color:#a6e22e">Message</span>, <span style="color:#66d9ef">interface</span>{}) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Close</span>() <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">String</span>() <span style="color:#66d9ef">string</span>
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Message</span> <span style="color:#66d9ef">struct</span> {
+    <span style="color:#a6e22e">Id</span>     <span style="color:#66d9ef">uint64</span>
+    <span style="color:#a6e22e">Type</span>   <span style="color:#a6e22e">MessageType</span>
+    <span style="color:#a6e22e">Target</span> <span style="color:#66d9ef">string</span>
+    <span style="color:#a6e22e">Method</span> <span style="color:#66d9ef">string</span>
+    <span style="color:#a6e22e">Error</span>  <span style="color:#66d9ef">string</span>
+    <span style="color:#a6e22e">Header</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">string</span>
+}
+</code></pre></div><p>Codec接口的Write方法就是编码过程，两个Read是解码过程。</p>
+<h3 id="registry">Registry</h3>
+<p>服务的注册和发现，目前实现的consul,mdns, etcd,etcdv3,zookeeper,kubernetes.等等，</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Registry</span> <span style="color:#66d9ef">interface</span> {
+    <span style="color:#a6e22e">Register</span>(<span style="color:#f92672">*</span><span style="color:#a6e22e">Service</span>, <span style="color:#f92672">...</span><span style="color:#a6e22e">RegisterOption</span>) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Deregister</span>(<span style="color:#f92672">*</span><span style="color:#a6e22e">Service</span>) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">GetService</span>(<span style="color:#66d9ef">string</span>) ([]<span style="color:#f92672">*</span><span style="color:#a6e22e">Service</span>, <span style="color:#66d9ef">error</span>)
+    <span style="color:#a6e22e">ListServices</span>() ([]<span style="color:#f92672">*</span><span style="color:#a6e22e">Service</span>, <span style="color:#66d9ef">error</span>)
+    <span style="color:#a6e22e">Watch</span>(<span style="color:#f92672">...</span><span style="color:#a6e22e">WatchOption</span>) (<span style="color:#a6e22e">Watcher</span>, <span style="color:#66d9ef">error</span>)
+    <span style="color:#a6e22e">String</span>() <span style="color:#66d9ef">string</span>
+    <span style="color:#a6e22e">Options</span>() <span style="color:#a6e22e">Options</span>
+}
+</code></pre></div><p>简单来说，就是Service 进行Register，来进行注册，Client 使用watch方法进行监控，当有服务加入或者删除时这个方法会被触发，以提醒客户端更新Service信息。</p>
+<p>默认的是服务注册和发现是consul，但是个人不推荐使用，因为你不能直接使用consul集群</p>
+<p>
+        <img class="mx-auto" alt="dcf5053c-4e28-4ce5-be2e-9b1c13042079" src="/Users/kakuhiroshi/code/kormanweb/static/post/golang/go%e5%be%ae%e6%9c%8d%e5%8a%a1%e6%a1%86%e6%9e%b6go-micro%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0/dcf5053c-4e28-4ce5-be2e-9b1c13042079.png" />   
+    </p>
+<p>我个人比较喜欢etcdv3集群。大家可以根据自己的喜好选择。</p>
+<h3 id="selector">Selector</h3>
+<p>以Registry为基础，Selector 是客户端级别的负载均衡，当有客户端向服务发送请求时， selector根据不同的算法从Registery中的主机列表，得到可用的Service节点，进行通信。目前实现的有循环算法和随机算法，默认的是随机算法。</p>
+<p>源码：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Selector</span> <span style="color:#66d9ef">interface</span> {
+    <span style="color:#a6e22e">Init</span>(<span style="color:#a6e22e">opts</span> <span style="color:#f92672">...</span><span style="color:#a6e22e">Option</span>) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Options</span>() <span style="color:#a6e22e">Options</span>
+    <span style="color:#75715e">// Select returns a function which should return the next node
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">Select</span>(<span style="color:#a6e22e">service</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">opts</span> <span style="color:#f92672">...</span><span style="color:#a6e22e">SelectOption</span>) (<span style="color:#a6e22e">Next</span>, <span style="color:#66d9ef">error</span>)
+    <span style="color:#75715e">// Mark sets the success/error against a node
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">Mark</span>(<span style="color:#a6e22e">service</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">node</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">registry</span>.<span style="color:#a6e22e">Node</span>, <span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>)
+    <span style="color:#75715e">// Reset returns state back to zero for a service
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">Reset</span>(<span style="color:#a6e22e">service</span> <span style="color:#66d9ef">string</span>)
+    <span style="color:#75715e">// Close renders the selector unusable
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">Close</span>() <span style="color:#66d9ef">error</span>
+    <span style="color:#75715e">// Name of the selector
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">String</span>() <span style="color:#66d9ef">string</span>
+}
+</code></pre></div><p>默认的是实现是本地缓存，当前实现的有blacklist,label,named等方式。</p>
+<h3 id="broker">Broker</h3>
+<p>Broker是消息发布和订阅的接口。很简单的一个例子，因为服务的节点是不固定的，如果有需要修改所有服务行为的需求，可以使服务订阅某个主题，当有信息发布时，所有的监听服务都会收到信息，根据你的需要做相应的行为。</p>
+<p>源码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Broker</span> <span style="color:#66d9ef">interface</span> {
+    <span style="color:#a6e22e">Options</span>() <span style="color:#a6e22e">Options</span>
+    <span style="color:#a6e22e">Address</span>() <span style="color:#66d9ef">string</span>
+    <span style="color:#a6e22e">Connect</span>() <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Disconnect</span>() <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Init</span>(<span style="color:#f92672">...</span><span style="color:#a6e22e">Option</span>) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Publish</span>(<span style="color:#66d9ef">string</span>, <span style="color:#f92672">*</span><span style="color:#a6e22e">Message</span>, <span style="color:#f92672">...</span><span style="color:#a6e22e">PublishOption</span>) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Subscribe</span>(<span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">Handler</span>, <span style="color:#f92672">...</span><span style="color:#a6e22e">SubscribeOption</span>) (<span style="color:#a6e22e">Subscriber</span>, <span style="color:#66d9ef">error</span>)
+    <span style="color:#a6e22e">String</span>() <span style="color:#66d9ef">string</span>
+}
+</code></pre></div><p>Broker默认的实现方式是http方式，但是这种方式不要在生产环境用。go-plugins里有很多成熟的消息队列实现方式，有kafka、nsq、rabbitmq、redis，等等。</p>
+<h3 id="client">Client</h3>
+<p>Client是请求服务的接口，他封装Transport和Codec进行rpc调用，也封装了Brocker进行信息的发布。</p>
+<p>源码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Client</span> <span style="color:#66d9ef">interface</span> {
+    <span style="color:#a6e22e">Init</span>(<span style="color:#f92672">...</span><span style="color:#a6e22e">Option</span>) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Options</span>() <span style="color:#a6e22e">Options</span>
+    <span style="color:#a6e22e">NewMessage</span>(<span style="color:#a6e22e">topic</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">msg</span> <span style="color:#66d9ef">interface</span>{}, <span style="color:#a6e22e">opts</span> <span style="color:#f92672">...</span><span style="color:#a6e22e">MessageOption</span>) <span style="color:#a6e22e">Message</span>
+    <span style="color:#a6e22e">NewRequest</span>(<span style="color:#a6e22e">service</span>, <span style="color:#a6e22e">method</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">req</span> <span style="color:#66d9ef">interface</span>{}, <span style="color:#a6e22e">reqOpts</span> <span style="color:#f92672">...</span><span style="color:#a6e22e">RequestOption</span>) <span style="color:#a6e22e">Request</span>
+    <span style="color:#a6e22e">Call</span>(<span style="color:#a6e22e">ctx</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Context</span>, <span style="color:#a6e22e">req</span> <span style="color:#a6e22e">Request</span>, <span style="color:#a6e22e">rsp</span> <span style="color:#66d9ef">interface</span>{}, <span style="color:#a6e22e">opts</span> <span style="color:#f92672">...</span><span style="color:#a6e22e">CallOption</span>) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Stream</span>(<span style="color:#a6e22e">ctx</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Context</span>, <span style="color:#a6e22e">req</span> <span style="color:#a6e22e">Request</span>, <span style="color:#a6e22e">opts</span> <span style="color:#f92672">...</span><span style="color:#a6e22e">CallOption</span>) (<span style="color:#a6e22e">Stream</span>, <span style="color:#66d9ef">error</span>)
+    <span style="color:#a6e22e">Publish</span>(<span style="color:#a6e22e">ctx</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Context</span>, <span style="color:#a6e22e">msg</span> <span style="color:#a6e22e">Message</span>, <span style="color:#a6e22e">opts</span> <span style="color:#f92672">...</span><span style="color:#a6e22e">PublishOption</span>) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">String</span>() <span style="color:#66d9ef">string</span>
+}
+</code></pre></div><p>当然他也支持双工通信 Stream 这些具体的实现方式和使用方式，以后会详细解说。</p>
+<p>默认的是rpc实现方式，他还有grpc和http方式，在go-plugins里可以找到</p>
+<h3 id="server">Server</h3>
+<p>Server看名字大家也知道是做什么的了。监听等待rpc请求。监听broker的订阅信息，等待信息队列的推送等。</p>
+<p>源码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Server</span> <span style="color:#66d9ef">interface</span> {
+    <span style="color:#a6e22e">Options</span>() <span style="color:#a6e22e">Options</span>
+    <span style="color:#a6e22e">Init</span>(<span style="color:#f92672">...</span><span style="color:#a6e22e">Option</span>) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Handle</span>(<span style="color:#a6e22e">Handler</span>) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">NewHandler</span>(<span style="color:#66d9ef">interface</span>{}, <span style="color:#f92672">...</span><span style="color:#a6e22e">HandlerOption</span>) <span style="color:#a6e22e">Handler</span>
+    <span style="color:#a6e22e">NewSubscriber</span>(<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">interface</span>{}, <span style="color:#f92672">...</span><span style="color:#a6e22e">SubscriberOption</span>) <span style="color:#a6e22e">Subscriber</span>
+    <span style="color:#a6e22e">Subscribe</span>(<span style="color:#a6e22e">Subscriber</span>) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Register</span>() <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Deregister</span>() <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Start</span>() <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Stop</span>() <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">String</span>() <span style="color:#66d9ef">string</span>
+}
+</code></pre></div><p>默认的是rpc实现方式，他还有grpc和http方式，在go-plugins里可以找到</p>
+<h3 id="service">Service</h3>
+<p>Service是Client和Server的封装，他包含了一系列的方法使用初始值去初始化Service和Client，使我们可以很简单的创建一个rpc服务。</p>
+<p>源码：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Service</span> <span style="color:#66d9ef">interface</span> {
+    <span style="color:#a6e22e">Init</span>(<span style="color:#f92672">...</span><span style="color:#a6e22e">Option</span>)
+    <span style="color:#a6e22e">Options</span>() <span style="color:#a6e22e">Options</span>
+    <span style="color:#a6e22e">Client</span>() <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">Client</span>
+    <span style="color:#a6e22e">Server</span>() <span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">Server</span>
+    <span style="color:#a6e22e">Run</span>() <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">String</span>() <span style="color:#66d9ef">string</span>
+}
+</code></pre></div><p>具体的细节，我以后的帖子会给大家一一展开，希望这篇帖子，可以帮助你对go-micro的整体框架有个初步了解</p>
+
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/golang/%E4%BD%BF%E7%94%A8micro%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1/">[转载]使用micro创建微服务</a></li>
+        
+        <li><a href="/post/golang/gomicro%E7%BC%96%E5%86%99%E5%BE%AE%E6%9C%8D%E5%8A%A1/">[转载]go-micro讲解--Go Micro编写微服务</a></li>
+        
+        <li><a href="/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/">[转载]Agones：一款基于Kubernetes的开源游戏服务器</a></li>
+        
+        <li><a href="/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/">[转载]Linux下查看文件编码及修改编码</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='http://korman.github.io/tags/golang'>golang</a></li>
+                
+                <li><a href='http://korman.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1'>微服务</a></li>
+                
+                <li><a href='http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD'>转载</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2020 <a href="http://korman.github.io/">Korman的个人博客 By Korman</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+
+
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='http://korman.github.io/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://korman.github.io/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A05/" title="[转载]go微服务框架go-micro深度学习(五)">[转载]go微服务框架go-micro深度学习(五)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A04/" title="[转载]go微服务框架go-micro深度学习(四)">[转载]go微服务框架go-micro深度学习(四)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A03/" title="[转载]go微服务框架go-micro深度学习(三)">[转载]go微服务框架go-micro深度学习(三)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02/" title="[转载]go微服务框架go-micro深度学习(二)">[转载]go微服务框架go-micro深度学习(二)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A01/" title="[转载]go微服务框架go-micro深度学习(一)">[转载]go微服务框架go-micro深度学习(一)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="[转载]Agones：一款基于Kubernetes的开源游戏服务器">[转载]Agones：一款基于Kubernetes的开源游戏服务器</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/" title="[转载]Linux下查看文件编码及修改编码">[转载]Linux下查看文件编码及修改编码</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/%E4%BD%BF%E7%94%A8micro%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="[转载]使用micro创建微服务">[转载]使用micro创建微服务</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/gomicro%E7%BC%96%E5%86%99%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="[转载]go-micro讲解--Go Micro编写微服务">[转载]go-micro讲解--Go Micro编写微服务</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/wow/base/%E8%84%B1%E7%A6%BB%E5%8D%A1%E6%AD%BB%E5%9B%9E%E5%9F%8E/" title="脱离卡死（回城）">脱离卡死（回城）</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title"><a href="/categories">分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="http://korman.github.io/categories/go%E8%AF%AD%E8%A8%80/">Go语言 (8)</a></li>
+    
+    <li><a href="http://korman.github.io/categories/linux/">linux (1)</a></li>
+    
+    <li><a href="http://korman.github.io/categories/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C/">魔兽世界 (33)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href="/tags">标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="http://korman.github.io/tags/gm%E5%91%BD%E4%BB%A4/">gm命令</a>
+    
+    <a href="http://korman.github.io/tags/golang/">golang</a>
+    
+    <a href="http://korman.github.io/tags/linux/">linux</a>
+    
+    <a href="http://korman.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a>
+    
+    <a href="http://korman.github.io/tags/%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/">游戏服务器</a>
+    
+    <a href="http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD/">转载</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://korman.github.io/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

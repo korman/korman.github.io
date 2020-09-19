@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>[转载]go微服务框架go-micro深度学习(四) | Korman的个人博客</title>
+    <meta property="og:title" content="[转载]go微服务框架go-micro深度学习(四) - Korman的个人博客">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-09-19T13:16:13&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-09-19T13:16:13&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="[转载]go微服务框架go-micro深度学习(四)">
+        
+    <meta name="author" content="Korman">
+    <meta property="og:url" content="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A04/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://korman.github.io/">
+                        Korman的个人博客
+                    </a>
+                
+                <p class="description">Korman&#39;s Blog</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://korman.github.io/">首页</a>
+                    
+                    <a  href="http://korman.github.io/about/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#上一篇帖介绍">上一篇帖介绍</a>
+      <ul>
+        <li><a href="#服务的启动">服务的启动</a></li>
+        <li><a href="#客户端调用服务方法">客户端调用服务方法</a></li>
+        <li><a href="#服务端处理请求">服务端处理请求</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">[转载]go微服务框架go-micro深度学习(四)</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年9月19日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://korman.github.io/categories/go%E8%AF%AD%E8%A8%80'>Go语言</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
+        </div>
+        
+        <div class="post-content">
+            <h2 id="上一篇帖介绍">上一篇帖介绍</h2>
+<p>上一篇帖子<a href="https://www.cnblogs.com/li-peng/p/9689786.html">go微服务框架go-micro深度学习(三) Registry服务的注册和发现详</a>细解释了go-micro是如何做服务注册和发现在，服务端注册server信息，client获取server的地址信息，就可以和服务建立连接，然后就可以进行通信了。这篇帖子详细说一下，go-micro的通信协议、编码，和具体服务方法的调用过程是如何实现的，文中的代码还是我github上的例子： <a href="https://github.com/lpxxn/gomicrorpc">gomicrorpc</a></p>
+<p>　　 go-micro 支持很多通信协议：http、tcp、grpc等，支持的编码方式也很多有json、protobuf、bytes、jsonrpc等。也可以根据自己的需要实现通信协议和编码方式。go-micro 默认的通信协议是http，默认的编码方式是protobuf，我就以默认的方式来分解他的具体实现。</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://img2018.cnblogs.com/blog/342595/201902/342595-20190212145421291-1502982504.png" />   
+    </p>
+<h3 id="服务的启动">服务的启动</h3>
+<p>go-micro在启动的时候会选择默认通信协议http和protobuf编码方式，但他是如何路由到具体方法的？在go-micro服务端启动的时候我们需要注册Handler，也就是我们具体实现结构体 ，如例子中注册方法时，我们调用的RegisterSayHandler方法</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// 注册 Handler
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">rpcapi</span>.<span style="color:#a6e22e">RegisterSayHandler</span>(<span style="color:#a6e22e">service</span>.<span style="color:#a6e22e">Server</span>(), new(<span style="color:#a6e22e">handler</span>.<span style="color:#a6e22e">Say</span>))
+</code></pre></div><p>这个方法内部的体实现主要是利用了反射的力量，注册的对象是实现了rpc接口的方法，如我们的Say实现了SayHandler。go-micro默认的router会利用反射把Say对象的信息完全提取出来，解析出结构体内的方法及方法的参数，保存到一个map内-&gt; map[结构体名称][方法信息集合]</p>
+<p>具体的实现在rpc_router.go里router的Handle(Handler)方法，组织完成后map的是下图这样，保存了很多反射信息，用以将来调用。</p>
+<p>下面是这个方法的主要代码，删除了一些，很希望大家读一下rpc_router.go里面的代码，prepareMethod方法是具体利用反射提取信息的方法。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">router</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">router</span>) <span style="color:#a6e22e">Handle</span>(<span style="color:#a6e22e">h</span> <span style="color:#a6e22e">Handler</span>) <span style="color:#66d9ef">error</span> {
+    <span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">mu</span>.<span style="color:#a6e22e">Lock</span>()
+    <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">mu</span>.<span style="color:#a6e22e">Unlock</span>()
+    <span style="color:#75715e">// ....
+</span><span style="color:#75715e"></span>
+    <span style="color:#a6e22e">rcvr</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">h</span>.<span style="color:#a6e22e">Handler</span>()
+    <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> new(<span style="color:#a6e22e">service</span>)
+    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">typ</span> = <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">TypeOf</span>(<span style="color:#a6e22e">rcvr</span>)
+    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">rcvr</span> = <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">ValueOf</span>(<span style="color:#a6e22e">rcvr</span>)
+
+    <span style="color:#75715e">// check name
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// ....
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">name</span> = <span style="color:#a6e22e">h</span>.<span style="color:#a6e22e">Name</span>()
+    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">method</span> = make(<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#f92672">*</span><span style="color:#a6e22e">methodType</span>)
+
+    <span style="color:#75715e">// Install the methods
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">m</span> &lt; <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">typ</span>.<span style="color:#a6e22e">NumMethod</span>(); <span style="color:#a6e22e">m</span><span style="color:#f92672">++</span> {
+        <span style="color:#a6e22e">method</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">typ</span>.<span style="color:#a6e22e">Method</span>(<span style="color:#a6e22e">m</span>)
+                <span style="color:#75715e">// prepareMethod会把所有解析的信息返回来
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">mt</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">prepareMethod</span>(<span style="color:#a6e22e">method</span>); <span style="color:#a6e22e">mt</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+            <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">method</span>[<span style="color:#a6e22e">method</span>.<span style="color:#a6e22e">Name</span>] = <span style="color:#a6e22e">mt</span>
+        }
+    }
+        <span style="color:#75715e">// .....
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// save handler
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">serviceMap</span>[<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">name</span>] = <span style="color:#a6e22e">s</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+}
+</code></pre></div><p>serviceMap里保存的就是反射后的信息，下图是我用goland的debug得到的保存信息</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://img2018.cnblogs.com/blog/342595/201902/342595-20190215212040393-1049214416.png" />   
+    </p>
+<p>路由信息处理完后，主要的工作就已经完成了，然后注册服务并启动服务，启动的服务是一个http的服务，我们可以看一下http_transport.go里的代码</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://img2018.cnblogs.com/blog/342595/201902/342595-20190215215740385-1318953379.png" />   
+    </p>
+<p>服务的简单流程图如下 ，选择通信协议和编码方式-&gt;注册服务方法-&gt;启动服务并注册服务信息</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://img2018.cnblogs.com/blog/342595/201902/342595-20190215220042622-1220846382.png" />   
+    </p>
+<h3 id="客户端调用服务方法">客户端调用服务方法</h3>
+<p>客户端在启动的时候也要选择默认的通信协议http，和protobuf编码。客户端在调用rpc方法的时候如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">rsp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">Hello</span>(<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Background</span>(), <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">SayParam</span>{<span style="color:#a6e22e">Msg</span>: <span style="color:#e6db74">&#34;hello server&#34;</span>})
+</code></pre></div><p>go-micro为我们自动生成的rpcapi.micro.go里我们可以看一上Hello的具体实现，没有几行代码，但内部还是做了很多工作</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">sayService</span>) <span style="color:#a6e22e">Hello</span>(<span style="color:#a6e22e">ctx</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Context</span>, <span style="color:#a6e22e">in</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">SayParam</span>, <span style="color:#a6e22e">opts</span> <span style="color:#f92672">...</span><span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">CallOption</span>) (<span style="color:#f92672">*</span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">SayResponse</span>, <span style="color:#66d9ef">error</span>) {
+   <span style="color:#a6e22e">req</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">name</span>, <span style="color:#e6db74">&#34;Say.Hello&#34;</span>, <span style="color:#a6e22e">in</span>)
+   <span style="color:#a6e22e">out</span> <span style="color:#f92672">:=</span> new(<span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">SayResponse</span>)
+   <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Call</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">out</span>, <span style="color:#a6e22e">opts</span><span style="color:#f92672">...</span>)
+   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span>
+   }
+   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">out</span>, <span style="color:#66d9ef">nil</span>
+}
+</code></pre></div><p>他的实现方式是封装request，然后调用服务方法。这个request 是非常重要的：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">newRequest</span>(<span style="color:#a6e22e">service</span>, <span style="color:#a6e22e">endpoint</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">request</span> <span style="color:#66d9ef">interface</span>{}, <span style="color:#a6e22e">contentType</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">reqOpts</span> <span style="color:#f92672">...</span><span style="color:#a6e22e">RequestOption</span>) <span style="color:#a6e22e">Request</span> {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">opts</span> <span style="color:#a6e22e">RequestOptions</span>
+
+    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">reqOpts</span> {
+        <span style="color:#a6e22e">o</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">opts</span>)
+    }
+
+    <span style="color:#75715e">// set the content-type specified
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">opts</span>.<span style="color:#a6e22e">ContentType</span>) &gt; <span style="color:#ae81ff">0</span> {
+        <span style="color:#a6e22e">contentType</span> = <span style="color:#a6e22e">opts</span>.<span style="color:#a6e22e">ContentType</span>
+    }
+
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">rpcRequest</span>{
+        <span style="color:#a6e22e">service</span>:     <span style="color:#a6e22e">service</span>,
+        <span style="color:#a6e22e">method</span>:      <span style="color:#a6e22e">endpoint</span>,
+        <span style="color:#a6e22e">endpoint</span>:    <span style="color:#a6e22e">endpoint</span>,
+        <span style="color:#a6e22e">body</span>:        <span style="color:#a6e22e">request</span>,
+        <span style="color:#a6e22e">contentType</span>: <span style="color:#a6e22e">contentType</span>,
+        <span style="color:#a6e22e">opts</span>:        <span style="color:#a6e22e">opts</span>,
+    }
+}
+</code></pre></div><p>这个方法返回一个rpcRequest里面包含了详细的调用信息，servicec：服务名，method和endpoint目前是一样的是方法名这里是Say.Hello，contentType是protobuf，body 是具体的信息，也要要进行编码的内容，使用protobuf进行编码，然后会把这些信息放到一个http.Request里，再从Register或者从缓存获取服务器信息，连接服务器，发送数据。</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://img2018.cnblogs.com/blog/342595/201902/342595-20190215224024267-558732267.png" />   
+    </p>
+<p>简单流程图如下</p>
+<p>client：封装参数-&gt; 编码数据-&gt;连接服务-&gt;发送数据-&gt;接收返回数据，并解码。</p>
+<p>service: 接收数据-&gt;解码数据，找到相应的实例和方法，利用反射调用具体方法-&gt;编码返数据-&gt;发送给客户端。</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://img2018.cnblogs.com/blog/342595/201902/342595-20190215222116840-168173365.png" />   
+    </p>
+<h3 id="服务端处理请求">服务端处理请求</h3>
+<p>当服务端监接收到数据后，从http的Request里的Header中读取到相应的信息：编码方式，endpoint，请求的数据，由路由器进行对比和匹配找到保存的反射信息，利用反射把请求的数据根据相应的编码方式进行解码，再利用反射调用具体的方法，处理完把返回数据进行编码，组织一个http.Response传输给用户，客户端接收到数据后进行解码读取数据。 rpc_router.go里的call方法就是具体的调用过程方法，有时间大家可以读一下。</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://img2018.cnblogs.com/blog/342595/201902/342595-20190215224832505-273009530.png" />   
+    </p>
+
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A03/">[转载]go微服务框架go-micro深度学习(三)</a></li>
+        
+        <li><a href="/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02/">[转载]go微服务框架go-micro深度学习(二)</a></li>
+        
+        <li><a href="/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A01/">[转载]go微服务框架go-micro深度学习(一)</a></li>
+        
+        <li><a href="/post/golang/%E4%BD%BF%E7%94%A8micro%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1/">[转载]使用micro创建微服务</a></li>
+        
+        <li><a href="/post/golang/gomicro%E7%BC%96%E5%86%99%E5%BE%AE%E6%9C%8D%E5%8A%A1/">[转载]go-micro讲解--Go Micro编写微服务</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='http://korman.github.io/tags/golang'>golang</a></li>
+                
+                <li><a href='http://korman.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1'>微服务</a></li>
+                
+                <li><a href='http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD'>转载</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2020 <a href="http://korman.github.io/">Korman的个人博客 By Korman</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+
+
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='http://korman.github.io/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://korman.github.io/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A05/" title="[转载]go微服务框架go-micro深度学习(五)">[转载]go微服务框架go-micro深度学习(五)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A04/" title="[转载]go微服务框架go-micro深度学习(四)">[转载]go微服务框架go-micro深度学习(四)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A03/" title="[转载]go微服务框架go-micro深度学习(三)">[转载]go微服务框架go-micro深度学习(三)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02/" title="[转载]go微服务框架go-micro深度学习(二)">[转载]go微服务框架go-micro深度学习(二)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A01/" title="[转载]go微服务框架go-micro深度学习(一)">[转载]go微服务框架go-micro深度学习(一)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="[转载]Agones：一款基于Kubernetes的开源游戏服务器">[转载]Agones：一款基于Kubernetes的开源游戏服务器</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/" title="[转载]Linux下查看文件编码及修改编码">[转载]Linux下查看文件编码及修改编码</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/%E4%BD%BF%E7%94%A8micro%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="[转载]使用micro创建微服务">[转载]使用micro创建微服务</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/gomicro%E7%BC%96%E5%86%99%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="[转载]go-micro讲解--Go Micro编写微服务">[转载]go-micro讲解--Go Micro编写微服务</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/wow/base/%E8%84%B1%E7%A6%BB%E5%8D%A1%E6%AD%BB%E5%9B%9E%E5%9F%8E/" title="脱离卡死（回城）">脱离卡死（回城）</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title"><a href="/categories">分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="http://korman.github.io/categories/go%E8%AF%AD%E8%A8%80/">Go语言 (8)</a></li>
+    
+    <li><a href="http://korman.github.io/categories/linux/">linux (1)</a></li>
+    
+    <li><a href="http://korman.github.io/categories/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C/">魔兽世界 (33)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href="/tags">标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="http://korman.github.io/tags/gm%E5%91%BD%E4%BB%A4/">gm命令</a>
+    
+    <a href="http://korman.github.io/tags/golang/">golang</a>
+    
+    <a href="http://korman.github.io/tags/linux/">linux</a>
+    
+    <a href="http://korman.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a>
+    
+    <a href="http://korman.github.io/tags/%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/">游戏服务器</a>
+    
+    <a href="http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD/">转载</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://korman.github.io/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

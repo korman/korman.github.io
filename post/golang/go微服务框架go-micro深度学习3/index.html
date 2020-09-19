@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>[转载]go微服务框架go-micro深度学习(三) | Korman的个人博客</title>
+    <meta property="og:title" content="[转载]go微服务框架go-micro深度学习(三) - Korman的个人博客">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-09-19T13:16:10&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-09-19T13:16:10&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="[转载]go微服务框架go-micro深度学习(三)">
+        
+    <meta name="author" content="Korman">
+    <meta property="og:url" content="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A03/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://korman.github.io/">
+                        Korman的个人博客
+                    </a>
+                
+                <p class="description">Korman&#39;s Blog</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://korman.github.io/">首页</a>
+                    
+                    <a  href="http://korman.github.io/about/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#服务的注册与发现">服务的注册与发现</a>
+      <ul>
+        <li><a href="#go-micro-服务端注册服务">go-micro 服务端注册服务</a></li>
+        <li><a href="#客户端发现服务">客户端发现服务</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">[转载]go微服务框架go-micro深度学习(三)</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年9月19日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://korman.github.io/categories/go%E8%AF%AD%E8%A8%80'>Go语言</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
+        </div>
+        
+        <div class="post-content">
+            <h2 id="服务的注册与发现">服务的注册与发现</h2>
+<p>服务的注册与发现是微服务必不可少的功能，这样系统才能有更高的性能，更高的可用性。go-micro框架的服务发现有自己能用的接口Registry。只要实现这个接口就可以定制自己的服务注册和发现。</p>
+<p>go-micro在客户端做的负载，典型的Balancing-aware Client模式。</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://img2018.cnblogs.com/blog/342595/201809/342595-20180922115026646-1373110192.png" />   
+    </p>
+<p>服务端把服务的地址信息保存到Registry, 然后定时的心跳检查，或者定时的重新注册服务。客户端监听Registry，最好是把服务信息保存到本地，监听服务的变动，更新缓存。当调用服务端的接口是时，根据客户端的服务列表和负载算法选择服务端进行通信。</p>
+<p>go-micro的能用Registry接口</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Registry</span> <span style="color:#66d9ef">interface</span> {
+    <span style="color:#a6e22e">Register</span>(<span style="color:#f92672">*</span><span style="color:#a6e22e">Service</span>, <span style="color:#f92672">...</span><span style="color:#a6e22e">RegisterOption</span>) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">Deregister</span>(<span style="color:#f92672">*</span><span style="color:#a6e22e">Service</span>) <span style="color:#66d9ef">error</span>
+    <span style="color:#a6e22e">GetService</span>(<span style="color:#66d9ef">string</span>) ([]<span style="color:#f92672">*</span><span style="color:#a6e22e">Service</span>, <span style="color:#66d9ef">error</span>)
+    <span style="color:#a6e22e">ListServices</span>() ([]<span style="color:#f92672">*</span><span style="color:#a6e22e">Service</span>, <span style="color:#66d9ef">error</span>)
+    <span style="color:#a6e22e">Watch</span>(<span style="color:#f92672">...</span><span style="color:#a6e22e">WatchOption</span>) (<span style="color:#a6e22e">Watcher</span>, <span style="color:#66d9ef">error</span>)
+    <span style="color:#a6e22e">String</span>() <span style="color:#66d9ef">string</span>
+    <span style="color:#a6e22e">Options</span>() <span style="color:#a6e22e">Options</span>
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Watcher</span> <span style="color:#66d9ef">interface</span> {
+    <span style="color:#75715e">// Next is a blocking call
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">Next</span>() (<span style="color:#f92672">*</span><span style="color:#a6e22e">Result</span>, <span style="color:#66d9ef">error</span>)
+    <span style="color:#a6e22e">Stop</span>()
+}
+</code></pre></div><p>　　这个接口还是很简单明了的，看方法也大概能猜到主要的作用</p>
+<p>　　Register方法和Deregister是服务端用于注册服务的，Watcher接口是客户端用于监听服务信息变化的。</p>
+<p>接下来我以go-micro的etcdv3为Registry的例给大家详细讲解一下go-micro的详细服务发现过程</p>
+<h3 id="go-micro-服务端注册服务">go-micro 服务端注册服务</h3>
+<p>流程图</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://img2018.cnblogs.com/blog/342595/201809/342595-20180925105417909-20630901.png" />   
+    </p>
+<p>服务端看上去流程还是比较简单的，当服务端调用Run()方法时，会调用service.Start()方法。这个除了监听端口，启动服务，还会把服务的ip端口号信息，和所有的公开接口的元数据信息保存到我们选择的Register服务器上去。</p>
+<p>看上去没有问题，但是，如果我们的节点发生故障，也是需要告诉Register把我们的节点信息删除掉。</p>
+<p>Run()方法中有个go s.run(ex) 方法的调用，这个方法就是根据我们设置interval去重新注册服务，当然比较保险的方式是我们把服务的ttl也设置上，这样当服务在未知的情况下崩溃，到了ttl的时间Register服务也会自动把信息删除掉。</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://img2018.cnblogs.com/blog/342595/201809/342595-20180925114114532-118260520.png" />   
+    </p>
+<p>设置服务的ttl和 interval</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#75715e">// 初始化服务
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">service</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">micro</span>.<span style="color:#a6e22e">NewService</span>(
+        <span style="color:#a6e22e">micro</span>.<span style="color:#a6e22e">Name</span>(<span style="color:#a6e22e">common</span>.<span style="color:#a6e22e">ServiceName</span>),
+        <span style="color:#a6e22e">micro</span>.<span style="color:#a6e22e">RegisterTTL</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span><span style="color:#f92672">*</span><span style="color:#ae81ff">30</span>),
+        <span style="color:#a6e22e">micro</span>.<span style="color:#a6e22e">RegisterInterval</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span><span style="color:#f92672">*</span><span style="color:#ae81ff">20</span>),
+        <span style="color:#a6e22e">micro</span>.<span style="color:#a6e22e">Registry</span>(<span style="color:#a6e22e">reg</span>),
+    )
+</code></pre></div><p>ttl就是注册服务的过期时间，interval就是间隔多久再次注册服务。如果系统崩溃，过期时间也会把服务删除掉。客户端当然也会有相应的判断，下面会详细解说</p>
+<h3 id="客户端发现服务">客户端发现服务</h3>
+<p>客户端的服务发现要步骤多一些，但并不复杂，他涉及到服务选择Selector和服务发现Register两部分。</p>
+<p>Selector是基于服务发现的，根据你选择的主机选择算法，返回主机的信息。默认的情况，go-micro是每次要得到服务器主机的信息都要去Register去获取。但是查看cmd.go的源码你会发现默认初始化的值，selector的默认flag是cache。DefaultSelectors里的cache对应的就是初始化cacheSelector方法</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://img2018.cnblogs.com/blog/342595/201810/342595-20181007132646744-671132070.png" />   
+    </p>
+<p>但是当你在执行service.Init()方法时</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://img2018.cnblogs.com/blog/342595/201809/342595-20180930102948012-245947052.png" />   
+    </p>
+<p>go-micro会把默认的selector替换成cacheSelector,具体的实现是在cmd.go的Before方法里</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://img2018.cnblogs.com/blog/342595/201809/342595-20180930103347676-1353484573.png" />   
+    </p>
+<p>cacheSelector 会把从Register里获取的主机信息缓存起来。并设置超时时间，如果超时则重新获取。在获取主机信息的时候他会单独跑一个协程，去watch服务的注册，如果有新节点发现，则加到缓存中，如果有节点故障则删除缓存中的节点信息。当client还要根据selector选择的主机选择算法才能得到主机信息，目前只有两种算法，循环和随机法。为了增加执行效率，很client端也会设置缓存连接池，这个点，以后会详细说。</p>
+<p>所以大概的客户端服务发现流程是下面这样</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://img2018.cnblogs.com/blog/342595/201810/342595-20181008194015615-1835548789.png" />   
+    </p>
+<p>主要的调用过程都在Call方法内</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://img2018.cnblogs.com/blog/342595/201810/342595-20181008194136487-1542412345.png" />   
+    </p>
+<p>主要的思路是</p>
+<p>从Selector里得到选择主机策略方法next。</p>
+<p>根据Retory是否重试调用服务，调用服务的过程是，从next 方法内得到主机，连接并传输数据 ，如果失败则重试，重试时，会根据主机选择策略方法next重新得到一个新的主机进行操作。</p>
+
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02/">[转载]go微服务框架go-micro深度学习(二)</a></li>
+        
+        <li><a href="/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A01/">[转载]go微服务框架go-micro深度学习(一)</a></li>
+        
+        <li><a href="/post/golang/%E4%BD%BF%E7%94%A8micro%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1/">[转载]使用micro创建微服务</a></li>
+        
+        <li><a href="/post/golang/gomicro%E7%BC%96%E5%86%99%E5%BE%AE%E6%9C%8D%E5%8A%A1/">[转载]go-micro讲解--Go Micro编写微服务</a></li>
+        
+        <li><a href="/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/">[转载]Agones：一款基于Kubernetes的开源游戏服务器</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='http://korman.github.io/tags/golang'>golang</a></li>
+                
+                <li><a href='http://korman.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1'>微服务</a></li>
+                
+                <li><a href='http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD'>转载</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2020 <a href="http://korman.github.io/">Korman的个人博客 By Korman</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+
+
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='http://korman.github.io/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://korman.github.io/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A05/" title="[转载]go微服务框架go-micro深度学习(五)">[转载]go微服务框架go-micro深度学习(五)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A04/" title="[转载]go微服务框架go-micro深度学习(四)">[转载]go微服务框架go-micro深度学习(四)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A03/" title="[转载]go微服务框架go-micro深度学习(三)">[转载]go微服务框架go-micro深度学习(三)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02/" title="[转载]go微服务框架go-micro深度学习(二)">[转载]go微服务框架go-micro深度学习(二)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A01/" title="[转载]go微服务框架go-micro深度学习(一)">[转载]go微服务框架go-micro深度学习(一)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="[转载]Agones：一款基于Kubernetes的开源游戏服务器">[转载]Agones：一款基于Kubernetes的开源游戏服务器</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/" title="[转载]Linux下查看文件编码及修改编码">[转载]Linux下查看文件编码及修改编码</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/%E4%BD%BF%E7%94%A8micro%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="[转载]使用micro创建微服务">[转载]使用micro创建微服务</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/gomicro%E7%BC%96%E5%86%99%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="[转载]go-micro讲解--Go Micro编写微服务">[转载]go-micro讲解--Go Micro编写微服务</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/wow/base/%E8%84%B1%E7%A6%BB%E5%8D%A1%E6%AD%BB%E5%9B%9E%E5%9F%8E/" title="脱离卡死（回城）">脱离卡死（回城）</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title"><a href="/categories">分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="http://korman.github.io/categories/go%E8%AF%AD%E8%A8%80/">Go语言 (8)</a></li>
+    
+    <li><a href="http://korman.github.io/categories/linux/">linux (1)</a></li>
+    
+    <li><a href="http://korman.github.io/categories/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C/">魔兽世界 (33)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href="/tags">标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="http://korman.github.io/tags/gm%E5%91%BD%E4%BB%A4/">gm命令</a>
+    
+    <a href="http://korman.github.io/tags/golang/">golang</a>
+    
+    <a href="http://korman.github.io/tags/linux/">linux</a>
+    
+    <a href="http://korman.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a>
+    
+    <a href="http://korman.github.io/tags/%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/">游戏服务器</a>
+    
+    <a href="http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD/">转载</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://korman.github.io/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

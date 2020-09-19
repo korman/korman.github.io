@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>[转载]go微服务框架go-micro深度学习(二) | Korman的个人博客</title>
+    <meta property="og:title" content="[转载]go微服务框架go-micro深度学习(二) - Korman的个人博客">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-09-19T13:16:08&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-09-19T13:16:08&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="[转载]go微服务框架go-micro深度学习(二)">
+        
+    <meta name="author" content="Korman">
+    <meta property="og:url" content="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://korman.github.io/">
+                        Korman的个人博客
+                    </a>
+                
+                <p class="description">Korman&#39;s Blog</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://korman.github.io/">首页</a>
+                    
+                    <a  href="http://korman.github.io/about/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#承上启下">承上启下</a>
+      <ul>
+        <li><a href="#安装所需要的环境">安装所需要的环境</a></li>
+        <li><a href="#例子1">例子1</a></li>
+        <li><a href="#例子2">例子2</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">[转载]go微服务框架go-micro深度学习(二)</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年9月19日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://korman.github.io/categories/go%E8%AF%AD%E8%A8%80'>Go语言</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
+        </div>
+        
+        <div class="post-content">
+            <h2 id="承上启下">承上启下</h2>
+<p>上一篇帖子简单介绍了go-micro的整体框架结构，这一篇主要写go-micro使用方式的例子，中间会穿插一些go-micro的源码，和调用流程图，帮大家更好的理解go-micro的底层。更详细更具体的调用流程和细节，会在以后的帖子里详细讲解。</p>
+<p>例子的github地址： <a href="https://github.com/lpxxn/gomicrorpc">gomicrorpc</a>  跑一遍例子，也就会明白个大概。</p>
+<h3 id="安装所需要的环境">安装所需要的环境</h3>
+<p>go-micro服务发现默认使用的是<a href="https://www.consul.io/downloads.html">consul</a>，(2019年源码修改了默认使用mdns)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">brew install consul
+consul agent -dev
+</code></pre></div><p>或者直接使用使用docker跑</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -p 8300:8300 -p 8301:8301 -p 8301:8301/udp -p 8302:8302/udp -p 8302:8302 -p 8400:8400 -p 8500:8500 -p 53:53/udp consul
+</code></pre></div><p>我个人更喜欢<a href="https://github.com/etcd-io/etcd/tree/v3.2.17">etcdv3</a>原因我上一篇也有提到过，gomicro服务发现不支持consul集群，我之前也写过<a href="https://www.cnblogs.com/li-peng/p/9259793.html">etcdv3 集群的搭建和使用</a>帖子，有时间大家可以看一下</p>
+<p>安装go-micro框架</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">go get github.com/micro/go-micro
+</code></pre></div><p>安装protobuf和依赖 prtobuf的基础知识我这里就不讲了，如果不了解的可以看一下<a href="https://developers.google.com/protocol-buffers/">官方文档</a>，就是一个跨平台，跨语言的数据序列化库，简单易学。</p>
+<p>是go-micro用于帮助我们生成服务接口和一系列的调用代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">brew install protobuf
+go get -u -v github.com/golang/protobuf/<span style="color:#f92672">{</span>proto,protoc-gen-go<span style="color:#f92672">}</span>
+go get -u -v github.com/micro/protoc-gen-micro
+</code></pre></div><p>protobuf也可以直接从源码安装</p>
+<p><a href="">
+        <img class="mx-auto" alt="复制代码" src="https://common.cnblogs.com/images/copycode.gif" />   
+    </a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">wget https://github.com/protocolbuffers/protobuf/releases/download/v3.6.1/protobuf-all-3.6.1.tar.gz
+tar zxvf protobuf-all-3.6.1.tar.gz
+cd protobuf-3.6.1/
+./autogen.sh
+./configure
+ make
+make install
+protoc -h
+</code></pre></div><p><a href="">
+        <img class="mx-auto" alt="复制代码" src="https://common.cnblogs.com/images/copycode.gif" />   
+    </a></p>
+<p>　</p>
+<p>安装micro工具包，这个安装是可选项，micro提供了一系列的工具来帮助我们更好的使用go-micro。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">go get github.com/micro/micro
+</code></pre></div><h3 id="例子1">例子1</h3>
+<p>创建proto文件common.proto，这个文件包含了传入和返回的参数，参数包含了常用的基础类型、数组、map等。还有一个Say 服务，这个服务里有一个rpc方法。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">syntax</span> = <span style="color:#e6db74">&#34;proto3&#34;</span>;
+
+<span style="color:#f92672">package</span> <span style="color:#a6e22e">model</span>;
+
+<span style="color:#a6e22e">message</span> <span style="color:#a6e22e">SayParam</span> {
+    <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">msg</span> = <span style="color:#ae81ff">1</span>;
+}
+
+<span style="color:#a6e22e">message</span> <span style="color:#a6e22e">Pair</span> {
+    <span style="color:#66d9ef">int32</span> <span style="color:#a6e22e">key</span> = <span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">values</span> = <span style="color:#ae81ff">2</span>;
+}
+
+<span style="color:#a6e22e">message</span> <span style="color:#a6e22e">SayResponse</span> {
+    <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">msg</span> = <span style="color:#ae81ff">1</span>;
+    <span style="color:#75715e">// 数组
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">repeated</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">values</span> = <span style="color:#ae81ff">2</span>;
+    <span style="color:#75715e">// map
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">map</span>&lt;<span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">Pair</span>&gt; <span style="color:#a6e22e">header</span> = <span style="color:#ae81ff">3</span>;
+    <span style="color:#a6e22e">RespType</span> <span style="color:#66d9ef">type</span> = <span style="color:#ae81ff">4</span>;
+}
+
+<span style="color:#a6e22e">enum</span> <span style="color:#a6e22e">RespType</span> {
+    <span style="color:#a6e22e">NONE</span> = <span style="color:#ae81ff">0</span>;
+    <span style="color:#a6e22e">ASCEND</span> = <span style="color:#ae81ff">1</span>;
+    <span style="color:#a6e22e">DESCEND</span> = <span style="color:#ae81ff">2</span>;
+}
+
+<span style="color:#75715e">// 服务接口
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">service</span> <span style="color:#a6e22e">Say</span> {
+    <span style="color:#a6e22e">rpc</span> <span style="color:#a6e22e">Hello</span>(<span style="color:#a6e22e">SayParam</span>) <span style="color:#a6e22e">returns</span> (<span style="color:#a6e22e">SayResponse</span>) {}
+}
+</code></pre></div><p>在根目录下运行，生成两个模板文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  protoc --proto_path<span style="color:#f92672">=</span>$GOPATH/src:. --micro_out<span style="color:#f92672">=</span>. --go_out<span style="color:#f92672">=</span>. example1/proto/*.proto 
+</code></pre></div><p>一个文件是proto的go 结构文件，还有一个go-micro rpc的接口文件。</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://images2018.cnblogs.com/blog/342595/201809/342595-20180907150405109-591572775.png" />   
+    </p>
+<p>server 端：</p>
+<p><a href="">
+        <img class="mx-auto" alt="复制代码" src="https://common.cnblogs.com/images/copycode.gif" />   
+    </a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Say</span> <span style="color:#66d9ef">struct</span> {}
+
+<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">s</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">Say</span>) <span style="color:#a6e22e">Hello</span>(<span style="color:#a6e22e">ctx</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Context</span>, <span style="color:#a6e22e">req</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">SayParam</span>, <span style="color:#a6e22e">rsp</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">SayResponse</span>) <span style="color:#66d9ef">error</span> {
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;received&#34;</span>, <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">Msg</span>)
+    <span style="color:#a6e22e">rsp</span>.<span style="color:#a6e22e">Header</span> = make(<span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#f92672">*</span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">Pair</span>)
+    <span style="color:#a6e22e">rsp</span>.<span style="color:#a6e22e">Header</span>[<span style="color:#e6db74">&#34;name&#34;</span>] = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">Pair</span>{<span style="color:#a6e22e">Key</span>: <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">Values</span>: <span style="color:#e6db74">&#34;abc&#34;</span>}
+
+    <span style="color:#a6e22e">rsp</span>.<span style="color:#a6e22e">Msg</span> = <span style="color:#e6db74">&#34;hello world&#34;</span>
+    <span style="color:#a6e22e">rsp</span>.<span style="color:#a6e22e">Values</span> = append(<span style="color:#a6e22e">rsp</span>.<span style="color:#a6e22e">Values</span>, <span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span>)
+    <span style="color:#a6e22e">rsp</span>.<span style="color:#a6e22e">Type</span> = <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">RespType_DESCEND</span>
+
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+}
+
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#75715e">// 我这里用的etcd 做为服务发现，如果使用consul可以去掉
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">reg</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">etcdv3</span>.<span style="color:#a6e22e">NewRegistry</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">op</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">registry</span>.<span style="color:#a6e22e">Options</span>){
+        <span style="color:#a6e22e">op</span>.<span style="color:#a6e22e">Addrs</span> = []<span style="color:#66d9ef">string</span>{
+            <span style="color:#e6db74">&#34;http://192.168.3.34:2379&#34;</span>, <span style="color:#e6db74">&#34;http://192.168.3.18:2379&#34;</span>, <span style="color:#e6db74">&#34;http://192.168.3.110:2379&#34;</span>,
+        }
+    })
+
+    <span style="color:#75715e">// 初始化服务
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">service</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">micro</span>.<span style="color:#a6e22e">NewService</span>(
+        <span style="color:#a6e22e">micro</span>.<span style="color:#a6e22e">Name</span>(<span style="color:#e6db74">&#34;lp.srv.eg1&#34;</span>),
+        <span style="color:#a6e22e">micro</span>.<span style="color:#a6e22e">Registry</span>(<span style="color:#a6e22e">reg</span>),
+    )
+    <span style="color:#a6e22e">service</span>.<span style="color:#a6e22e">Init</span>()
+    <span style="color:#75715e">// 注册 Handler
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">RegisterSayHandler</span>(<span style="color:#a6e22e">service</span>.<span style="color:#a6e22e">Server</span>(), new(<span style="color:#a6e22e">Say</span>))
+
+    <span style="color:#75715e">// run server
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">service</span>.<span style="color:#a6e22e">Run</span>(); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        panic(<span style="color:#a6e22e">err</span>)
+    }
+}
+</code></pre></div><p><a href="">
+        <img class="mx-auto" alt="复制代码" src="https://common.cnblogs.com/images/copycode.gif" />   
+    </a></p>
+<p>服务发现我使用的是etcdv3 替换了默认的consul</p>
+<p>micro.NewService 初始化服务，然后返回一个Service接口的实例，newService()方法的大概流程如下，</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://images2018.cnblogs.com/blog/342595/201809/342595-20180907170216034-815207293.png" />   
+    </p>
+<p>先是给各个接口初始化默认值，再使用传入的值替换默认值，这也是go-micro可替换插件的地方。</p>
+<p>service有一个Init()可选方法，这是一个单例方法，</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">s</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">service</span>) <span style="color:#a6e22e">Init</span>(<span style="color:#a6e22e">opts</span> <span style="color:#f92672">...</span><span style="color:#a6e22e">Option</span>) {
+    <span style="color:#75715e">// process options
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">o</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">opts</span> {
+        <span style="color:#a6e22e">o</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">opts</span>)
+    }
+
+    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">once</span>.<span style="color:#a6e22e">Do</span>(<span style="color:#66d9ef">func</span>() {
+        <span style="color:#75715e">// save user action
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">action</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">opts</span>.<span style="color:#a6e22e">Cmd</span>.<span style="color:#a6e22e">App</span>().<span style="color:#a6e22e">Action</span>
+        <span style="color:#75715e">// set service action
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">opts</span>.<span style="color:#a6e22e">Cmd</span>.<span style="color:#a6e22e">App</span>().<span style="color:#a6e22e">Action</span> = <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">cli</span>.<span style="color:#a6e22e">Context</span>) {
+                <span style="color:#f92672">.........</span><span style="color:#75715e">//这里就不把代码全显示出来了
+</span><span style="color:#75715e"></span>                <span style="color:#f92672">.........</span>
+        }
+}
+</code></pre></div><p>用于始化cmd的一些信息</p>
+<p>service.Run()方法 调用流程</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://images2018.cnblogs.com/blog/342595/201809/342595-20180907160423832-1369247551.png" />   
+    </p>
+<p>因为在初始化的时候没有指定端口，系统会自动分配一个端口号分给Server，并把这个server的信息注册到Register。</p>
+<p>BeferStart和AfterStart也都是可以自定义的</p>
+<p>client 端：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#75715e">// 我这里用的etcd 做为服务发现，如果使用consul可以去掉
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">reg</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">etcdv3</span>.<span style="color:#a6e22e">NewRegistry</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">op</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">registry</span>.<span style="color:#a6e22e">Options</span>){
+        <span style="color:#a6e22e">op</span>.<span style="color:#a6e22e">Addrs</span> = []<span style="color:#66d9ef">string</span>{
+            <span style="color:#e6db74">&#34;http://192.168.3.34:2379&#34;</span>, <span style="color:#e6db74">&#34;http://192.168.3.18:2379&#34;</span>, <span style="color:#e6db74">&#34;http://192.168.3.110:2379&#34;</span>,
+        }
+    })
+
+    <span style="color:#75715e">// 初始化服务
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">service</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">micro</span>.<span style="color:#a6e22e">NewService</span>(
+        <span style="color:#a6e22e">micro</span>.<span style="color:#a6e22e">Registry</span>(<span style="color:#a6e22e">reg</span>),
+    )
+    <span style="color:#a6e22e">service</span>.<span style="color:#a6e22e">Init</span>()
+    <span style="color:#a6e22e">sayClent</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">NewSayService</span>(<span style="color:#e6db74">&#34;lp.srv.eg1&#34;</span>, <span style="color:#a6e22e">service</span>.<span style="color:#a6e22e">Client</span>())
+
+
+    <span style="color:#a6e22e">rsp</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">sayClent</span>.<span style="color:#a6e22e">Hello</span>(<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Background</span>(), <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">SayParam</span>{<span style="color:#a6e22e">Msg</span>: <span style="color:#e6db74">&#34;hello server&#34;</span>})
+    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        panic(<span style="color:#a6e22e">err</span>)
+    }
+
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">rsp</span>)
+
+}
+</code></pre></div><p>上面根据proto文件的生成的两个文件中有一个是rpc的接口文件，接口文件已经帮我们把调用方法的整个流程封装好了。</p>
+<p>只需要给出服务名称和licent就可以。然后调用Hello方法</p>
+<p>源码：</p>
+<pre><code>func (c *sayService) Hello(ctx context.Context, in *SayParam, opts ...client.CallOption) (*SayResponse, error) {
+    req := c.c.NewRequest(c.name, &quot;Say.Hello&quot;, in)
+    out := new(SayResponse)
+    err := c.c.Call(ctx, req, out, opts...)
+    if err != nil {
+        return nil, err
+    }
+    return out, nil
+}
+</code></pre><p>主要的流程里都在c.c.Call方法里。简单来说流程如下</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://images2018.cnblogs.com/blog/342595/201809/342595-20180907165930746-905093013.png" />   
+    </p>
+<p>就是得到节点信息address，根据address去查询 pool里是否有连接，如果有则取出来，如果没有则创建，然后进行数据传输，传输完成后把client放回到pool内。pool的大小也是可以控制的，这部分的代码读起来特别爽，具体的细节和处理流程会在以后的帖子里详细讲解</p>
+<h3 id="例子2">例子2</h3>
+<p>例子1，做了一个简单的服务，已经不能再简单了，只是为了能让大家熟悉一下go-micro。看完例子1后应该会有更多的想法，想使用更多的go-micro的功能，比如protobuf生成的类都在一起，如果想model和api分开怎么处理，怎么使用go-micro的双向流，怎么使用消息推送，等等。所以我就双做了一个小例子，这个例子里包含了一些东西。</p>
+<p>
+        <img class="mx-auto" alt="img" src="https://images2018.cnblogs.com/blog/342595/201809/342595-20180910150343405-1783830623.png" />   
+    </p>
+<p>这个例子我就只说一下组织结构，也没有多少代码，大家有时间看一下就ok了。</p>
+<p>proto下的两个文件夹，一个model一个rpcapi，是把数据和api分开，api引用了model</p>
+<p>看一下rpcapi</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">syntax</span> = <span style="color:#e6db74">&#34;proto3&#34;</span>;
+
+<span style="color:#f92672">package</span> <span style="color:#a6e22e">rpcapi</span>;
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;github.com/lpxxn/gomicrorpc/example2/proto/model/common.proto&#34;</span>;
+
+<span style="color:#75715e">// 服务接口
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">service</span> <span style="color:#a6e22e">Say</span> {
+    <span style="color:#a6e22e">rpc</span> <span style="color:#a6e22e">Hello</span>(<span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">SayParam</span>) <span style="color:#a6e22e">returns</span> (<span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">SayResponse</span>) {}
+    <span style="color:#a6e22e">rpc</span> <span style="color:#a6e22e">Stream</span>(<span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">SRequest</span>) <span style="color:#a6e22e">returns</span> (<span style="color:#a6e22e">stream</span> <span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">SResponse</span>) {}
+
+}
+</code></pre></div><p>import了model里的common.proto</p>
+<p>在生成的时候一个只要go_out另一个只要micro_out就好了</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  protoc --proto_path<span style="color:#f92672">=</span>$GOPATH/src:. --go_out<span style="color:#f92672">=</span>. example2/proto/model/*.proto 
+  
+  protoc --proto_path<span style="color:#f92672">=</span>$GOPATH/src:. --micro_out<span style="color:#f92672">=</span>. example2/proto/rpcapi/*.proto 
+</code></pre></div><p>订阅一个信息</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#75715e">// Register Subscribers
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">Subscribe</span>(<span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">NewSubscriber</span>(<span style="color:#a6e22e">common</span>.<span style="color:#a6e22e">Topic1</span>, <span style="color:#a6e22e">subscriber</span>.<span style="color:#a6e22e">Handler</span>)); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+        panic(<span style="color:#a6e22e">err</span>)
+    }
+</code></pre></div><p>当有信息发送时，所有订阅了lp.srv.eg2.topic1这个信息的服务都会收到信息</p>
+<p>客户端发送信息</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#a6e22e">p</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">micro</span>.<span style="color:#a6e22e">NewPublisher</span>(<span style="color:#a6e22e">common</span>.<span style="color:#a6e22e">Topic1</span>, <span style="color:#a6e22e">service</span>.<span style="color:#a6e22e">Client</span>())
+    <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">Publish</span>(<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">TODO</span>(), <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">SayParam</span>{<span style="color:#a6e22e">Msg</span>: <span style="color:#a6e22e">lib</span>.<span style="color:#a6e22e">RandomStr</span>(<span style="color:#a6e22e">lib</span>.<span style="color:#a6e22e">Random</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">10</span>))})
+</code></pre></div><p>如果是生产环境一定不要用go-micro默认的信息发布和订阅处理方式，micro的插件plugin里是有很多成熟的插件。</p>
+<p>使用双向流的小功能</p>
+<p>这个方法只是每次向客户端发送一些数据，每次只发送一部分。比如我们给客户端推送的数据很大时，一次性全都推过去，是不太正确的做法，分批推送还是比较好的。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">s</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">Say</span>) <span style="color:#a6e22e">Stream</span>(<span style="color:#a6e22e">ctx</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Context</span>, <span style="color:#a6e22e">req</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">SRequest</span>, <span style="color:#a6e22e">stream</span> <span style="color:#a6e22e">rpcapi</span>.<span style="color:#a6e22e">Say_StreamStream</span>) <span style="color:#66d9ef">error</span> {
+
+    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; int(<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">Count</span>); <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+        <span style="color:#a6e22e">rsp</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">model</span>.<span style="color:#a6e22e">SResponse</span>{}
+        <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">lib</span>.<span style="color:#a6e22e">Random</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>); <span style="color:#a6e22e">j</span> &lt; <span style="color:#ae81ff">10</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span> {
+            <span style="color:#a6e22e">rsp</span>.<span style="color:#a6e22e">Value</span> = append(<span style="color:#a6e22e">rsp</span>.<span style="color:#a6e22e">Value</span>, <span style="color:#a6e22e">lib</span>.<span style="color:#a6e22e">RandomStr</span>(<span style="color:#a6e22e">lib</span>.<span style="color:#a6e22e">Random</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">10</span>)))
+        }
+        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">stream</span>.<span style="color:#a6e22e">Send</span>(<span style="color:#a6e22e">rsp</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+        }
+        <span style="color:#75715e">// 模拟处理过程
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Sleep</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Microsecond</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">50</span>)
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+}
+</code></pre></div><p>希望这个小例子能让大家入门go-micro.</p>
+
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A01/">[转载]go微服务框架go-micro深度学习(一)</a></li>
+        
+        <li><a href="/post/golang/%E4%BD%BF%E7%94%A8micro%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1/">[转载]使用micro创建微服务</a></li>
+        
+        <li><a href="/post/golang/gomicro%E7%BC%96%E5%86%99%E5%BE%AE%E6%9C%8D%E5%8A%A1/">[转载]go-micro讲解--Go Micro编写微服务</a></li>
+        
+        <li><a href="/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/">[转载]Agones：一款基于Kubernetes的开源游戏服务器</a></li>
+        
+        <li><a href="/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/">[转载]Linux下查看文件编码及修改编码</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='http://korman.github.io/tags/golang'>golang</a></li>
+                
+                <li><a href='http://korman.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1'>微服务</a></li>
+                
+                <li><a href='http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD'>转载</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2020 <a href="http://korman.github.io/">Korman的个人博客 By Korman</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+
+
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='http://korman.github.io/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://korman.github.io/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A05/" title="[转载]go微服务框架go-micro深度学习(五)">[转载]go微服务框架go-micro深度学习(五)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A04/" title="[转载]go微服务框架go-micro深度学习(四)">[转载]go微服务框架go-micro深度学习(四)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A03/" title="[转载]go微服务框架go-micro深度学习(三)">[转载]go微服务框架go-micro深度学习(三)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02/" title="[转载]go微服务框架go-micro深度学习(二)">[转载]go微服务框架go-micro深度学习(二)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A01/" title="[转载]go微服务框架go-micro深度学习(一)">[转载]go微服务框架go-micro深度学习(一)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="[转载]Agones：一款基于Kubernetes的开源游戏服务器">[转载]Agones：一款基于Kubernetes的开源游戏服务器</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/" title="[转载]Linux下查看文件编码及修改编码">[转载]Linux下查看文件编码及修改编码</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/%E4%BD%BF%E7%94%A8micro%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="[转载]使用micro创建微服务">[转载]使用micro创建微服务</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/gomicro%E7%BC%96%E5%86%99%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="[转载]go-micro讲解--Go Micro编写微服务">[转载]go-micro讲解--Go Micro编写微服务</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/wow/base/%E8%84%B1%E7%A6%BB%E5%8D%A1%E6%AD%BB%E5%9B%9E%E5%9F%8E/" title="脱离卡死（回城）">脱离卡死（回城）</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title"><a href="/categories">分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="http://korman.github.io/categories/go%E8%AF%AD%E8%A8%80/">Go语言 (8)</a></li>
+    
+    <li><a href="http://korman.github.io/categories/linux/">linux (1)</a></li>
+    
+    <li><a href="http://korman.github.io/categories/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C/">魔兽世界 (33)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href="/tags">标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="http://korman.github.io/tags/gm%E5%91%BD%E4%BB%A4/">gm命令</a>
+    
+    <a href="http://korman.github.io/tags/golang/">golang</a>
+    
+    <a href="http://korman.github.io/tags/linux/">linux</a>
+    
+    <a href="http://korman.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a>
+    
+    <a href="http://korman.github.io/tags/%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/">游戏服务器</a>
+    
+    <a href="http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD/">转载</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://korman.github.io/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

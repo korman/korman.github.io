@@ -6,10 +6,55 @@
     <description>Recent content in golang on Korman的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 18 Sep 2020 17:10:08 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2020 13:16:15 +0800</lastBuildDate>
     
 	<atom:link href="http://korman.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[转载]go微服务框架go-micro深度学习(五)</title>
+      <link>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A05/</link>
+      <pubDate>Sat, 19 Sep 2020 13:16:15 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A05/</guid>
+      <description>介绍 github 例子地址 上一篇写了一下rpc调用过程的实现方式，简单来说就是服务端把实现了接口的结构体对象进行反射，抽取方法，签名，保存，客户端调用的时候go-micro封请求数据，服务端接收到请求时，找到需要调用调用的对象和对应的方法，利用反射进行调用，返回数据。 但是没有说stream的</description>
+    </item>
+    
+    <item>
+      <title>[转载]go微服务框架go-micro深度学习(四)</title>
+      <link>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A04/</link>
+      <pubDate>Sat, 19 Sep 2020 13:16:13 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A04/</guid>
+      <description>上一篇帖介绍 上一篇帖子go微服务框架go-micro深度学习(三) Registry服务的注册和发现详细解释了go-micro是如何做服务注册和发现在，服务端注册server信息，client获取server的地址信息，就可以和服务建立连接，然后就可以进行通信了。这篇帖子详细说一下</description>
+    </item>
+    
+    <item>
+      <title>[转载]go微服务框架go-micro深度学习(三)</title>
+      <link>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A03/</link>
+      <pubDate>Sat, 19 Sep 2020 13:16:10 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A03/</guid>
+      <description>服务的注册与发现 服务的注册与发现是微服务必不可少的功能，这样系统才能有更高的性能，更高的可用性。go-micro框架的服务发现有自己能用的接口Registry。只要实现这个接口就可以定制自己的服务注册和发现。 go-micro在客户端做的负载，典型的Balancing-aware C</description>
+    </item>
+    
+    <item>
+      <title>[转载]go微服务框架go-micro深度学习(二)</title>
+      <link>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02/</link>
+      <pubDate>Sat, 19 Sep 2020 13:16:08 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02/</guid>
+      <description>承上启下 上一篇帖子简单介绍了go-micro的整体框架结构，这一篇主要写go-micro使用方式的例子，中间会穿插一些go-micro的源码，和调用流程图，帮大家更好的理解go-micro的底层。更详细更具体的调用流程和细节，会在以后的帖子里详细讲解。 例子的github地址： gomicrorpc 跑</description>
+    </item>
+    
+    <item>
+      <title>[转载]go微服务框架go-micro深度学习(一)</title>
+      <link>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A01/</link>
+      <pubDate>Sat, 19 Sep 2020 13:16:04 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A01/</guid>
+      <description>起因 产品嘴里的一个小项目，从立项到开发上线，随着时间和需求的不断激增，会越来越复杂，变成一个大项目，如果前期项目架构没设计的不好，代码会越来越臃肿，难以维护，后期的每次产品迭代上线都会牵一发而动全身。项目微服务化，松耦合模块间的关系，是一个很好的选择，随然增加了维护成本，但是还是</description>
+    </item>
     
     <item>
       <title>[转载]Agones：一款基于Kubernetes的开源游戏服务器</title>
