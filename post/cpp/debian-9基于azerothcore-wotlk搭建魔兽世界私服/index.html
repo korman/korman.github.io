@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>[转载]Debian 9基于azerothcore Wotlk搭建魔兽世界私服 | Korman的个人博客</title>
+    <meta property="og:title" content="[转载]Debian 9基于azerothcore Wotlk搭建魔兽世界私服 - Korman的个人博客">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-09-21T15:12:10&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-09-21T15:12:10&#43;08:00'>
+        
+    <meta name="Keywords" content="">
+    <meta name="description" content="[转载]Debian 9基于azerothcore Wotlk搭建魔兽世界私服">
+        
+    <meta name="author" content="Korman">
+    <meta property="og:url" content="http://korman.github.io/post/cpp/debian-9%E5%9F%BA%E4%BA%8Eazerothcore-wotlk%E6%90%AD%E5%BB%BA%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%E7%A7%81%E6%9C%8D/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+    
+    
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://korman.github.io/">
+                        Korman的个人博客
+                    </a>
+                
+                <p class="description">Korman&#39;s Blog</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="http://korman.github.io/">首页</a>
+                    
+                    <a  href="http://korman.github.io/about/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">[转载]Debian 9基于azerothcore Wotlk搭建魔兽世界私服</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年9月21日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='http://korman.github.io/categories/c&#43;&#43;'>c&#43;&#43;</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
+        </div>
+        
+        <div class="post-content">
+            <h4 id="电脑硬件要求">电脑硬件要求</h4>
+<p>CPU双核以上，内存2G以上，交换分区4G以上，硬盘20G以上。</p>
+<h4 id="编译服务器程序">编译服务器程序</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo apt-get install git cmake make gcc g++ clang libmariadbclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libace-6.* libace-dev
+$ git clone https://github.com/azerothcore/azerothcore-wotlk.git azerothcore
+$ cd azerothcore
+$ mkdir build
+$ cd build
+$ mkdir -p /home/$USER/azeroth-server
+$ cmake ../ -DCMAKE_INSTALL_PREFIX<span style="color:#f92672">=</span>/home/$USER/azeroth-server/ -DTOOLS<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> -DSCRIPTS<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+$ make -j <span style="color:#ae81ff">2</span>
+$ make install
+</code></pre></div><p>如果需要幻化师，还需要在编译之前加入</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ cd azerothcore/modules
+$ git clone https://github.com/azerothcore/mod-transmog.git
+</code></pre></div><p>修改配置文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ cd /home/$USER/azeroth-server/etc
+$ cp authserver.conf.dist authserver.conf
+$ cp worldserver.conf.dist worldserver.conf
+</code></pre></div><p>修改<code>authserver.conf</code>和<code>worldserver.conf</code>里面mysql的连接内容
+<code>LoginDatabaseInfo = &quot;127.0.0.1;3306;root;your_password;auth&quot;</code>
+<code>WorldDatabaseInfo = &quot;127.0.0.1;3306;root;your_password;world&quot;</code>
+<code>CharacterDatabaseInfo = &quot;127.0.0.1;3306;root;your_password;characters&quot;</code>
+其中<code>root</code>是数据库用户名，<code>your_password</code>是登陆数据库的密码。
+修改<code>worldserver.conf</code>里的DataDir路径
+<code>DataDir = &quot;/home/$USER/azeroth-server/data&quot;</code>
+创建数据文件夹</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">mkdir /home/$USER/azeroth-server/data
+</code></pre></div><p>下载数据包https://mega.nz/#!utg3hKJL!TtSzcWxVkvxF4HJvor8LFWhrBwwpH2pHpI-xHGr-HZo，解压后，把里面四个文件夹复制到data目录</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cp -r dbc maps mmaps vmaps /home/$USER/azeroth-server/data/
+</code></pre></div><h4 id="数据库">数据库</h4>
+<p>创建数据库</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo mysql_secure_installation <span style="color:#75715e">##添加root密码，按Y回车。</span>
+$ mysql -u root -p
+$ passwd:
+&gt;CREATE DATABASE world;
+&gt;CREATE DATABASE characters;
+&gt;CREATE DATABASE auth;
+&gt;<span style="color:#ae81ff">\q</span>
+</code></pre></div><p>生成数据表</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ cd ~/azerothcore/apps/db_assembler/
+$ bash ./db_assembler.sh
+$ cd ~/azerothcore//env/dist/sql
+$ sudo mysql -u root -p world &lt; world_base.sql
+/// 按照这个顺序填【base -&gt; updates -&gt; custom】引入，三个数据共9份。
+</code></pre></div><p>修改下auth中realmist表中的address字段为你的服务器IP，就可以使用了
+进入<code>/home/$USER/azeroth-server/bin</code>运行
+<code>./authserver &amp;</code>
+<code>./worldserver</code>
+创建游戏账号密码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">account <span style="color:#66d9ef">create</span> <span style="color:#f92672">&lt;</span>username<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>password<span style="color:#f92672">&gt;</span>
+</code></pre></div><p>提升为GM</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">account set gmlevel &lt;username&gt; <span style="color:#ae81ff">3</span> -1
+</code></pre></div><p>GM提升到4级，修改数据表</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">UPDATE</span> auth.account_access <span style="color:#66d9ef">AS</span> <span style="color:#66d9ef">access</span> <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> auth.account <span style="color:#66d9ef">AS</span> account <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">access</span>.id <span style="color:#f92672">=</span> account.id <span style="color:#66d9ef">SET</span> gmlevel <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;4&#39;</span> <span style="color:#66d9ef">WHERE</span> name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;username&gt;&#39;</span>;
+</code></pre></div><p>作者：龜山島
+链接：https://www.jianshu.com/p/4ff891568198
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A05/">[转载]go微服务框架go-micro深度学习(五)</a></li>
+        
+        <li><a href="/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A04/">[转载]go微服务框架go-micro深度学习(四)</a></li>
+        
+        <li><a href="/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A03/">[转载]go微服务框架go-micro深度学习(三)</a></li>
+        
+        <li><a href="/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02/">[转载]go微服务框架go-micro深度学习(二)</a></li>
+        
+        <li><a href="/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A01/">[转载]go微服务框架go-micro深度学习(一)</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='http://korman.github.io/tags/c&#43;&#43;'>c&#43;&#43;</a></li>
+                
+                <li><a href='http://korman.github.io/tags/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C'>魔兽世界</a></li>
+                
+                <li><a href='http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD'>转载</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+</div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2020 <a href="http://korman.github.io/">Korman的个人博客 By Korman</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+
+
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='http://korman.github.io/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://korman.github.io/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://korman.github.io/post/cpp/debian-9%E5%9F%BA%E4%BA%8Eazerothcore-wotlk%E6%90%AD%E5%BB%BA%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%E7%A7%81%E6%9C%8D/" title="[转载]Debian 9基于azerothcore Wotlk搭建魔兽世界私服">[转载]Debian 9基于azerothcore Wotlk搭建魔兽世界私服</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/git/git%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%88%B0%E6%9C%AC%E5%9C%B0/" title="Git拉取远程分支到本地">Git拉取远程分支到本地</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A05/" title="[转载]go微服务框架go-micro深度学习(五)">[转载]go微服务框架go-micro深度学习(五)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A04/" title="[转载]go微服务框架go-micro深度学习(四)">[转载]go微服务框架go-micro深度学习(四)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A03/" title="[转载]go微服务框架go-micro深度学习(三)">[转载]go微服务框架go-micro深度学习(三)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02/" title="[转载]go微服务框架go-micro深度学习(二)">[转载]go微服务框架go-micro深度学习(二)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A01/" title="[转载]go微服务框架go-micro深度学习(一)">[转载]go微服务框架go-micro深度学习(一)</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="[转载]Agones：一款基于Kubernetes的开源游戏服务器">[转载]Agones：一款基于Kubernetes的开源游戏服务器</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/" title="[转载]Linux下查看文件编码及修改编码">[转载]Linux下查看文件编码及修改编码</a>
+    </li>
+    
+    <li>
+        <a href="http://korman.github.io/post/golang/%E4%BD%BF%E7%94%A8micro%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="[转载]使用micro创建微服务">[转载]使用micro创建微服务</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title"><a href="/categories">分类</a></h3>
+<ul class="widget-list">
+    
+    <li><a href="http://korman.github.io/categories/c&#43;&#43;/">c&#43;&#43; (1)</a></li>
+    
+    <li><a href="http://korman.github.io/categories/git/">git (1)</a></li>
+    
+    <li><a href="http://korman.github.io/categories/go%E8%AF%AD%E8%A8%80/">Go语言 (8)</a></li>
+    
+    <li><a href="http://korman.github.io/categories/linux/">linux (1)</a></li>
+    
+    <li><a href="http://korman.github.io/categories/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C/">魔兽世界 (33)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title"><a href="/tags">标签</a></h3>
+<div class="tagcloud">
+    
+    <a href="http://korman.github.io/tags/c&#43;&#43;/">c&#43;&#43;</a>
+    
+    <a href="http://korman.github.io/tags/git/">git</a>
+    
+    <a href="http://korman.github.io/tags/gm%E5%91%BD%E4%BB%A4/">gm命令</a>
+    
+    <a href="http://korman.github.io/tags/golang/">golang</a>
+    
+    <a href="http://korman.github.io/tags/linux/">linux</a>
+    
+    <a href="http://korman.github.io/tags/%E5%8E%9F%E5%88%9B/">原创</a>
+    
+    <a href="http://korman.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a>
+    
+    <a href="http://korman.github.io/tags/%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/">游戏服务器</a>
+    
+    <a href="http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD/">转载</a>
+    
+    <a href="http://korman.github.io/tags/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C/">魔兽世界</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://korman.github.io/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
