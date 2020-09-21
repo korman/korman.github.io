@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Korman的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 21 Sep 2020 15:12:10 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2020 16:07:18 +0800</lastBuildDate>
     
 	<atom:link href="http://korman.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,16 +14,34 @@
     <item>
       <title>c&#43;&#43;</title>
       <link>http://korman.github.io/tags/c&#43;&#43;/</link>
-      <pubDate>Mon, 21 Sep 2020 15:12:10 +0800</pubDate>
+      <pubDate>Mon, 21 Sep 2020 16:07:18 +0800</pubDate>
       
       <guid>http://korman.github.io/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>linux</title>
+      <link>http://korman.github.io/tags/linux/</link>
+      <pubDate>Mon, 21 Sep 2020 16:07:18 +0800</pubDate>
+      
+      <guid>http://korman.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>makefile</title>
+      <link>http://korman.github.io/tags/makefile/</link>
+      <pubDate>Mon, 21 Sep 2020 16:07:18 +0800</pubDate>
+      
+      <guid>http://korman.github.io/tags/makefile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>转载</title>
       <link>http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD/</link>
-      <pubDate>Mon, 21 Sep 2020 15:12:10 +0800</pubDate>
+      <pubDate>Mon, 21 Sep 2020 16:07:18 +0800</pubDate>
       
       <guid>http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD/</guid>
       <description></description>
@@ -80,15 +98,6 @@
       <pubDate>Fri, 18 Sep 2020 17:10:08 +0800</pubDate>
       
       <guid>http://korman.github.io/tags/%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>http://korman.github.io/tags/linux/</link>
-      <pubDate>Fri, 18 Sep 2020 17:00:21 +0800</pubDate>
-      
-      <guid>http://korman.github.io/tags/linux/</guid>
       <description></description>
     </item>
     

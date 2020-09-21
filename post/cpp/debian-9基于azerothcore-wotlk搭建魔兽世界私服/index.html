@@ -132,9 +132,19 @@
     <div class="post-toc-content">
         <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#电脑硬件要求">电脑硬件要求</a></li>
+    <li><a href="#编译服务器程序">编译服务器程序</a></li>
+    <li><a href="#修改配置文件">修改配置文件</a></li>
+    <li><a href="#数据库">数据库</a>
       <ul>
-        <li></li>
+        <li><a href="#创建数据库">创建数据库</a></li>
+        <li><a href="#生成数据表">生成数据表</a></li>
+      </ul>
+    </li>
+    <li><a href="#创建游戏账号密码">创建游戏账号密码</a>
+      <ul>
+        <li><a href="#提升为gm">提升为GM</a></li>
+        <li><a href="#gm提升到4级修改数据表">GM提升到4级，修改数据表</a></li>
       </ul>
     </li>
   </ul>
@@ -192,9 +202,9 @@
         </div>
         
         <div class="post-content">
-            <h4 id="电脑硬件要求">电脑硬件要求</h4>
+            <h2 id="电脑硬件要求">电脑硬件要求</h2>
 <p>CPU双核以上，内存2G以上，交换分区4G以上，硬盘20G以上。</p>
-<h4 id="编译服务器程序">编译服务器程序</h4>
+<h2 id="编译服务器程序">编译服务器程序</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo apt-get install git cmake make gcc g++ clang libmariadbclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libace-6.* libace-dev
 $ git clone https://github.com/azerothcore/azerothcore-wotlk.git azerothcore
 $ cd azerothcore
@@ -207,7 +217,7 @@ $ make install
 </code></pre></div><p>如果需要幻化师，还需要在编译之前加入</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ cd azerothcore/modules
 $ git clone https://github.com/azerothcore/mod-transmog.git
-</code></pre></div><p>修改配置文件</p>
+</code></pre></div><h2 id="修改配置文件">修改配置文件</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ cd /home/$USER/azeroth-server/etc
 $ cp authserver.conf.dist authserver.conf
 $ cp worldserver.conf.dist worldserver.conf
@@ -222,8 +232,8 @@ $ cp worldserver.conf.dist worldserver.conf
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">mkdir /home/$USER/azeroth-server/data
 </code></pre></div><p>下载数据包https://mega.nz/#!utg3hKJL!TtSzcWxVkvxF4HJvor8LFWhrBwwpH2pHpI-xHGr-HZo，解压后，把里面四个文件夹复制到data目录</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cp -r dbc maps mmaps vmaps /home/$USER/azeroth-server/data/
-</code></pre></div><h4 id="数据库">数据库</h4>
-<p>创建数据库</p>
+</code></pre></div><h2 id="数据库">数据库</h2>
+<h3 id="创建数据库">创建数据库</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo mysql_secure_installation <span style="color:#75715e">##添加root密码，按Y回车。</span>
 $ mysql -u root -p
 $ passwd:
@@ -231,7 +241,7 @@ $ passwd:
 &gt;CREATE DATABASE characters;
 &gt;CREATE DATABASE auth;
 &gt;<span style="color:#ae81ff">\q</span>
-</code></pre></div><p>生成数据表</p>
+</code></pre></div><h3 id="生成数据表">生成数据表</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ cd ~/azerothcore/apps/db_assembler/
 $ bash ./db_assembler.sh
 $ cd ~/azerothcore//env/dist/sql
@@ -240,12 +250,12 @@ $ sudo mysql -u root -p world &lt; world_base.sql
 </code></pre></div><p>修改下auth中realmist表中的address字段为你的服务器IP，就可以使用了
 进入<code>/home/$USER/azeroth-server/bin</code>运行
 <code>./authserver &amp;</code>
-<code>./worldserver</code>
-创建游戏账号密码</p>
+<code>./worldserver</code></p>
+<h2 id="创建游戏账号密码">创建游戏账号密码</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">account <span style="color:#66d9ef">create</span> <span style="color:#f92672">&lt;</span>username<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>password<span style="color:#f92672">&gt;</span>
-</code></pre></div><p>提升为GM</p>
+</code></pre></div><h3 id="提升为gm">提升为GM</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">account set gmlevel &lt;username&gt; <span style="color:#ae81ff">3</span> -1
-</code></pre></div><p>GM提升到4级，修改数据表</p>
+</code></pre></div><h3 id="gm提升到4级修改数据表">GM提升到4级，修改数据表</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">UPDATE</span> auth.account_access <span style="color:#66d9ef">AS</span> <span style="color:#66d9ef">access</span> <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> auth.account <span style="color:#66d9ef">AS</span> account <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">access</span>.id <span style="color:#f92672">=</span> account.id <span style="color:#66d9ef">SET</span> gmlevel <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;4&#39;</span> <span style="color:#66d9ef">WHERE</span> name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;username&gt;&#39;</span>;
 </code></pre></div><p>作者：龜山島
 链接：https://www.jianshu.com/p/4ff891568198
@@ -354,6 +364,10 @@ $ sudo mysql -u root -p world &lt; world_base.sql
 <ul class="widget-list">
     
     <li>
+        <a href="http://korman.github.io/post/linux/makefile%E6%95%99%E7%A8%8B/" title="[转载]Makefile教程">[转载]Makefile教程</a>
+    </li>
+    
+    <li>
         <a href="http://korman.github.io/post/cpp/debian-9%E5%9F%BA%E4%BA%8Eazerothcore-wotlk%E6%90%AD%E5%BB%BA%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%E7%A7%81%E6%9C%8D/" title="[转载]Debian 9基于azerothcore Wotlk搭建魔兽世界私服">[转载]Debian 9基于azerothcore Wotlk搭建魔兽世界私服</a>
     </li>
     
@@ -389,10 +403,6 @@ $ sudo mysql -u root -p world &lt; world_base.sql
         <a href="http://korman.github.io/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/" title="[转载]Linux下查看文件编码及修改编码">[转载]Linux下查看文件编码及修改编码</a>
     </li>
     
-    <li>
-        <a href="http://korman.github.io/post/golang/%E4%BD%BF%E7%94%A8micro%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="[转载]使用micro创建微服务">[转载]使用micro创建微服务</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -408,7 +418,7 @@ $ sudo mysql -u root -p world &lt; world_base.sql
     
     <li><a href="http://korman.github.io/categories/go%E8%AF%AD%E8%A8%80/">Go语言 (8)</a></li>
     
-    <li><a href="http://korman.github.io/categories/linux/">linux (1)</a></li>
+    <li><a href="http://korman.github.io/categories/linux/">linux (2)</a></li>
     
     <li><a href="http://korman.github.io/categories/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C/">魔兽世界 (33)</a></li>
     
@@ -428,6 +438,8 @@ $ sudo mysql -u root -p world &lt; world_base.sql
     <a href="http://korman.github.io/tags/golang/">golang</a>
     
     <a href="http://korman.github.io/tags/linux/">linux</a>
+    
+    <a href="http://korman.github.io/tags/makefile/">makefile</a>
     
     <a href="http://korman.github.io/tags/%E5%8E%9F%E5%88%9B/">原创</a>
     
