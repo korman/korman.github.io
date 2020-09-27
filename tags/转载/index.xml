@@ -6,10 +6,19 @@
     <description>Recent content in 转载 on Korman的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 24 Sep 2020 10:55:40 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2020 11:23:03 +0800</lastBuildDate>
     
 	<atom:link href="http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[转载]Hugo中常用命令及参数</title>
+      <link>http://korman.github.io/post/hugo/hugo%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%8F%8A%E5%8F%82%E6%95%B0/</link>
+      <pubDate>Sun, 27 Sep 2020 11:23:03 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/hugo/hugo%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%8F%8A%E5%8F%82%E6%95%B0/</guid>
+      <description>简介 hugo是运行在命令行上的, 没有UI界面, hugo的命令不是太复杂, 只需要记住几个常用的命令就可以开始工作了. 命令格式: hugo [command] [flags] hugo常用命令 help hugo help # 列出hugo所有命令及简要说明 hugo help [command] [flags] # 单独展示某个命令或参数的使用说明 hugo hugo # hugo为主命令, 当他不带任何子命令和参数时, 表</description>
+    </item>
     
     <item>
       <title>[转载]Makefile简单编写 生成可执行文件</title>
