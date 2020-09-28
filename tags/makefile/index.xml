@@ -6,11 +6,7 @@
     <description>Recent content in makefile on Korman的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 24 Sep 2020 10:55:40 +0800</lastBuildDate>
-    
-	<atom:link href="http://korman.github.io/tags/makefile/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 24 Sep 2020 10:55:40 +0800</lastBuildDate><atom:link href="http://korman.github.io/tags/makefile/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[转载]Makefile简单编写 生成可执行文件</title>
       <link>http://korman.github.io/post/linux/makefile%E7%AE%80%E5%8D%95%E7%BC%96%E5%86%99-%E7%94%9F%E6%88%90%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</link>
