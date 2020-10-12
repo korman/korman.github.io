@@ -6,7 +6,16 @@
     <description>Recent content in 转载 on Korman的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 28 Sep 2020 14:51:22 +0800</lastBuildDate><atom:link href="http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Oct 2020 15:49:56 +0800</lastBuildDate><atom:link href="http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[转载]什么是敏捷开发</title>
+      <link>http://korman.github.io/post/development/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Mon, 12 Oct 2020 15:49:56 +0800</pubDate>
+      
+      <guid>http://korman.github.io/post/development/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</guid>
+      <description>一个有趣的例子： 如果去餐厅点餐，点了10个菜，经过一个多小时，服务员才一次性把做完的10个菜全部端上来，这就等同于传统的开发模式，而大部分的餐厅显然不会这样，更常见的是做完一道菜就先端上了一道菜（以顾客需求为核心），这就相当于敏捷开发。 传统开发： 瀑布式开发，严格分级，需求分析，设</description>
+    </item>
+    
     <item>
       <title>[转载]GPG入门教程</title>
       <link>http://korman.github.io/post/linux/gpg%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</link>
