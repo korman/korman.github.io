@@ -6,24 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>[转载]Linux下查看文件编码及修改编码 | Korman的个人博客</title>
-    <meta property="og:title" content="[转载]Linux下查看文件编码及修改编码 - Korman的个人博客">
+    <title>Scrum | Korman的个人博客</title>
+    <meta property="og:title" content="Scrum - Korman的个人博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-09-18T17:00:21&#43;08:00'>
-        
-        
-    <meta property="article:modified_time" content='2020-09-18T17:00:21&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="[转载]Linux下查看文件编码及修改编码">
+    <meta name="description" content="Scrum">
         
     <meta name="author" content="Korman">
-    <meta property="og:url" content="http://korman.github.io/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/">
+    <meta property="og:url" content="http://korman.github.io/tags/scrum/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml+xml" href="http://korman.github.io/tags/scrum/index.xml" title="Korman的个人博客" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -49,7 +46,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="current" href="http://korman.github.io/">首页</a>
+                    <a class="" href="http://korman.github.io/">首页</a>
                     
                     <a  href="http://korman.github.io/about/about/" title="关于">关于</a>
                     
@@ -66,210 +63,45 @@
                 <div class="col-8" id="main">
                     
 <div class="res-cons">
-    <style type="text/css">
-    .post-toc {
-        position: fixed;
-        width: 200px;
-        margin-left: -210px;
-        padding: 5px 10px;
-        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
-        font-size: 12px;
-        border: 1px solid rgba(0, 0, 0, .07);
-        border-radius: 5px;
-        background-color: rgba(255, 255, 255, 0.98);
-        background-clip: padding-box;
-        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
-        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
-        word-wrap: break-word;
-        white-space: nowrap;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        z-index: 999;
-        cursor: pointer;
-        max-height: 70%;
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
+    
+    <h3 class="archive-title">
+        包含标签
+        <span class="keyword">Scrum</span>
+        的文章
+    </h3>
+    
 
-    .post-toc .post-toc-title {
-        width: 100%;
-        margin: 0 auto;
-        font-size: 20px;
-        font-weight: 400;
-        text-transform: uppercase;
-        text-align: center;
-    }
-
-    .post-toc .post-toc-content {
-        font-size: 15px;
-    }
-
-    .post-toc .post-toc-content>nav>ul {
-        margin: 10px 0;
-    }
-
-    .post-toc .post-toc-content ul {
-        padding-left: 20px;
-        list-style: square;
-        margin: 0.5em;
-        line-height: 1.8em;
-    }
-
-    .post-toc .post-toc-content ul ul {
-        padding-left: 15px;
-        display: none;
-    }
-
-    @media print,
-    screen and (max-width:1057px) {
-        .post-toc {
-            display: none;
-        }
-    }
-</style>
-<div class="post-toc" style="position: absolute; top: 188px;">
-    <h2 class="post-toc-title">文章目录</h2>
-    <div class="post-toc-content">
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#在vim中可以直接查看文件编码">在Vim中可以直接查看文件编码</a></li>
-    <li><a href="#文件编码转换">文件编码转换</a></li>
-    <li><a href="#利用iconv命令进行编码转换文件内容编码转换">利用iconv命令进行编码转换文件内容编码转换</a>
-      <ul>
-        <li><a href="#例子">例子:</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-    </div>
-</div>
-<script type="text/javascript">
-    $(document).ready(function () {
-        var postToc = $(".post-toc");
-        if (postToc.length) {
-            var leftPos = $("#main").offset().left;
-            if(leftPos<220){
-                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
-            }
-
-            var t = postToc.offset().top - 20,
-                a = {
-                    start: {
-                        position: "absolute",
-                        top: t
-                    },
-                    process: {
-                        position: "fixed",
-                        top: 20
-                    },
-                };
-            $(window).scroll(function () {
-                var e = $(window).scrollTop();
-                e < t ? postToc.css(a.start) : postToc.css(a.process)
-            })
-        }
-    })
-</script>
+    
     <article class="post">
         <header>
-            <h1 class="post-title">[转载]Linux下查看文件编码及修改编码</h1>
+            <h1 class="post-title">
+                <a href="http://korman.github.io/post/development/%E4%B8%8D%E6%98%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E4%B9%9F%E8%83%BD%E6%87%82%E7%9A%84scrum%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/">[转载]不是工程师也能懂的Scrum入门介绍</a>
+            </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年9月18日
+            2020年10月13日
         </date>
         
-        <div class="post-meta">
-            <span>|</span>
+        <div class="post-meta meta-category">
+            |
             
-            <span class="meta-category"><a href='http://korman.github.io/categories/linux'>linux</a></span>
+            <a href='http://korman.github.io/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86'>项目管理</a>
             
-        </div>
-        
-        
-        
-        <div class="clear" style="display: none">
-            <div class="toc-article">
-                <div class="toc-title">文章目录</div>
-            </div>
         </div>
         
         <div class="post-content">
-            <h2 id="在vim中可以直接查看文件编码">在Vim中可以直接查看文件编码</h2>
-<pre><code>:set fileencoding
-</code></pre><p>即可显示文件编码格式。</p>
-<p>如果你只是想查看其它编码格式的文件或者想解决用Vim查看文件乱码的问题，那么你可以在~/.vimrc文件中添加一下内容:</p>
-<pre><code>set encoding=utf-8 filenencodings=ucs-bom,utf-8,cp936
-</code></pre><p>这样，就可以让vim自动识别文件编码(可以自动识别UTF-8或者GBK编码的文件),其实就是依照fileencodings提供的编码列表尝试，如果没有找到合适的编码，就用latin-1(ASCII)编码打开</p>
-<h2 id="文件编码转换">文件编码转换</h2>
-<ol>
-<li>在vim中直接进行转换文件编码，比如将一个文件转换成utf-8格式</li>
-</ol>
-<pre><code>:set fileencoding=utf-8
-</code></pre><ol start="2">
-<li>enconv转换文件编码，比如要将一个GBK编码的文件转换成UTF-8编码，操作如下:</li>
-</ol>
-<pre><code>enconv -L zh_CN -x UTF-8 filename
-</code></pre><ol start="3">
-<li>iconv转换，iconv的命令格式如下:</li>
-</ol>
-<pre><code>iconv -f encoding -t encoding inputfile
-</code></pre><p>​    比如将一个UTF-8编码的文件转换成GBK编码</p>
-<pre><code>iconv -f UTF-8 -t GBK file1 -O file2
-</code></pre><p>查看文件编码file命令</p>
-<pre><code>file ip.txt
-
-ip.txt: UTF-8 Unicode text, with escape sequences
-</code></pre><h2 id="利用iconv命令进行编码转换文件内容编码转换">利用iconv命令进行编码转换文件内容编码转换</h2>
-<p>iconv命令用于转换指定文件的编码，默认输出到标准输出设备，亦可指定输出文件。</p>
-<p>用法：</p>
-<pre><code>iconv [选项...][文件...]
-</code></pre><p>-f,&ndash;from-code=名称 原始文本编码</p>
-<p>-t,&ndash;to-code=名称 输出编码</p>
-<p>输出控制: -c 从输出中忽略无效的字符</p>
-<p>-o,&ndash;output=FILE 输出文件号</p>
-<h3 id="例子">例子:</h3>
-<pre><code>iconv -f utf-8 -t gb2312 aaa.txt &gt; bbb.txt
-</code></pre><p>这个命令读取aaa.txt文件，从utf-8编码转换为gb2312编码，其输出定向到bbb.txt文件。</p>
-<p>cp936 aaaa.csv  =》  utf-8 as.csv</p>
-<pre><code>iconv -f cp936 -t utf-8 aaaa.csv -o as.csv
-</code></pre><p>转载地址：https://blog.csdn.net/ywf331/article/details/80536033</p>
-
-        </div>
-
-        
-
-
-        
-
-<div class="post-archive">
-    <h2>See Also</h2>
-    <ul class="listing">
-        
-        <li><a href="/post/golang/%E4%BD%BF%E7%94%A8micro%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1/">[转载]使用micro创建微服务</a></li>
-        
-        <li><a href="/post/golang/gomicro%E7%BC%96%E5%86%99%E5%BE%AE%E6%9C%8D%E5%8A%A1/">[转载]go-micro讲解--Go Micro编写微服务</a></li>
-        
-    </ul>
-</div>
-
-
-        <div class="post-meta meta-tags">
-            
-            <ul class="clearfix">
-                
-                <li><a href='http://korman.github.io/tags/linux'>linux</a></li>
-                
-                <li><a href='http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD'>转载</a></li>
-                
-            </ul>
-            
+            什麽是Scrum？要理解其实很简单 Scrum源于软体工程师的工作模式，如果你的团队已经知道目标大致为何、可能需要做的事之后，下一步应该会想「如何一起完成」，而Scrum基本上就在告诉你这件事。 许多老闆都「听说」它很好，但因为难以理解、不知道实际优点、运作方式，所以想要导入就变得很……
+            <p class="readmore"><a href="http://korman.github.io/post/development/%E4%B8%8D%E6%98%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E4%B9%9F%E8%83%BD%E6%87%82%E7%9A%84scrum%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/">阅读全文</a></p>
         </div>
     </article>
     
-    
 
     
-    
+
+
+
+
+
 </div>
 
                     <footer id="footer">
@@ -292,16 +124,6 @@ ip.txt: UTF-8 Unicode text, with escape sequences
 </footer>
 
 
-    
-    <script type="text/javascript">
-        window.MathJax = {
-            tex2jax: {
-                inlineMath: [['$', '$']],
-                processEscapes: true
-                }
-            };
-    </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
