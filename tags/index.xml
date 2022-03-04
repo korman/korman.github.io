@@ -1,189 +1,189 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Korman的个人博客</title>
-    <link>http://korman.github.io/tags/</link>
-    <description>Recent content in Tags on Korman的个人博客</description>
+    <title>Tags on 郭浩的个人博客</title>
+    <link>http://guohao.work/tags/</link>
+    <description>Recent content in Tags on 郭浩的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 14 Oct 2020 09:11:34 +0800</lastBuildDate><atom:link href="http://korman.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Oct 2020 09:11:34 +0800</lastBuildDate><atom:link href="http://guohao.work/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>厨艺</title>
-      <link>http://korman.github.io/tags/%E5%8E%A8%E8%89%BA/</link>
+      <link>http://guohao.work/tags/%E5%8E%A8%E8%89%BA/</link>
       <pubDate>Wed, 14 Oct 2020 09:11:34 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/%E5%8E%A8%E8%89%BA/</guid>
+      <guid>http://guohao.work/tags/%E5%8E%A8%E8%89%BA/</guid>
       <description></description>
     </item>
     
     <item>
       <title>转载</title>
-      <link>http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD/</link>
+      <link>http://guohao.work/tags/%E8%BD%AC%E8%BD%BD/</link>
       <pubDate>Wed, 14 Oct 2020 09:11:34 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/%E8%BD%AC%E8%BD%BD/</guid>
+      <guid>http://guohao.work/tags/%E8%BD%AC%E8%BD%BD/</guid>
       <description></description>
     </item>
     
     <item>
       <title>开发</title>
-      <link>http://korman.github.io/tags/%E5%BC%80%E5%8F%91/</link>
+      <link>http://guohao.work/tags/%E5%BC%80%E5%8F%91/</link>
       <pubDate>Tue, 13 Oct 2020 14:49:00 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/%E5%BC%80%E5%8F%91/</guid>
+      <guid>http://guohao.work/tags/%E5%BC%80%E5%8F%91/</guid>
       <description></description>
     </item>
     
     <item>
       <title>敏捷开发</title>
-      <link>http://korman.github.io/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</link>
+      <link>http://guohao.work/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</link>
       <pubDate>Tue, 13 Oct 2020 14:49:00 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</guid>
+      <guid>http://guohao.work/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scrum</title>
-      <link>http://korman.github.io/tags/scrum/</link>
+      <link>http://guohao.work/tags/scrum/</link>
       <pubDate>Tue, 13 Oct 2020 11:30:56 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/scrum/</guid>
+      <guid>http://guohao.work/tags/scrum/</guid>
       <description></description>
     </item>
     
     <item>
       <title>gpg</title>
-      <link>http://korman.github.io/tags/gpg/</link>
+      <link>http://guohao.work/tags/gpg/</link>
       <pubDate>Mon, 28 Sep 2020 14:51:22 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/gpg/</guid>
+      <guid>http://guohao.work/tags/gpg/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>http://korman.github.io/tags/linux/</link>
+      <link>http://guohao.work/tags/linux/</link>
       <pubDate>Mon, 28 Sep 2020 14:51:22 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/linux/</guid>
+      <guid>http://guohao.work/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>加密</title>
-      <link>http://korman.github.io/tags/%E5%8A%A0%E5%AF%86/</link>
+      <link>http://guohao.work/tags/%E5%8A%A0%E5%AF%86/</link>
       <pubDate>Mon, 28 Sep 2020 14:51:22 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/%E5%8A%A0%E5%AF%86/</guid>
+      <guid>http://guohao.work/tags/%E5%8A%A0%E5%AF%86/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>http://korman.github.io/tags/hugo/</link>
+      <link>http://guohao.work/tags/hugo/</link>
       <pubDate>Sun, 27 Sep 2020 11:23:03 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/hugo/</guid>
+      <guid>http://guohao.work/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>angular</title>
-      <link>http://korman.github.io/tags/angular/</link>
+      <link>http://guohao.work/tags/angular/</link>
       <pubDate>Fri, 25 Sep 2020 13:52:55 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/angular/</guid>
+      <guid>http://guohao.work/tags/angular/</guid>
       <description></description>
     </item>
     
     <item>
       <title>nodejs</title>
-      <link>http://korman.github.io/tags/nodejs/</link>
+      <link>http://guohao.work/tags/nodejs/</link>
       <pubDate>Fri, 25 Sep 2020 13:52:55 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/nodejs/</guid>
+      <guid>http://guohao.work/tags/nodejs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>原创</title>
-      <link>http://korman.github.io/tags/%E5%8E%9F%E5%88%9B/</link>
+      <link>http://guohao.work/tags/%E5%8E%9F%E5%88%9B/</link>
       <pubDate>Fri, 25 Sep 2020 13:52:55 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/%E5%8E%9F%E5%88%9B/</guid>
+      <guid>http://guohao.work/tags/%E5%8E%9F%E5%88%9B/</guid>
       <description></description>
     </item>
     
     <item>
       <title>makefile</title>
-      <link>http://korman.github.io/tags/makefile/</link>
+      <link>http://guohao.work/tags/makefile/</link>
       <pubDate>Thu, 24 Sep 2020 10:55:40 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/makefile/</guid>
+      <guid>http://guohao.work/tags/makefile/</guid>
       <description></description>
     </item>
     
     <item>
       <title>c&#43;&#43;</title>
-      <link>http://korman.github.io/tags/c&#43;&#43;/</link>
+      <link>http://guohao.work/tags/c&#43;&#43;/</link>
       <pubDate>Tue, 22 Sep 2020 14:43:01 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/c&#43;&#43;/</guid>
+      <guid>http://guohao.work/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     
     <item>
       <title>魔兽世界</title>
-      <link>http://korman.github.io/tags/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C/</link>
+      <link>http://guohao.work/tags/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C/</link>
       <pubDate>Tue, 22 Sep 2020 14:43:01 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C/</guid>
+      <guid>http://guohao.work/tags/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C/</guid>
       <description></description>
     </item>
     
     <item>
       <title>git</title>
-      <link>http://korman.github.io/tags/git/</link>
+      <link>http://guohao.work/tags/git/</link>
       <pubDate>Mon, 21 Sep 2020 10:36:04 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/git/</guid>
+      <guid>http://guohao.work/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>微服务</title>
-      <link>http://korman.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/</link>
+      <link>http://guohao.work/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/</link>
       <pubDate>Mon, 21 Sep 2020 10:36:04 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/</guid>
+      <guid>http://guohao.work/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>http://korman.github.io/tags/golang/</link>
+      <link>http://guohao.work/tags/golang/</link>
       <pubDate>Sat, 19 Sep 2020 13:16:15 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/golang/</guid>
+      <guid>http://guohao.work/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>游戏服务器</title>
-      <link>http://korman.github.io/tags/%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <link>http://guohao.work/tags/%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Fri, 18 Sep 2020 17:10:08 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <guid>http://guohao.work/tags/%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description></description>
     </item>
     
     <item>
       <title>gm命令</title>
-      <link>http://korman.github.io/tags/gm%E5%91%BD%E4%BB%A4/</link>
+      <link>http://guohao.work/tags/gm%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Thu, 17 Sep 2020 15:25:00 +0800</pubDate>
       
-      <guid>http://korman.github.io/tags/gm%E5%91%BD%E4%BB%A4/</guid>
+      <guid>http://guohao.work/tags/gm%E5%91%BD%E4%BB%A4/</guid>
       <description></description>
     </item>
     

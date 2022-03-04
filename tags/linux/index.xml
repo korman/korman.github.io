@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on Korman的个人博客</title>
-    <link>http://korman.github.io/tags/linux/</link>
-    <description>Recent content in linux on Korman的个人博客</description>
+    <title>linux on 郭浩的个人博客</title>
+    <link>http://guohao.work/tags/linux/</link>
+    <description>Recent content in linux on 郭浩的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 28 Sep 2020 14:51:22 +0800</lastBuildDate><atom:link href="http://korman.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2020 14:51:22 +0800</lastBuildDate><atom:link href="http://guohao.work/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[转载]GPG入门教程</title>
-      <link>http://korman.github.io/post/linux/gpg%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</link>
+      <link>http://guohao.work/post/linux/gpg%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</link>
       <pubDate>Mon, 28 Sep 2020 14:51:22 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/linux/gpg%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</guid>
+      <guid>http://guohao.work/post/linux/gpg%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</guid>
       <description>一、什么是GPG 要了解什么是GPG，就要先了解PGP。 1991年，程序员Phil Zimmermann为了避开政府监视，开发了加密软件PGP。这个软件非常好用，迅速流传开来，成了许多程序员的必备工具。但是，它是商业软件，不能自由使用。所以，自由软件基金会决定，开发一个PGP的替代品</description>
     </item>
     
     <item>
       <title>[转载]Makefile简单编写 生成可执行文件</title>
-      <link>http://korman.github.io/post/linux/makefile%E7%AE%80%E5%8D%95%E7%BC%96%E5%86%99-%E7%94%9F%E6%88%90%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</link>
+      <link>http://guohao.work/post/linux/makefile%E7%AE%80%E5%8D%95%E7%BC%96%E5%86%99-%E7%94%9F%E6%88%90%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</link>
       <pubDate>Thu, 24 Sep 2020 10:55:40 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/linux/makefile%E7%AE%80%E5%8D%95%E7%BC%96%E5%86%99-%E7%94%9F%E6%88%90%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</guid>
+      <guid>http://guohao.work/post/linux/makefile%E7%AE%80%E5%8D%95%E7%BC%96%E5%86%99-%E7%94%9F%E6%88%90%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</guid>
       <description>要想把写好的程序放到linux下编译，必不可少的要使用到makefile文件。makefile带来的好处就是——“自动化编译”，一旦写好，只需要一个make命令，整个工程完全自动编译，极大的提高了软件开发的效率。下面讲下makefile简单的编写例子。 1、 Makefile的规则 target</description>
     </item>
     
     <item>
       <title>[转载]Makefile教程</title>
-      <link>http://korman.github.io/post/linux/makefile%E6%95%99%E7%A8%8B/</link>
+      <link>http://guohao.work/post/linux/makefile%E6%95%99%E7%A8%8B/</link>
       <pubDate>Mon, 21 Sep 2020 16:07:18 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/linux/makefile%E6%95%99%E7%A8%8B/</guid>
+      <guid>http://guohao.work/post/linux/makefile%E6%95%99%E7%A8%8B/</guid>
       <description>开头 makefile很重要 什么是makefile？或许很多Winodws的程序员都不知道这个东西，因为那些Windows的IDE都为你做了这个工作，但我觉得要作一个好的和professional的程序员，makefile还是要懂。这就好像现在有这么多的HTML的编辑器，但如果你想</description>
     </item>
     
     <item>
       <title>[转载]Linux下查看文件编码及修改编码</title>
-      <link>http://korman.github.io/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/</link>
+      <link>http://guohao.work/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/</link>
       <pubDate>Fri, 18 Sep 2020 17:00:21 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/</guid>
+      <guid>http://guohao.work/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/</guid>
       <description>在Vim中可以直接查看文件编码 :set fileencoding 即可显示文件编码格式。 如果你只是想查看其它编码格式的文件或者想解决用Vim查看文件乱码的问题，那么你可以在~/.vimrc文件中添加一下内容: set encoding=utf-8 filenencodings=ucs-bom,utf-8,cp936 这样，就可以让vim自动识别文件编码(可以自动识别UTF-8或者GBK编码的文件),其实就是依照f</description>
     </item>
     

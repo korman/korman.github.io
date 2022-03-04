@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Abouts on Korman的个人博客</title>
-    <link>http://korman.github.io/about/</link>
-    <description>Recent content in Abouts on Korman的个人博客</description>
+    <title>Abouts on 郭浩的个人博客</title>
+    <link>http://guohao.work/about/</link>
+    <description>Recent content in Abouts on 郭浩的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 17 Sep 2020 09:03:30 +0800</lastBuildDate><atom:link href="http://korman.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Sep 2020 09:03:30 +0800</lastBuildDate><atom:link href="http://guohao.work/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>关于</title>
-      <link>http://korman.github.io/about/about/</link>
+      <link>http://guohao.work/about/about/</link>
       <pubDate>Thu, 17 Sep 2020 09:03:30 +0800</pubDate>
       
-      <guid>http://korman.github.io/about/about/</guid>
+      <guid>http://guohao.work/about/about/</guid>
       <description>关于作者 联系方式 e-mail: korman@qq.com qq: 249980463</description>
     </item>
     

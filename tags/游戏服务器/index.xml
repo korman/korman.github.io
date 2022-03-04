@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>游戏服务器 on Korman的个人博客</title>
-    <link>http://korman.github.io/tags/%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
-    <description>Recent content in 游戏服务器 on Korman的个人博客</description>
+    <title>游戏服务器 on 郭浩的个人博客</title>
+    <link>http://guohao.work/tags/%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+    <description>Recent content in 游戏服务器 on 郭浩的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 18 Sep 2020 17:10:08 +0800</lastBuildDate><atom:link href="http://korman.github.io/tags/%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Sep 2020 17:10:08 +0800</lastBuildDate><atom:link href="http://guohao.work/tags/%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[转载]Agones：一款基于Kubernetes的开源游戏服务器</title>
-      <link>http://korman.github.io/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <link>http://guohao.work/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Fri, 18 Sep 2020 17:10:08 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <guid>http://guohao.work/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description>简介 在分布式系统领域，支持在线弹性扩展，实时多人专属游戏服务器意味着特殊的挑战。随着游戏专业人士创造的各种特殊方案，Kubernetes被整合成跨云和物理机，支持复杂工作流的开源分布式标准。今天，我们很高兴发布开源Agones[1]（希腊语“contest”或者“gatherin</description>
     </item>
     

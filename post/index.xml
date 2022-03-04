@@ -1,504 +1,504 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Korman的个人博客</title>
-    <link>http://korman.github.io/post/</link>
-    <description>Recent content in Posts on Korman的个人博客</description>
+    <title>Posts on 郭浩的个人博客</title>
+    <link>http://guohao.work/post/</link>
+    <description>Recent content in Posts on 郭浩的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 14 Oct 2020 09:11:34 +0800</lastBuildDate><atom:link href="http://korman.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Oct 2020 09:11:34 +0800</lastBuildDate><atom:link href="http://guohao.work/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[转载]棒槌肉片，味道特别的鲜美</title>
-      <link>http://korman.github.io/post/cooking/%E6%A3%92%E6%A7%8C%E8%82%89%E7%89%87%E5%91%B3%E9%81%93%E7%89%B9%E5%88%AB%E7%9A%84%E9%B2%9C%E7%BE%8E/</link>
+      <link>http://guohao.work/post/cooking/%E6%A3%92%E6%A7%8C%E8%82%89%E7%89%87%E5%91%B3%E9%81%93%E7%89%B9%E5%88%AB%E7%9A%84%E9%B2%9C%E7%BE%8E/</link>
       <pubDate>Wed, 14 Oct 2020 09:11:34 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/cooking/%E6%A3%92%E6%A7%8C%E8%82%89%E7%89%87%E5%91%B3%E9%81%93%E7%89%B9%E5%88%AB%E7%9A%84%E9%B2%9C%E7%BE%8E/</guid>
+      <guid>http://guohao.work/post/cooking/%E6%A3%92%E6%A7%8C%E8%82%89%E7%89%87%E5%91%B3%E9%81%93%E7%89%B9%E5%88%AB%E7%9A%84%E9%B2%9C%E7%BE%8E/</guid>
       <description>简介 最近很火的一道菜。把里脊肉用棒槌，我没有这个东西用的擀面棒来代替。切片儿一片一片的蘸上淀粉捶打。这个肉质那非常的细嫩。加点儿火锅底料和自己喜欢的蔬菜用煮水煮肉片儿的方法来烹饪它。做菜要有自己的心思和特色，不是别人放什么菜，你就放什么菜。这道菜呢，我在里面加了韭菜。韭菜有自己独</description>
     </item>
     
     <item>
       <title>[转载]Scrum 是什么</title>
-      <link>http://korman.github.io/post/development/scrum%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <link>http://guohao.work/post/development/scrum%E6%98%AF%E4%BB%80%E4%B9%88/</link>
       <pubDate>Tue, 13 Oct 2020 14:49:00 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/development/scrum%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <guid>http://guohao.work/post/development/scrum%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
       <description>Scrum 是什么？ Scrum 是当前最流行的敏捷软件开发方法论和实施框架。但就像人们对 “Agile” 术语的不同理解一样，不同的人对 “Scrum” 也有着不同的理解。那么，到底 Scrum 是什么？ 标准释义： Scrum 是一个框架，在这个框架中人们可以解决复杂的自适应问题，同时也能高效并有创造性地交付尽可能高价值的产品。 我</description>
     </item>
     
     <item>
       <title>[转载]不是工程师也能懂的Scrum入门介绍</title>
-      <link>http://korman.github.io/post/development/%E4%B8%8D%E6%98%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E4%B9%9F%E8%83%BD%E6%87%82%E7%9A%84scrum%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/</link>
+      <link>http://guohao.work/post/development/%E4%B8%8D%E6%98%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E4%B9%9F%E8%83%BD%E6%87%82%E7%9A%84scrum%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/</link>
       <pubDate>Tue, 13 Oct 2020 11:30:56 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/development/%E4%B8%8D%E6%98%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E4%B9%9F%E8%83%BD%E6%87%82%E7%9A%84scrum%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/</guid>
+      <guid>http://guohao.work/post/development/%E4%B8%8D%E6%98%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E4%B9%9F%E8%83%BD%E6%87%82%E7%9A%84scrum%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/</guid>
       <description>什麽是Scrum？要理解其实很简单 Scrum源于软体工程师的工作模式，如果你的团队已经知道目标大致为何、可能需要做的事之后，下一步应该会想「如何一起完成」，而Scrum基本上就在告诉你这件事。 许多老闆都「听说」它很好，但因为难以理解、不知道实际优点、运作方式，所以想要导入就变得很</description>
     </item>
     
     <item>
       <title>[转载]如何让团队开始使用敏捷开发</title>
-      <link>http://korman.github.io/post/development/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%9B%A2%E9%98%9F%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</link>
+      <link>http://guohao.work/post/development/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%9B%A2%E9%98%9F%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</link>
       <pubDate>Mon, 12 Oct 2020 16:41:06 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/development/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%9B%A2%E9%98%9F%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</guid>
+      <guid>http://guohao.work/post/development/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%9B%A2%E9%98%9F%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</guid>
       <description>为什么要敏捷开发 “没有人喜欢敏捷，但我们不得不敏捷。就像没有人喜欢工作，但你必须工作。”这是我经常用来调侃敏捷的一句话。 试想一下，拿到一份完整详尽的需求文档，逐个功能Coding，测试部署上线。不需要再次确认需求，不会有人打断思路。没有需求更改，只要自己不犯错，不存在推倒重来这才</description>
     </item>
     
     <item>
       <title>[转载]什么是敏捷开发</title>
-      <link>http://korman.github.io/post/development/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</link>
+      <link>http://guohao.work/post/development/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</link>
       <pubDate>Mon, 12 Oct 2020 15:49:56 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/development/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</guid>
+      <guid>http://guohao.work/post/development/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</guid>
       <description>一个有趣的例子： 如果去餐厅点餐，点了10个菜，经过一个多小时，服务员才一次性把做完的10个菜全部端上来，这就等同于传统的开发模式，而大部分的餐厅显然不会这样，更常见的是做完一道菜就先端上了一道菜（以顾客需求为核心），这就相当于敏捷开发。 传统开发： 瀑布式开发，严格分级，需求分析，设</description>
     </item>
     
     <item>
       <title>[转载]GPG入门教程</title>
-      <link>http://korman.github.io/post/linux/gpg%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</link>
+      <link>http://guohao.work/post/linux/gpg%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</link>
       <pubDate>Mon, 28 Sep 2020 14:51:22 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/linux/gpg%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</guid>
+      <guid>http://guohao.work/post/linux/gpg%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</guid>
       <description>一、什么是GPG 要了解什么是GPG，就要先了解PGP。 1991年，程序员Phil Zimmermann为了避开政府监视，开发了加密软件PGP。这个软件非常好用，迅速流传开来，成了许多程序员的必备工具。但是，它是商业软件，不能自由使用。所以，自由软件基金会决定，开发一个PGP的替代品</description>
     </item>
     
     <item>
       <title>[转载]Hugo中常用命令及参数</title>
-      <link>http://korman.github.io/post/hugo/hugo%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%8F%8A%E5%8F%82%E6%95%B0/</link>
+      <link>http://guohao.work/post/hugo/hugo%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%8F%8A%E5%8F%82%E6%95%B0/</link>
       <pubDate>Sun, 27 Sep 2020 11:23:03 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/hugo/hugo%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%8F%8A%E5%8F%82%E6%95%B0/</guid>
+      <guid>http://guohao.work/post/hugo/hugo%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%8F%8A%E5%8F%82%E6%95%B0/</guid>
       <description>简介 hugo是运行在命令行上的, 没有UI界面, hugo的命令不是太复杂, 只需要记住几个常用的命令就可以开始工作了. 命令格式: hugo [command] [flags] hugo常用命令 help hugo help # 列出hugo所有命令及简要说明 hugo help [command] [flags] # 单独展示某个命令或参数的使用说明 hugo hugo # hugo为主命令, 当他不带任何子命令和参数时, 表</description>
     </item>
     
     <item>
       <title>项目打包命令</title>
-      <link>http://korman.github.io/post/angular/%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%91%BD%E4%BB%A4/</link>
+      <link>http://guohao.work/post/angular/%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Fri, 25 Sep 2020 13:52:55 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/angular/%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%91%BD%E4%BB%A4/</guid>
+      <guid>http://guohao.work/post/angular/%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%91%BD%E4%BB%A4/</guid>
       <description>ng build &amp;ndash;prod &amp;ndash;aot &amp;ndash;base-href ./</description>
     </item>
     
     <item>
       <title>[转载]Makefile简单编写 生成可执行文件</title>
-      <link>http://korman.github.io/post/linux/makefile%E7%AE%80%E5%8D%95%E7%BC%96%E5%86%99-%E7%94%9F%E6%88%90%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</link>
+      <link>http://guohao.work/post/linux/makefile%E7%AE%80%E5%8D%95%E7%BC%96%E5%86%99-%E7%94%9F%E6%88%90%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</link>
       <pubDate>Thu, 24 Sep 2020 10:55:40 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/linux/makefile%E7%AE%80%E5%8D%95%E7%BC%96%E5%86%99-%E7%94%9F%E6%88%90%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</guid>
+      <guid>http://guohao.work/post/linux/makefile%E7%AE%80%E5%8D%95%E7%BC%96%E5%86%99-%E7%94%9F%E6%88%90%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</guid>
       <description>要想把写好的程序放到linux下编译，必不可少的要使用到makefile文件。makefile带来的好处就是——“自动化编译”，一旦写好，只需要一个make命令，整个工程完全自动编译，极大的提高了软件开发的效率。下面讲下makefile简单的编写例子。 1、 Makefile的规则 target</description>
     </item>
     
     <item>
       <title>[转载]Mac下搭建AzerothCore遇到的坑</title>
-      <link>http://korman.github.io/post/cpp/mac%E4%B8%8B%E6%90%AD%E5%BB%BAazerothcore%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</link>
+      <link>http://guohao.work/post/cpp/mac%E4%B8%8B%E6%90%AD%E5%BB%BAazerothcore%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</link>
       <pubDate>Tue, 22 Sep 2020 14:43:01 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/cpp/mac%E4%B8%8B%E6%90%AD%E5%BB%BAazerothcore%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</guid>
+      <guid>http://guohao.work/post/cpp/mac%E4%B8%8B%E6%90%AD%E5%BB%BAazerothcore%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</guid>
       <description>一、git clone 时候遇到的问题 1、git代码证书问题。 参考文档：https://blog.csdn.net/lqlqlq007/article/details/78983879 2、git本地配置（git文件大小限制，git速度限制） git config --global --add core.compression -1 git config --global http.postBuffer 524288000 git config --global http.lowSpeedLimit 0 git config --global http.lowSpeedTime 999999 3、git</description>
     </item>
     
     <item>
       <title>[转载]Makefile教程</title>
-      <link>http://korman.github.io/post/linux/makefile%E6%95%99%E7%A8%8B/</link>
+      <link>http://guohao.work/post/linux/makefile%E6%95%99%E7%A8%8B/</link>
       <pubDate>Mon, 21 Sep 2020 16:07:18 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/linux/makefile%E6%95%99%E7%A8%8B/</guid>
+      <guid>http://guohao.work/post/linux/makefile%E6%95%99%E7%A8%8B/</guid>
       <description>开头 makefile很重要 什么是makefile？或许很多Winodws的程序员都不知道这个东西，因为那些Windows的IDE都为你做了这个工作，但我觉得要作一个好的和professional的程序员，makefile还是要懂。这就好像现在有这么多的HTML的编辑器，但如果你想</description>
     </item>
     
     <item>
       <title>[转载]Debian 9基于azerothcore Wotlk搭建魔兽世界私服</title>
-      <link>http://korman.github.io/post/cpp/debian-9%E5%9F%BA%E4%BA%8Eazerothcore-wotlk%E6%90%AD%E5%BB%BA%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%E7%A7%81%E6%9C%8D/</link>
+      <link>http://guohao.work/post/cpp/debian-9%E5%9F%BA%E4%BA%8Eazerothcore-wotlk%E6%90%AD%E5%BB%BA%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%E7%A7%81%E6%9C%8D/</link>
       <pubDate>Mon, 21 Sep 2020 15:12:10 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/cpp/debian-9%E5%9F%BA%E4%BA%8Eazerothcore-wotlk%E6%90%AD%E5%BB%BA%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%E7%A7%81%E6%9C%8D/</guid>
+      <guid>http://guohao.work/post/cpp/debian-9%E5%9F%BA%E4%BA%8Eazerothcore-wotlk%E6%90%AD%E5%BB%BA%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%E7%A7%81%E6%9C%8D/</guid>
       <description>电脑硬件要求 CPU双核以上，内存2G以上，交换分区4G以上，硬盘20G以上。 编译服务器程序 $ sudo apt-get install git cmake make gcc g++ clang libmariadbclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libace-6.* libace-dev $ git clone https://github.com/azerothcore/azerothcore-wotlk.git azerothcore $ cd azerothcore $ mkdir build $ cd build $ mkdir -p /home/$USER/azeroth-server $ cmake ../ -DCMAKE_INSTALL_PREFIX=/home/$USER/azeroth-server/ -DTOOLS=0 -DSCRIPTS=1 $ make -j 2 $ make install 如果需要幻化师，还需要在编译之前加入 $ cd azerothcore/modules $ git clone https://github.com/azerothcore/mod-transmog.git 修改配置文件 $ cd /home/$USER/azeroth-server/etc $ cp authserver.conf.dist authserver.conf $ cp worldserver.conf.dist worldserver.conf 修改au</description>
     </item>
     
     <item>
       <title>Git拉取远程分支到本地</title>
-      <link>http://korman.github.io/post/git/git%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%88%B0%E6%9C%AC%E5%9C%B0/</link>
+      <link>http://guohao.work/post/git/git%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%88%B0%E6%9C%AC%E5%9C%B0/</link>
       <pubDate>Mon, 21 Sep 2020 10:36:04 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/git/git%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%88%B0%E6%9C%AC%E5%9C%B0/</guid>
+      <guid>http://guohao.work/post/git/git%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%88%B0%E6%9C%AC%E5%9C%B0/</guid>
       <description>介绍 很多人不知道如何拉取远程分支到本地，比如刚刚clone下一个新库，但是却只有master,没有开发分支develop，以下介绍如何拉取远程分支到本地。 方法 在本地创建同名分支 git checkout -b dev(本地分支名称) origin/dev(远程分支名称) 拉取远程内容 git pull origin dev(远程分支名称)</description>
     </item>
     
     <item>
       <title>[转载]go微服务框架go-micro深度学习(五)</title>
-      <link>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A05/</link>
+      <link>http://guohao.work/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A05/</link>
       <pubDate>Sat, 19 Sep 2020 13:16:15 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A05/</guid>
+      <guid>http://guohao.work/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A05/</guid>
       <description>介绍 github 例子地址 上一篇写了一下rpc调用过程的实现方式，简单来说就是服务端把实现了接口的结构体对象进行反射，抽取方法，签名，保存，客户端调用的时候go-micro封请求数据，服务端接收到请求时，找到需要调用调用的对象和对应的方法，利用反射进行调用，返回数据。 但是没有说stream的</description>
     </item>
     
     <item>
       <title>[转载]go微服务框架go-micro深度学习(四)</title>
-      <link>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A04/</link>
+      <link>http://guohao.work/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A04/</link>
       <pubDate>Sat, 19 Sep 2020 13:16:13 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A04/</guid>
+      <guid>http://guohao.work/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A04/</guid>
       <description>上一篇帖介绍 上一篇帖子go微服务框架go-micro深度学习(三) Registry服务的注册和发现详细解释了go-micro是如何做服务注册和发现在，服务端注册server信息，client获取server的地址信息，就可以和服务建立连接，然后就可以进行通信了。这篇帖子详细说一下</description>
     </item>
     
     <item>
       <title>[转载]go微服务框架go-micro深度学习(三)</title>
-      <link>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A03/</link>
+      <link>http://guohao.work/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A03/</link>
       <pubDate>Sat, 19 Sep 2020 13:16:10 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A03/</guid>
+      <guid>http://guohao.work/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A03/</guid>
       <description>服务的注册与发现 服务的注册与发现是微服务必不可少的功能，这样系统才能有更高的性能，更高的可用性。go-micro框架的服务发现有自己能用的接口Registry。只要实现这个接口就可以定制自己的服务注册和发现。 go-micro在客户端做的负载，典型的Balancing-aware C</description>
     </item>
     
     <item>
       <title>[转载]go微服务框架go-micro深度学习(二)</title>
-      <link>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02/</link>
+      <link>http://guohao.work/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02/</link>
       <pubDate>Sat, 19 Sep 2020 13:16:08 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02/</guid>
+      <guid>http://guohao.work/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A02/</guid>
       <description>承上启下 上一篇帖子简单介绍了go-micro的整体框架结构，这一篇主要写go-micro使用方式的例子，中间会穿插一些go-micro的源码，和调用流程图，帮大家更好的理解go-micro的底层。更详细更具体的调用流程和细节，会在以后的帖子里详细讲解。 例子的github地址： gomicrorpc 跑</description>
     </item>
     
     <item>
       <title>[转载]go微服务框架go-micro深度学习(一)</title>
-      <link>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A01/</link>
+      <link>http://guohao.work/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A01/</link>
       <pubDate>Sat, 19 Sep 2020 13:16:04 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A01/</guid>
+      <guid>http://guohao.work/post/golang/go%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6go-micro%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A01/</guid>
       <description>起因 产品嘴里的一个小项目，从立项到开发上线，随着时间和需求的不断激增，会越来越复杂，变成一个大项目，如果前期项目架构没设计的不好，代码会越来越臃肿，难以维护，后期的每次产品迭代上线都会牵一发而动全身。项目微服务化，松耦合模块间的关系，是一个很好的选择，随然增加了维护成本，但是还是</description>
     </item>
     
     <item>
       <title>[转载]Agones：一款基于Kubernetes的开源游戏服务器</title>
-      <link>http://korman.github.io/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <link>http://guohao.work/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Fri, 18 Sep 2020 17:10:08 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <guid>http://guohao.work/post/golang/agones%E4%B8%80%E6%AC%BE%E5%9F%BA%E4%BA%8Ekubernetes%E7%9A%84%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description>简介 在分布式系统领域，支持在线弹性扩展，实时多人专属游戏服务器意味着特殊的挑战。随着游戏专业人士创造的各种特殊方案，Kubernetes被整合成跨云和物理机，支持复杂工作流的开源分布式标准。今天，我们很高兴发布开源Agones[1]（希腊语“contest”或者“gatherin</description>
     </item>
     
     <item>
       <title>[转载]Linux下查看文件编码及修改编码</title>
-      <link>http://korman.github.io/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/</link>
+      <link>http://guohao.work/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/</link>
       <pubDate>Fri, 18 Sep 2020 17:00:21 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/</guid>
+      <guid>http://guohao.work/post/linux/linux%E4%B8%8B%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/</guid>
       <description>在Vim中可以直接查看文件编码 :set fileencoding 即可显示文件编码格式。 如果你只是想查看其它编码格式的文件或者想解决用Vim查看文件乱码的问题，那么你可以在~/.vimrc文件中添加一下内容: set encoding=utf-8 filenencodings=ucs-bom,utf-8,cp936 这样，就可以让vim自动识别文件编码(可以自动识别UTF-8或者GBK编码的文件),其实就是依照f</description>
     </item>
     
     <item>
       <title>[转载]使用micro创建微服务</title>
-      <link>http://korman.github.io/post/golang/%E4%BD%BF%E7%94%A8micro%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1/</link>
+      <link>http://guohao.work/post/golang/%E4%BD%BF%E7%94%A8micro%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1/</link>
       <pubDate>Fri, 18 Sep 2020 09:20:37 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/golang/%E4%BD%BF%E7%94%A8micro%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1/</guid>
+      <guid>http://guohao.work/post/golang/%E4%BD%BF%E7%94%A8micro%E5%88%9B%E5%BB%BA%E5%BE%AE%E6%9C%8D%E5%8A%A1/</guid>
       <description>简介 micro是一个工具集，用来帮助开发者创建和管理微服务。它包括两部分： go-micro：它是一个go语言的微服务开发框架。 micro：它是一个命令行工具，这个工具是基于go-micro开发的。 另外go-plugins作为一组插件，在开发过程中也是必要的。通过插件，我们在服务发</description>
     </item>
     
     <item>
       <title>[转载]go-micro讲解--Go Micro编写微服务</title>
-      <link>http://korman.github.io/post/golang/gomicro%E7%BC%96%E5%86%99%E5%BE%AE%E6%9C%8D%E5%8A%A1/</link>
+      <link>http://guohao.work/post/golang/gomicro%E7%BC%96%E5%86%99%E5%BE%AE%E6%9C%8D%E5%8A%A1/</link>
       <pubDate>Fri, 18 Sep 2020 01:44:57 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/golang/gomicro%E7%BC%96%E5%86%99%E5%BE%AE%E6%9C%8D%E5%8A%A1/</guid>
+      <guid>http://guohao.work/post/golang/gomicro%E7%BC%96%E5%86%99%E5%BE%AE%E6%9C%8D%E5%8A%A1/</guid>
       <description>安装protoc github上下载一个cpp包：https://github.com/google/protobuf/releases make make install安装即可 protoc-gen-go go get -u github.com/golang/protobuf/protoc-gen-go 安装protoc-gen-micro go get github.com/micro/protoc-gen-micro 安装Consul micro默认使用consul作为微服务发现 Consul is used as</description>
     </item>
     
     <item>
       <title>脱离卡死（回城）</title>
-      <link>http://korman.github.io/post/wow/base/%E8%84%B1%E7%A6%BB%E5%8D%A1%E6%AD%BB%E5%9B%9E%E5%9F%8E/</link>
+      <link>http://guohao.work/post/wow/base/%E8%84%B1%E7%A6%BB%E5%8D%A1%E6%AD%BB%E5%9B%9E%E5%9F%8E/</link>
       <pubDate>Thu, 17 Sep 2020 15:25:00 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/base/%E8%84%B1%E7%A6%BB%E5%8D%A1%E6%AD%BB%E5%9B%9E%E5%9F%8E/</guid>
+      <guid>http://guohao.work/post/wow/base/%E8%84%B1%E7%A6%BB%E5%8D%A1%E6%AD%BB%E5%9B%9E%E5%9F%8E/</guid>
       <description>.start 脱离卡死（回城）</description>
     </item>
     
     <item>
       <title>祖尔曼和祖格</title>
-      <link>http://korman.github.io/post/wow/teleport/%E7%A5%96%E5%B0%94%E6%9B%BC%E5%92%8C%E7%A5%96%E6%A0%BC/</link>
+      <link>http://guohao.work/post/wow/teleport/%E7%A5%96%E5%B0%94%E6%9B%BC%E5%92%8C%E7%A5%96%E6%A0%BC/</link>
       <pubDate>Thu, 17 Sep 2020 15:16:05 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/teleport/%E7%A5%96%E5%B0%94%E6%9B%BC%E5%92%8C%E7%A5%96%E6%A0%BC/</guid>
+      <guid>http://guohao.work/post/wow/teleport/%E7%A5%96%E5%B0%94%E6%9B%BC%E5%92%8C%E7%A5%96%E6%A0%BC/</guid>
       <description>祖尔曼 .go 6851.15 -7988.15 188.53 530 祖格 .go -11916 -1208.36 92.28 0</description>
     </item>
     
     <item>
       <title>巫妖王个副本BOSS</title>
-      <link>http://korman.github.io/post/wow/teleport/%E5%B7%AB%E5%A6%96%E7%8E%8B%E4%B8%AA%E5%89%AF%E6%9C%ACboss/</link>
+      <link>http://guohao.work/post/wow/teleport/%E5%B7%AB%E5%A6%96%E7%8E%8B%E4%B8%AA%E5%89%AF%E6%9C%ACboss/</link>
       <pubDate>Thu, 17 Sep 2020 15:14:58 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/teleport/%E5%B7%AB%E5%A6%96%E7%8E%8B%E4%B8%AA%E5%89%AF%E6%9C%ACboss/</guid>
+      <guid>http://guohao.work/post/wow/teleport/%E5%B7%AB%E5%A6%96%E7%8E%8B%E4%B8%AA%E5%89%AF%E6%9C%ACboss/</guid>
       <description>命令列表 传送命令 地点 .go 5696 2197.674316 798.126099 571 新三本入口 .go 4914.370117 2184.003418 638.733643 632 灵魂熔炉 .go 439.14256 209.538788 528.708740 658 萨倫之渊 .go 5239 1932.64 707.694946 668 倒影大厅 .go 5579.586426 2233.414307 733.011475 668 巫妖王The Lich King .go 8516.254883 707.177063 558.247681 571 银白联赛场地（十字军入口） .go 8577.664063 791.918884 558.234558 571 银白联赛场地（勇士试练入口）YS .go 690.690613 127.155220 142.135513 649 阿努巴拉克TOC10&amp;amp;25人；YX&amp;amp;PT .go 8922.087891 -991.638184 1039.398682 571 石之大</description>
     </item>
     
     <item>
       <title>巫妖王北极全部坐标</title>
-      <link>http://korman.github.io/post/wow/teleport/%E5%B7%AB%E5%A6%96%E7%8E%8B%E5%8C%97%E6%9E%81%E5%85%A8%E9%83%A8%E5%9D%90%E6%A0%87/</link>
+      <link>http://guohao.work/post/wow/teleport/%E5%B7%AB%E5%A6%96%E7%8E%8B%E5%8C%97%E6%9E%81%E5%85%A8%E9%83%A8%E5%9D%90%E6%A0%87/</link>
       <pubDate>Thu, 17 Sep 2020 15:10:23 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/teleport/%E5%B7%AB%E5%A6%96%E7%8E%8B%E5%8C%97%E6%9E%81%E5%85%A8%E9%83%A8%E5%9D%90%E6%A0%87/</guid>
+      <guid>http://guohao.work/post/wow/teleport/%E5%B7%AB%E5%A6%96%E7%8E%8B%E5%8C%97%E6%9E%81%E5%85%A8%E9%83%A8%E5%9D%90%E6%A0%87/</guid>
       <description>凛风峡湾 新阿加曼德 .go 383 -4610 244 571 索瓦雨德营地 .go 343 -4210 255 571 西风升降梯 .go 424 -3980 267 571 镇西要塞 .go 1368 -3341 175 571 冬蹄营地 .go 2651 -4392 283 571 斯考恩 .go 1959 -4277 210 571 鬼刃岗哨 .go 669 -5473 238 571 探险者协会前哨 .go 453 -5908 313 571 无赖角 .go 49 -3589 2 571 Valgarde (Alliance Base)瓦尔加德(凛风峡湾) .go 592,33 -5095,5 6 571 Wyrmskol (Utgarde Keep entrance)龙颅村(凛风峡湾) .go 943,4 -4933 2 571 Kamagua (Tuskarr</description>
     </item>
     
     <item>
       <title>外域副本传送点命令</title>
-      <link>http://korman.github.io/post/wow/teleport/%E5%A4%96%E5%9F%9F%E5%89%AF%E6%9C%AC%E4%BC%A0%E9%80%81%E7%82%B9%E5%91%BD%E4%BB%A4/</link>
+      <link>http://guohao.work/post/wow/teleport/%E5%A4%96%E5%9F%9F%E5%89%AF%E6%9C%AC%E4%BC%A0%E9%80%81%E7%82%B9%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Thu, 17 Sep 2020 15:07:30 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/teleport/%E5%A4%96%E5%9F%9F%E5%89%AF%E6%9C%AC%E4%BC%A0%E9%80%81%E7%82%B9%E5%91%BD%E4%BB%A4/</guid>
+      <guid>http://guohao.work/post/wow/teleport/%E5%A4%96%E5%9F%9F%E5%89%AF%E6%9C%AC%E4%BC%A0%E9%80%81%E7%82%B9%E5%91%BD%E4%BB%A4/</guid>
       <description>资料片副本传送点命令(已更新) .go 瞬移命令 .go 0 -11853.6 -3197.44 -27.2186 黑暗之门 副本坐标 有部分副本传送有点不正常，如果遇到团队副本不能进，可以双开组队进 传送副本前要先用这个命令 .gm on 格式为 .worldport map xyz map和xyz均为下面的坐标值 .go -3562.8f 247.6f 42.9f 530 黑暗神庙（副本）入口 (没去过官服的朋友 门是在地上墙壁上的缺口) .go -11107.95 -2002.06 49.89</description>
     </item>
     
     <item>
       <title>太阳井副本坐标</title>
-      <link>http://korman.github.io/post/wow/teleport/%E5%A4%AA%E9%98%B3%E4%BA%95%E5%89%AF%E6%9C%AC%E5%9D%90%E6%A0%87/</link>
+      <link>http://guohao.work/post/wow/teleport/%E5%A4%AA%E9%98%B3%E4%BA%95%E5%89%AF%E6%9C%AC%E5%9D%90%E6%A0%87/</link>
       <pubDate>Thu, 17 Sep 2020 15:06:42 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/teleport/%E5%A4%AA%E9%98%B3%E4%BA%95%E5%89%AF%E6%9C%AC%E5%9D%90%E6%A0%87/</guid>
+      <guid>http://guohao.work/post/wow/teleport/%E5%A4%AA%E9%98%B3%E4%BA%95%E5%89%AF%E6%9C%AC%E5%9D%90%E6%A0%87/</guid>
       <description>.go 12612 -6777 14 530</description>
     </item>
     
     <item>
       <title>十字军副本</title>
-      <link>http://korman.github.io/post/wow/teleport/%E5%8D%81%E5%AD%97%E5%86%9B%E5%89%AF%E6%9C%AC/</link>
+      <link>http://guohao.work/post/wow/teleport/%E5%8D%81%E5%AD%97%E5%86%9B%E5%89%AF%E6%9C%AC/</link>
       <pubDate>Thu, 17 Sep 2020 13:55:57 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/teleport/%E5%8D%81%E5%AD%97%E5%86%9B%E5%89%AF%E6%9C%AC/</guid>
+      <guid>http://guohao.work/post/wow/teleport/%E5%8D%81%E5%AD%97%E5%86%9B%E5%89%AF%E6%9C%AC/</guid>
       <description>.go 8515.45 728.91 558.24 571</description>
     </item>
     
     <item>
       <title>红玉圣殿</title>
-      <link>http://korman.github.io/post/wow/teleport/%E7%BA%A2%E7%8E%89%E5%9C%A3%E6%AE%BF/</link>
+      <link>http://guohao.work/post/wow/teleport/%E7%BA%A2%E7%8E%89%E5%9C%A3%E6%AE%BF/</link>
       <pubDate>Thu, 17 Sep 2020 13:55:25 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/teleport/%E7%BA%A2%E7%8E%89%E5%9C%A3%E6%AE%BF/</guid>
+      <guid>http://guohao.work/post/wow/teleport/%E7%BA%A2%E7%8E%89%E5%9C%A3%E6%AE%BF/</guid>
       <description>.go 3592.03 208.45 -110.66 571</description>
     </item>
     
     <item>
       <title>寒冰皇冠副本</title>
-      <link>http://korman.github.io/post/wow/teleport/%E5%AF%92%E5%86%B0%E7%9A%87%E5%86%A0%E5%89%AF%E6%9C%AC/</link>
+      <link>http://guohao.work/post/wow/teleport/%E5%AF%92%E5%86%B0%E7%9A%87%E5%86%A0%E5%89%AF%E6%9C%AC/</link>
       <pubDate>Thu, 17 Sep 2020 13:54:18 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/teleport/%E5%AF%92%E5%86%B0%E7%9A%87%E5%86%A0%E5%89%AF%E6%9C%AC/</guid>
+      <guid>http://guohao.work/post/wow/teleport/%E5%AF%92%E5%86%B0%E7%9A%87%E5%86%A0%E5%89%AF%E6%9C%AC/</guid>
       <description>.go 5841 2095 636 571 寒冰皇冠副本 老2 门口的传送门 可以传送到老4那的 老3飞艇由于单人没办法完成 所以取消 也可以直接传送.go -549.13 2211.29 539.29 631 打完老4后面有个门 就能进2区了 .go 4147.22 2766.81 350.96 631 2区直接传送 打完瘟疫区 和赤红区 霜翼区才会 开门 打绿龙这个BOSS 和一般BOSS 打发不一样 是给绿龙加血 他血满了就过了 可以用这个</description>
     </item>
     
     <item>
       <title>地球传送</title>
-      <link>http://korman.github.io/post/wow/teleport/%E5%9C%B0%E7%90%83%E4%BC%A0%E9%80%81/</link>
+      <link>http://guohao.work/post/wow/teleport/%E5%9C%B0%E7%90%83%E4%BC%A0%E9%80%81/</link>
       <pubDate>Thu, 17 Sep 2020 13:45:29 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/teleport/%E5%9C%B0%E7%90%83%E4%BC%A0%E9%80%81/</guid>
+      <guid>http://guohao.work/post/wow/teleport/%E5%9C%B0%E7%90%83%E4%BC%A0%E9%80%81/</guid>
       <description>基础 传送命令 .go 坐标 例如去银月城输入 .go 9485 -7281 14 530 如何自己查找坐标？ 进入游戏后，输入 .gps，会显示你当前坐标 例如显示的是下面的内容 Map:1 Zone:1637 Area:1637 x:1801.856201 Y:-4529.882813 z:21.071239 orientation:3.006988 grid[35,23]cell[3,4] instanceid:0 那么你的坐标就是 1802 -4530 21 1 再例如，显示的是 Map:530 Zone:3483 Area:3539 x:-248.356201 Y:956.182813 z:84.071239 orientation:3.006988 grid[31,23]cell[4,6] instanceid:0 那么你的坐标就是 -248 956 84 530 下面是我自己查找的一些坐标 副本及野外boss 地点 命令 卡</description>
     </item>
     
     <item>
       <title>达拉然城堡</title>
-      <link>http://korman.github.io/post/wow/teleport/%E8%BE%BE%E6%8B%89%E7%84%B6%E5%9F%8E%E5%A0%A1/</link>
+      <link>http://guohao.work/post/wow/teleport/%E8%BE%BE%E6%8B%89%E7%84%B6%E5%9F%8E%E5%A0%A1/</link>
       <pubDate>Thu, 17 Sep 2020 13:44:59 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/teleport/%E8%BE%BE%E6%8B%89%E7%84%B6%E5%9F%8E%E5%A0%A1/</guid>
+      <guid>http://guohao.work/post/wow/teleport/%E8%BE%BE%E6%8B%89%E7%84%B6%E5%9F%8E%E5%A0%A1/</guid>
       <description>达拉然城堡 .go 5818.13 452.51 658.76 571</description>
     </item>
     
     <item>
       <title>传送主城</title>
-      <link>http://korman.github.io/post/wow/teleport/%E4%BC%A0%E9%80%81%E4%B8%BB%E5%9F%8E/</link>
+      <link>http://guohao.work/post/wow/teleport/%E4%BC%A0%E9%80%81%E4%B8%BB%E5%9F%8E/</link>
       <pubDate>Thu, 17 Sep 2020 13:41:07 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/teleport/%E4%BC%A0%E9%80%81%E4%B8%BB%E5%9F%8E/</guid>
+      <guid>http://guohao.work/post/wow/teleport/%E4%BC%A0%E9%80%81%E4%B8%BB%E5%9F%8E/</guid>
       <description>部落 地点 命令 银月城 .go 9485 -7281 14 530 奥格瑞玛 .go 1551 -4408 9 1 雷霆崖 .go -1280 125 131 1 幽暗城 .go 1609 202 -43 0 联盟 地点 命令 埃索达 .go -3973 -11587 -134 530 暴风城 .go -9065 434 94 0 铁炉堡 .go -5032 -819 495 0 达纳苏斯 .go 9961 2055 1329 1 中立 地点 命令 加基森 .go -7174 -3778 8 1 东瘟疫礼拜堂 .go 2320 5293 82 0 棘齿城 .go -977 -3788 6 1 藏宝海湾 .go -14302 518 9 0 黑暗之门 .go -248 956 84 530 沙斯塔城 .go -1831 5297 -12 530 风暴</description>
     </item>
     
     <item>
       <title>传送人物</title>
-      <link>http://korman.github.io/post/wow/teleport/%E4%BC%A0%E9%80%81%E4%BA%BA%E7%89%A9/</link>
+      <link>http://guohao.work/post/wow/teleport/%E4%BC%A0%E9%80%81%E4%BA%BA%E7%89%A9/</link>
       <pubDate>Thu, 17 Sep 2020 13:40:01 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/teleport/%E4%BC%A0%E9%80%81%E4%BA%BA%E7%89%A9/</guid>
+      <guid>http://guohao.work/post/wow/teleport/%E4%BC%A0%E9%80%81%E4%BA%BA%E7%89%A9/</guid>
       <description>.goname * 传送自己到名为*的人物处 比如传送到abc旁边 就输入 .goname abc (必须是玩家) .namego * 传送名为*的目标到自己所在处</description>
     </item>
     
     <item>
       <title>北极副本</title>
-      <link>http://korman.github.io/post/wow/teleport/%E5%8C%97%E6%9E%81%E5%89%AF%E6%9C%AC/</link>
+      <link>http://guohao.work/post/wow/teleport/%E5%8C%97%E6%9E%81%E5%89%AF%E6%9C%AC/</link>
       <pubDate>Thu, 17 Sep 2020 13:37:02 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/teleport/%E5%8C%97%E6%9E%81%E5%89%AF%E6%9C%AC/</guid>
+      <guid>http://guohao.work/post/wow/teleport/%E5%8C%97%E6%9E%81%E5%89%AF%E6%9C%AC/</guid>
       <description>北裂境副本 地点 命令 奥核之心 .go 3891.73 6984.91 69.49 571 奥核之眼 .go 3877.41 6984.64 106.32 571 永恒之眼 .go 3865.92 6986.52 152.59 571 阿兹欧-奈幽（尼鲁布） .go 3678.06 2166.39 35.79 571 紫罗兰城堡（监狱） .go 5696.87 505.73 652.69 571 刚德拉克 .go 6969.75 -4402.35 441.58 571 德拉克塞隆要塞 .go 4774.21 -2046.72 229.42 571 安卡罕特.古王国 .go 3641.85 2032.94 2.47 571 纳克萨玛斯NAXX .go 3666.79 -1264.78 243.52 571 俄特加德要塞 .go 1224.24 -4864.12 41.25 571</description>
     </item>
     
     <item>
       <title>奥杜亚</title>
-      <link>http://korman.github.io/post/wow/teleport/%E5%A5%A5%E6%9D%9C%E4%BA%9A/</link>
+      <link>http://guohao.work/post/wow/teleport/%E5%A5%A5%E6%9D%9C%E4%BA%9A/</link>
       <pubDate>Thu, 17 Sep 2020 13:35:43 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/teleport/%E5%A5%A5%E6%9D%9C%E4%BA%9A/</guid>
+      <guid>http://guohao.work/post/wow/teleport/%E5%A5%A5%E6%9D%9C%E4%BA%9A/</guid>
       <description>奥杜亚(外围).go -768.06 -135.60 429.79 603 生命温室：.go 2292.56 -9.74 422.59 603 雷鸣之厅：.go 2134.9 -259.7 419.8 603 前厅 .go 1651.86 -23.43 427.30 603 创思之厅：.go 2703.92 2569.63 364.31 603 癫狂斜廊：.go 1848.49 136.84 341.80 603</description>
     </item>
     
     <item>
       <title>战斗宠物</title>
-      <link>http://korman.github.io/post/wow/pet/%E6%88%98%E6%96%97%E5%AE%A0%E7%89%A9/</link>
+      <link>http://guohao.work/post/wow/pet/%E6%88%98%E6%96%97%E5%AE%A0%E7%89%A9/</link>
       <pubDate>Thu, 17 Sep 2020 11:13:14 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/pet/%E6%88%98%E6%96%97%E5%AE%A0%E7%89%A9/</guid>
+      <guid>http://guohao.work/post/wow/pet/%E6%88%98%E6%96%97%E5%AE%A0%E7%89%A9/</guid>
       <description>缺省 .demorph 改变人物回缺省外形 战斗宠物 .npc add ID 作用 4950 召唤赫尔库拉之犬 6251 召唤红衣大炮 7903 召唤熊 7905 召唤野猪 7906 召唤豹 7907 召唤螃蟹 7908 召唤鳄鱼 7909 召唤猩猩 7910 召唤迅猛龙 7911 召唤蝎子 7912 召唤蜘蛛 7913 召唤陆行鸟 7914 召唤灵魂 7915 召唤海龟 7916 召唤斑马 7904 召唤鸟 8270 召唤地行者 8271 召唤风嚎者 8274 召唤战斗猪 8276 召唤土狼 8594 召唤月夜猛虎幼崽 宠物</description>
     </item>
     
     <item>
       <title>有趣的东西</title>
-      <link>http://korman.github.io/post/wow/pet/%E6%9C%89%E8%B6%A3%E7%9A%84%E4%B8%9C%E8%A5%BF/</link>
+      <link>http://guohao.work/post/wow/pet/%E6%9C%89%E8%B6%A3%E7%9A%84%E4%B8%9C%E8%A5%BF/</link>
       <pubDate>Thu, 17 Sep 2020 11:09:39 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/pet/%E6%9C%89%E8%B6%A3%E7%9A%84%E4%B8%9C%E8%A5%BF/</guid>
+      <guid>http://guohao.work/post/wow/pet/%E6%9C%89%E8%B6%A3%E7%9A%84%E4%B8%9C%E8%A5%BF/</guid>
       <description>有趣的东西~ 学习类的 使用.learn命令 ID 作用 17707 召唤熊猫 17708 召唤迷你破坏神 23530 召唤红色小神龙 40634 小新 7975 召唤Party机器小姐（无数量限制） 添加物品的 使用.additem命令 ID 作用 32622 小象项圈 32617 贪睡的威利 32616 蛋蛋的蛋 32233 鹿角小飞兔的酒杯 31880 血精灵孤儿哨 34425 发条机器人 34493 风筝 34499 纸飞机 34492 火箭鸡 33924 美味巧克</description>
     </item>
     
     <item>
       <title>玩具</title>
-      <link>http://korman.github.io/post/wow/pet/%E7%8E%A9%E5%85%B7/</link>
+      <link>http://guohao.work/post/wow/pet/%E7%8E%A9%E5%85%B7/</link>
       <pubDate>Thu, 17 Sep 2020 11:07:45 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/pet/%E7%8E%A9%E5%85%B7/</guid>
+      <guid>http://guohao.work/post/wow/pet/%E7%8E%A9%E5%85%B7/</guid>
       <description>介绍 先选中自己，再输入.learn id ID列表 ID 名字 介绍 62857 沙池虎 右键点击以召唤一只沙池虎 61031 玩具火车组 右键点击以架设你的玩具火车组。 61032 复制的可爱蛋糕 右键点击以准备一块可爱蛋糕，足以提供5名小队成员食用。 61033 陈年达拉然圆形重奶酪 右键点击以准备一块陈年达拉然圆形重奶酪，足以提供5名小队成员</description>
     </item>
     
     <item>
       <title>搜索宠物方法</title>
-      <link>http://korman.github.io/post/wow/pet/%E6%90%9C%E7%B4%A2%E5%AE%A0%E7%89%A9%E6%96%B9%E6%B3%95/</link>
+      <link>http://guohao.work/post/wow/pet/%E6%90%9C%E7%B4%A2%E5%AE%A0%E7%89%A9%E6%96%B9%E6%B3%95/</link>
       <pubDate>Thu, 17 Sep 2020 11:07:01 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/pet/%E6%90%9C%E7%B4%A2%E5%AE%A0%E7%89%A9%E6%96%B9%E6%B3%95/</guid>
+      <guid>http://guohao.work/post/wow/pet/%E6%90%9C%E7%B4%A2%E5%AE%A0%E7%89%A9%E6%96%B9%E6%B3%95/</guid>
       <description>.lookup item 宠物名字 然后.additem 代码</description>
     </item>
     
     <item>
       <title>魔兽非战斗宠物全收藏</title>
-      <link>http://korman.github.io/post/wow/pet/%E9%AD%94%E5%85%BD%E9%9D%9E%E6%88%98%E6%96%97%E5%AE%A0%E7%89%A9%E5%85%A8%E6%94%B6%E8%97%8F/</link>
+      <link>http://guohao.work/post/wow/pet/%E9%AD%94%E5%85%BD%E9%9D%9E%E6%88%98%E6%96%97%E5%AE%A0%E7%89%A9%E5%85%A8%E6%94%B6%E8%97%8F/</link>
       <pubDate>Thu, 17 Sep 2020 10:54:53 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/pet/%E9%AD%94%E5%85%BD%E9%9D%9E%E6%88%98%E6%96%97%E5%AE%A0%E7%89%A9%E5%85%A8%E6%94%B6%E8%97%8F/</guid>
+      <guid>http://guohao.work/post/wow/pet/%E9%AD%94%E5%85%BD%E9%9D%9E%E6%88%98%E6%96%97%E5%AE%A0%E7%89%A9%E5%85%A8%E6%94%B6%E8%97%8F/</guid>
       <description>列表 命令 宝宝名 .additem 23713 角鹰兽宝宝 .additem 34493 飞龙风筝 .additem 49287 巨牙海民风筝 .additem 39973 幽灵颅骨 .additem 38658 吸血蝙蝠宝宝 .additem 38628 小虚空鳐 .additem 35504 凤凰宝宝 .additem 34478 微型孢子蝠 .additem 46802 沉重的鱼人卵(鱼人机枪兵) .additem 46894 魔化碧玉 .additem 46892 莫叽姆斯的小矛 .additem 20371 蓝色鱼人卵 .additem 13584 破坏神之石 .additem 13583 熊猫项圈 .additem 13582 跳虫绳索 .additem 35350 莫莫的小桶 .additem 35349 尼尼的小桶 .additem 34955 灼烧石 .additem 33818 毒皮</description>
     </item>
     
     <item>
       <title>好看猎人宝宝</title>
-      <link>http://korman.github.io/post/wow/pet/%E5%A5%BD%E7%9C%8B%E7%8C%8E%E4%BA%BA%E5%AE%9D%E5%AE%9D/</link>
+      <link>http://guohao.work/post/wow/pet/%E5%A5%BD%E7%9C%8B%E7%8C%8E%E4%BA%BA%E5%AE%9D%E5%AE%9D/</link>
       <pubDate>Thu, 17 Sep 2020 10:42:42 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/pet/%E5%A5%BD%E7%9C%8B%E7%8C%8E%E4%BA%BA%E5%AE%9D%E5%AE%9D/</guid>
+      <guid>http://guohao.work/post/wow/pet/%E5%A5%BD%E7%9C%8B%E7%8C%8E%E4%BA%BA%E5%AE%9D%E5%AE%9D/</guid>
       <description>描述 .npc add id 召唤出来 兽王天赋猎人可以抓 列表 名字 ID 介绍 猎人宝宝-Skoll 35189 传说中身上围绕着电的 狼宝宝！很漂亮哦！ 猎人宝宝-古德利亚 33776 传说中的幽灵虎！很拉风 猎人宝宝-Arcturis 38453 传说中的幽灵熊！也很拉风 猎人宝宝-洛卡纳哈 32517 这只其实我感觉没有上面的帅</description>
     </item>
     
     <item>
       <title>宠物</title>
-      <link>http://korman.github.io/post/wow/pet/%E5%AE%A0%E7%89%A9/</link>
+      <link>http://guohao.work/post/wow/pet/%E5%AE%A0%E7%89%A9/</link>
       <pubDate>Thu, 17 Sep 2020 10:37:01 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/pet/%E5%AE%A0%E7%89%A9/</guid>
+      <guid>http://guohao.work/post/wow/pet/%E5%AE%A0%E7%89%A9/</guid>
       <description>介绍 先选中自己，再输入.learn id，具体id列表如下 列表 技能id 宠物名字 描述 65381 好奇的小神谕者 右键点击以召唤或解散好奇的小神谕者。 65382 好奇的小獾狼怪 右键点击以召唤或解散好奇的小獾狼。 67413 小飞奔迅猛龙 右键点击以召唤或解散你的小迅猛龙。 67414 小变异迅猛龙 右键点击以召唤或解散你的小迅猛龙。 67415</description>
     </item>
     
     <item>
       <title>重置副本</title>
-      <link>http://korman.github.io/post/wow/base/%E9%87%8D%E7%BD%AE%E5%89%AF%E6%9C%AC/</link>
+      <link>http://guohao.work/post/wow/base/%E9%87%8D%E7%BD%AE%E5%89%AF%E6%9C%AC/</link>
       <pubDate>Thu, 17 Sep 2020 10:31:59 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/base/%E9%87%8D%E7%BD%AE%E5%89%AF%E6%9C%AC/</guid>
+      <guid>http://guohao.work/post/wow/base/%E9%87%8D%E7%BD%AE%E5%89%AF%E6%9C%AC/</guid>
       <description>注意重置不是全部，而是选择得置哪个怪或者BOSS 在副本内输入.respawn 在重置前先用.gm on 开启GM模式 选中要重置的怪或者BOSS输入.respawn 然在输入.gm off 关闭GM 模式 ，就可以开打了</description>
     </item>
     
     <item>
       <title>GM基本命令</title>
-      <link>http://korman.github.io/post/wow/base/gm%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</link>
+      <link>http://guohao.work/post/wow/base/gm%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Thu, 17 Sep 2020 10:31:21 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/base/gm%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</guid>
+      <guid>http://guohao.work/post/wow/base/gm%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</guid>
       <description>gm使用方法 在游戏选中自己头像， 按回车 输入就行了 比如 .modify money 给自己加金钱，后面空一格加数字，数字是以铜为单位的， 就打 .modify money 99999 然后回车 升级 .levelup 99 添加装备就是.additem xxxxx xxxx就是装备代码 命令里都有 常用命令 .modify money 999999999 给自己加金钱，后面空一格加数字，数字是以铜为单位的，要点下自己 .modify speed 10 改变</description>
     </item>
     
     <item>
       <title>重置人物</title>
-      <link>http://korman.github.io/post/wow/role/%E9%87%8D%E7%BD%AE%E4%BA%BA%E7%89%A9/</link>
+      <link>http://guohao.work/post/wow/role/%E9%87%8D%E7%BD%AE%E4%BA%BA%E7%89%A9/</link>
       <pubDate>Thu, 17 Sep 2020 10:30:30 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/role/%E9%87%8D%E7%BD%AE%E4%BA%BA%E7%89%A9/</guid>
+      <guid>http://guohao.work/post/wow/role/%E9%87%8D%E7%BD%AE%E4%BA%BA%E7%89%A9/</guid>
       <description>.reset stats 重置目标所有状态 .reset honor 重置目标荣誉点数 .reset level 重置目标等级 .reset spells 重置目标所有技能 .reset talents 重置目标所有天赋</description>
     </item>
     
     <item>
       <title>36格包包代码</title>
-      <link>http://korman.github.io/post/wow/item/36%E6%A0%BC%E5%8C%85%E5%8C%85%E4%BB%A3%E7%A0%81/</link>
+      <link>http://guohao.work/post/wow/item/36%E6%A0%BC%E5%8C%85%E5%8C%85%E4%BB%A3%E7%A0%81/</link>
       <pubDate>Thu, 17 Sep 2020 10:29:55 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/item/36%E6%A0%BC%E5%8C%85%E5%8C%85%E4%BB%A3%E7%A0%81/</guid>
+      <guid>http://guohao.work/post/wow/item/36%E6%A0%BC%E5%8C%85%E5%8C%85%E4%BB%A3%E7%A0%81/</guid>
       <description>.additem 23162</description>
     </item>
     
     <item>
       <title>技能冷却</title>
-      <link>http://korman.github.io/post/wow/role/%E6%8A%80%E8%83%BD%E5%86%B7%E5%8D%B4/</link>
+      <link>http://guohao.work/post/wow/role/%E6%8A%80%E8%83%BD%E5%86%B7%E5%8D%B4/</link>
       <pubDate>Thu, 17 Sep 2020 10:28:51 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/role/%E6%8A%80%E8%83%BD%E5%86%B7%E5%8D%B4/</guid>
+      <guid>http://guohao.work/post/wow/role/%E6%8A%80%E8%83%BD%E5%86%B7%E5%8D%B4/</guid>
       <description>.cooldown 立即使目标的魔法冷却</description>
     </item>
     
     <item>
       <title>所有物品代码</title>
-      <link>http://korman.github.io/post/wow/item/%E6%89%80%E6%9C%89%E7%89%A9%E5%93%81%E4%BB%A3%E7%A0%81/</link>
+      <link>http://guohao.work/post/wow/item/%E6%89%80%E6%9C%89%E7%89%A9%E5%93%81%E4%BB%A3%E7%A0%81/</link>
       <pubDate>Thu, 17 Sep 2020 10:01:48 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/item/%E6%89%80%E6%9C%89%E7%89%A9%E5%93%81%E4%BB%A3%E7%A0%81/</guid>
+      <guid>http://guohao.work/post/wow/item/%E6%89%80%E6%9C%89%E7%89%A9%E5%93%81%E4%BB%A3%E7%A0%81/</guid>
       <description>简介 在游戏用GM帐号输入 .additem xxx 添加物品 （xxx就是下面的数字代码） 列表 ID 物品名称 25 破损的短剑 35 弯曲的法杖 36 用旧的钉锤 37 破损的斧头 38 新兵衬衣 39 新兵短裤 40 新兵之靴 43 侍从之靴 44 侍从短裤 45 侍从衬衣 47 盗贼之鞋 48 盗贼短裤 49 盗贼衬衣 51 见习牧师之靴 52 见习牧师短裤 53 见习牧师衬衣 55 学徒之靴 56 学徒长袍 57</description>
     </item>
     
     <item>
       <title>记录的物品ID列表</title>
-      <link>http://korman.github.io/post/wow/item/itemid/</link>
+      <link>http://guohao.work/post/wow/item/itemid/</link>
       <pubDate>Thu, 17 Sep 2020 10:00:17 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/item/itemid/</guid>
+      <guid>http://guohao.work/post/wow/item/itemid/</guid>
       <description>简介 我自己记录的常用的商业技能材料id与基础的低等级所需物品id 列表 物品名 id 铜锭 2840 青铜锭 2841 粗糙的石头 2836 毛料 2592 宁神花 2447 绿玛瑙 1206 彩色珍珠 5500 次级月亮石 1705 银锭 2842 学者的书写工具 39505 轻羊皮纸 39354 虎眼石 818 珠宝制作工具 20815 暗影石 1210 冰镇牛奶 1179 果汁 1205 卷轴：附魔武器 - 十字军 38873 铁锭 3575 黑铁锭 11371 绿色染料 2605 黄水晶 3864</description>
     </item>
     
     <item>
       <title>地图全开和飞行点全开</title>
-      <link>http://korman.github.io/post/wow/role/%E5%9C%B0%E5%9B%BE%E5%85%A8%E5%BC%80%E5%92%8C%E9%A3%9E%E8%A1%8C%E7%82%B9%E5%85%A8%E5%BC%80/</link>
+      <link>http://guohao.work/post/wow/role/%E5%9C%B0%E5%9B%BE%E5%85%A8%E5%BC%80%E5%92%8C%E9%A3%9E%E8%A1%8C%E7%82%B9%E5%85%A8%E5%BC%80/</link>
       <pubDate>Thu, 17 Sep 2020 09:58:59 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/role/%E5%9C%B0%E5%9B%BE%E5%85%A8%E5%BC%80%E5%92%8C%E9%A3%9E%E8%A1%8C%E7%82%B9%E5%85%A8%E5%BC%80/</guid>
+      <guid>http://guohao.work/post/wow/role/%E5%9C%B0%E5%9B%BE%E5%85%A8%E5%BC%80%E5%92%8C%E9%A3%9E%E8%A1%8C%E7%82%B9%E5%85%A8%E5%BC%80/</guid>
       <description>.explorecheat 1 地图全开 .taxicheat on 飞行点全开</description>
     </item>
     
     <item>
       <title>基本管理GM命令</title>
-      <link>http://korman.github.io/post/wow/base/%E5%9F%BA%E6%9C%AC%E7%AE%A1%E7%90%86gm%E5%91%BD%E4%BB%A4/</link>
+      <link>http://guohao.work/post/wow/base/%E5%9F%BA%E6%9C%AC%E7%AE%A1%E7%90%86gm%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Thu, 17 Sep 2020 09:24:40 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/base/%E5%9F%BA%E6%9C%AC%E7%AE%A1%E7%90%86gm%E5%91%BD%E4%BB%A4/</guid>
+      <guid>http://guohao.work/post/wow/base/%E5%9F%BA%E6%9C%AC%E7%AE%A1%E7%90%86gm%E5%91%BD%E4%BB%A4/</guid>
       <description>A .account // 查询账号等级 .account create 账号 密码 // 创建账号 .account delete 账号 // 删除账号 .account set gmlevel 账号 3 -1 // 设置账号GM权限 .account onlinelist // 查询账号在线列表 .additem 物品Id 数量 // 刷物品到背包 .additemset 套装ID // 刷新套装全件到背包 B .bank // 进入银行 .baninfo ip // 查看被封Ip信息 .baninfo character // 查看被封角色信息 .baninfo account // 查看被封账号信息 C .commands // 查看所有可使用的GM命令</description>
     </item>
     
     <item>
       <title>称号</title>
-      <link>http://korman.github.io/post/wow/base/%E7%A7%B0%E5%8F%B7/</link>
+      <link>http://guohao.work/post/wow/base/%E7%A7%B0%E5%8F%B7/</link>
       <pubDate>Wed, 16 Sep 2020 14:46:04 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/base/%E7%A7%B0%E5%8F%B7/</guid>
+      <guid>http://guohao.work/post/wow/base/%E7%A7%B0%E5%8F%B7/</guid>
       <description>.titles add 1 =======士兵 .titles add 2 =======下士 .titles add 3 =======士官 .titles add 4 =======上士 联盟以此类推到.titles add 14为总元帅 .titles add 15 =======斥候 .titles add 16 =======蛮兵 部落以此类推到.titles add 28为高阶督军 .titles setmask -14000mask ========获得大部分称号</description>
     </item>
     
     <item>
       <title>必看！bot宏</title>
-      <link>http://korman.github.io/post/wow/base/bot%E5%AE%8F/</link>
+      <link>http://guohao.work/post/wow/base/bot%E5%AE%8F/</link>
       <pubDate>Tue, 15 Sep 2020 17:23:58 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/wow/base/bot%E5%AE%8F/</guid>
+      <guid>http://guohao.work/post/wow/base/bot%E5%AE%8F/</guid>
       <description>基础 机器人用“停止”命令后，鼠标右键点击机器人即可对话，可以分配机器人职责（坦克、奶、输出——如“坦克”选择“近战，坦克”；“治疗”选择“远程，治疗”、或“近战，治疗”，或：“治疗”），交易装备给他；交易完成用“跟随”命令即可 机器人装备指南 伤害受玩家装备等级和他自己装备影响，好装</description>
     </item>
     

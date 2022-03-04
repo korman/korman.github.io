@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>原创 on Korman的个人博客</title>
-    <link>http://korman.github.io/tags/%E5%8E%9F%E5%88%9B/</link>
-    <description>Recent content in 原创 on Korman的个人博客</description>
+    <title>原创 on 郭浩的个人博客</title>
+    <link>http://guohao.work/tags/%E5%8E%9F%E5%88%9B/</link>
+    <description>Recent content in 原创 on 郭浩的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 25 Sep 2020 13:52:55 +0800</lastBuildDate><atom:link href="http://korman.github.io/tags/%E5%8E%9F%E5%88%9B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Sep 2020 13:52:55 +0800</lastBuildDate><atom:link href="http://guohao.work/tags/%E5%8E%9F%E5%88%9B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>项目打包命令</title>
-      <link>http://korman.github.io/post/angular/%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%91%BD%E4%BB%A4/</link>
+      <link>http://guohao.work/post/angular/%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Fri, 25 Sep 2020 13:52:55 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/angular/%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%91%BD%E4%BB%A4/</guid>
+      <guid>http://guohao.work/post/angular/%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E5%91%BD%E4%BB%A4/</guid>
       <description>ng build &amp;ndash;prod &amp;ndash;aot &amp;ndash;base-href ./</description>
     </item>
     
     <item>
       <title>Git拉取远程分支到本地</title>
-      <link>http://korman.github.io/post/git/git%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%88%B0%E6%9C%AC%E5%9C%B0/</link>
+      <link>http://guohao.work/post/git/git%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%88%B0%E6%9C%AC%E5%9C%B0/</link>
       <pubDate>Mon, 21 Sep 2020 10:36:04 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/git/git%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%88%B0%E6%9C%AC%E5%9C%B0/</guid>
+      <guid>http://guohao.work/post/git/git%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E5%88%B0%E6%9C%AC%E5%9C%B0/</guid>
       <description>介绍 很多人不知道如何拉取远程分支到本地，比如刚刚clone下一个新库，但是却只有master,没有开发分支develop，以下介绍如何拉取远程分支到本地。 方法 在本地创建同名分支 git checkout -b dev(本地分支名称) origin/dev(远程分支名称) 拉取远程内容 git pull origin dev(远程分支名称)</description>
     </item>
     

@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>敏捷开发 on Korman的个人博客</title>
-    <link>http://korman.github.io/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</link>
-    <description>Recent content in 敏捷开发 on Korman的个人博客</description>
+    <title>敏捷开发 on 郭浩的个人博客</title>
+    <link>http://guohao.work/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in 敏捷开发 on 郭浩的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 13 Oct 2020 14:49:00 +0800</lastBuildDate><atom:link href="http://korman.github.io/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Oct 2020 14:49:00 +0800</lastBuildDate><atom:link href="http://guohao.work/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[转载]Scrum 是什么</title>
-      <link>http://korman.github.io/post/development/scrum%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <link>http://guohao.work/post/development/scrum%E6%98%AF%E4%BB%80%E4%B9%88/</link>
       <pubDate>Tue, 13 Oct 2020 14:49:00 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/development/scrum%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <guid>http://guohao.work/post/development/scrum%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
       <description>Scrum 是什么？ Scrum 是当前最流行的敏捷软件开发方法论和实施框架。但就像人们对 “Agile” 术语的不同理解一样，不同的人对 “Scrum” 也有着不同的理解。那么，到底 Scrum 是什么？ 标准释义： Scrum 是一个框架，在这个框架中人们可以解决复杂的自适应问题，同时也能高效并有创造性地交付尽可能高价值的产品。 我</description>
     </item>
     
     <item>
       <title>[转载]如何让团队开始使用敏捷开发</title>
-      <link>http://korman.github.io/post/development/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%9B%A2%E9%98%9F%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</link>
+      <link>http://guohao.work/post/development/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%9B%A2%E9%98%9F%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</link>
       <pubDate>Mon, 12 Oct 2020 16:41:06 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/development/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%9B%A2%E9%98%9F%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</guid>
+      <guid>http://guohao.work/post/development/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%9B%A2%E9%98%9F%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</guid>
       <description>为什么要敏捷开发 “没有人喜欢敏捷，但我们不得不敏捷。就像没有人喜欢工作，但你必须工作。”这是我经常用来调侃敏捷的一句话。 试想一下，拿到一份完整详尽的需求文档，逐个功能Coding，测试部署上线。不需要再次确认需求，不会有人打断思路。没有需求更改，只要自己不犯错，不存在推倒重来这才</description>
     </item>
     
     <item>
       <title>[转载]什么是敏捷开发</title>
-      <link>http://korman.github.io/post/development/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</link>
+      <link>http://guohao.work/post/development/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</link>
       <pubDate>Mon, 12 Oct 2020 15:49:56 +0800</pubDate>
       
-      <guid>http://korman.github.io/post/development/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</guid>
+      <guid>http://guohao.work/post/development/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</guid>
       <description>一个有趣的例子： 如果去餐厅点餐，点了10个菜，经过一个多小时，服务员才一次性把做完的10个菜全部端上来，这就等同于传统的开发模式，而大部分的餐厅显然不会这样，更常见的是做完一道菜就先端上了一道菜（以顾客需求为核心），这就相当于敏捷开发。 传统开发： 瀑布式开发，严格分级，需求分析，设</description>
     </item>
     
